@@ -1,0 +1,89 @@
+{
+  "navbar": {
+    "about": "Sobre Mí",
+    "projects": "Proyectos",
+    "stack": "Stack",
+    "contact": "Contacto",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Juan Carlos",
+    "subtitle": "Desarrollador Full Stack creando soluciones innovadoras con tecnologías modernas",
+    "exploreWork": "Explora Mi Trabajo"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Desarrollador Apasionado y Solucionador de Problemas",
+    "description": "Soy un desarrollador full stack especializado en JavaScript, TypeScript y Python, con un enfoque particular en crear interfaces accesibles y usables. Tengo experiencia desarrollando aplicaciones web modernas con React, Express.js y bases de datos relacionales.",
+    "journey": "Mi pasión por el desarrollo de software se centra en la implementación de clean architecture y código limpio. Busco constantemente aprender nuevas tecnologías como Inteligencia Artificial, DevOps y Ciberseguridad, mientras automatizo tareas con scripts en Bash y Python.",
+    "agile": "Metodologías Ágiles y Trabajo en Equipo",
+    "cleanCode": "Código Limpio y Arquitectura Limpia",
+    "learning": "Enfoque en UX/UI y Automatización",
+    "interests": "Mis Intereses",
+    "aiDevOps": "Inteligencia Artificial y DevOps",
+    "uxDesign": "Diseño de Experiencias de Usuario",
+    "automation": "Automatización y Ciberseguridad"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Aquí están algunos de los proyectos en los que he trabajado, mostrando mis habilidades en varias tecnologías y frameworks.",
+    "viewProject": "Ver Proyecto",
+    "liveDemo": "Demo en Vivo",
+    "sourceCode": "Código Fuente",
+    "code": "Código",
+    "demo": "Demo",
+    "vetCareFrontend": {
+      "title": "Vet-Care Frontend",
+      "description": "Desarrollé la interfaz de usuario para gestión de citas veterinarias, incluyendo dashboards para usuarios y veterinarios, con React y Tailwind CSS."
+    },
+    "vetCareBackend": {
+      "title": "Vet-Care Backend",
+      "description": "Implementé la API RESTful para la lógica de negocio y gestión de datos con MySQL, además de la implementación con Node.js, Express, Sequelize y seguridad JWT."
+    },
+    "portfolio": {
+      "title": "Portafolio Personal",
+      "description": "Desarrollé mi portafolio web creado principalmente para darme a conocer, desplegado en Netlify, construido con una paleta de colores predefinida y diseño minimalista usando React, TypeScript y TailwindCSS."
+    }
+  },
+  "stack": {
+    "title": "Mi Stack Tecnológico",
+    "subtitle": "Tecnologías y herramientas que uso para dar vida a las ideas. Siempre aprendiendo y adaptándome a nuevas tecnologías.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Base de Datos",
+    "softSkills": "Habilidades Blandas & Metodologías",
+    "design": "Diseño",
+    "tools": "Herramientas",
+    "continuousLearning": "Aprendizaje Continuo",
+    "learningDescription": "El mundo tecnológico evoluciona rápidamente, y estoy comprometido a mantenerme actualizado con las últimas tendencias, mejores prácticas y tecnologías emergentes. Regularmente exploro nuevos frameworks, asisto a conferencias tecnológicas y contribuyo a proyectos de código abierto para mejorar mis habilidades y retribuir a la comunidad."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "madeWith": "Hecho con",
+    "contact": "Contacto",
+    "portfolio": "Portfolio",
+    "description": "Creando soluciones digitales innovadoras con pasión y precisión. Construyamos algo increíble juntos.",
+    "quickLinks": "Enlaces Rápidos",
+    "aboutMe": "Sobre Mí",
+    "projects": "Proyectos",
+    "techStack": "Stack Tecnológico",
+    "getInTouch": "Ponte en Contacto",
+
+    "availability": "Disponible para trabajo freelance y oportunidades de colaboración.",
+    "workTogether": "Trabajemos Juntos",
+    "builtWith": "Construido con React y TypeScript",
+    "styledWith": "Estilizado con Tailwind CSS",
+    "coffeeMessage": "y mucho café."
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "copyEmail": "Copiar email",
+    "copied": "¡Copiado!",
+    "sendEmail": "Enviar email",
+    "contactMe": "Contáctame",
+    "getInTouch": "Ponte en contacto"
+  }
+}

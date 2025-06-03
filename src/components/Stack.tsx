@@ -1,43 +1,46 @@
 
 import React from 'react';
-import { Database, Globe, Smartphone, Server, Palette, Zap } from 'lucide-react';
+import { Database, Globe, Users, Server, Palette, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Stack = () => {
+  const { t } = useTranslation();
+  
   const stackCategories = [
     {
-      title: "Frontend",
+      titleKey: "stack.frontend",
       icon: Globe,
-      technologies: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SASS"],
+      technologies: ["React", "TypeScript", "JavaScript (ES6+)", "HTML", "CSS", "Tailwind CSS"],
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Backend",
+      titleKey: "stack.backend",
       icon: Server,
-      technologies: ["Node.js", "Express", "Python", "Django", "GraphQL", "REST APIs"],
+      technologies: ["Node.js", "Express.js", "Python", "C#", "REST APIs", "JWT"],
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Database",
+      titleKey: "stack.database",
       icon: Database,
-      technologies: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Firebase", "Supabase"],
+      technologies: ["MySQL", "PostgreSQL", "Sequelize", "Database Design", "SQL", "Data Modeling"],
       color: "from-purple-500 to-violet-500"
     },
     {
-      title: "Mobile",
-      icon: Smartphone,
-      technologies: ["React Native", "Flutter", "iOS", "Android", "Expo", "Cordova"],
+      titleKey: "stack.softSkills",
+      icon: Users,
+      technologies: ["Scrum", "Kanban", "Agile", "Team Leadership", "Problem Solving", "Communication"],
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Design",
+      titleKey: "stack.design",
       icon: Palette,
-      technologies: ["Figma", "Adobe XD", "Photoshop", "Sketch", "Blender", "After Effects"],
+      technologies: ["Figma", "Framer", "UX/UI Design", "Responsive Design", "Accessibility", "User Experience"],
       color: "from-pink-500 to-rose-500"
     },
     {
-      title: "Tools",
+      titleKey: "stack.tools",
       icon: Zap,
-      technologies: ["Git", "Docker", "AWS", "Vercel", "Webpack", "Vite"],
+      technologies: ["Git & GitHub", "Bun", "Bash", "Clean Architecture", "Code Quality", "Automation"],
       color: "from-yellow-500 to-amber-500"
     }
   ];
@@ -53,11 +56,11 @@ const Stack = () => {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Tech <span className="text-blue-400">Stack</span>
+            <span className="text-blue-400">{t('stack.title')}</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life. Always learning and adapting to new technologies.
+            {t('stack.subtitle')}
           </p>
         </div>
 
@@ -77,7 +80,7 @@ const Stack = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
-                  {category.title}
+                  {t(category.titleKey)}
                 </h3>
                 
                 <div className="space-y-2">
@@ -105,12 +108,10 @@ const Stack = () => {
         <div className="mt-16 text-center">
           <div className="border border-blue-500/30 rounded-lg p-8 bg-slate-900/30 backdrop-blur-sm max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 text-blue-400">
-              Continuous Learning
+              {t('stack.continuousLearning')}
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
-              The tech world evolves rapidly, and I'm committed to staying updated with the latest trends, 
-              best practices, and emerging technologies. I regularly explore new frameworks, attend tech conferences, 
-              and contribute to open-source projects to enhance my skills and give back to the community.
+              {t('stack.learningDescription')}
             </p>
           </div>
         </div>

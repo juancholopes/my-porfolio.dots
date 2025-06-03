@@ -1,7 +1,10 @@
 import React from "react";
 import { Code2, Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Grid background */}
@@ -22,18 +25,17 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="float-animation">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-white">Hello, I'm</span>
+            <span className="text-white">{t('hero.greeting')}</span>
             <br />
-            <span className="text-blue-400 inline-block">Juan Carlos</span>
+            <span className="text-blue-400 inline-block">{t('hero.name')}</span>
           </h1>
         </div>
 
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Full Stack Developer creating innovative solutions with modern
-          technologies
+          {t('hero.subtitle')}
         </p>
 
-        <div className="flex justify-center space-x-6 mb-12">
+        <div className="flex justify-center space-x-6 mb-8">
           <a
             href="https://github.com/juanchopi37"
             className="p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
@@ -47,7 +49,7 @@ const Hero = () => {
             <Linkedin size={24} className="text-blue-400" />
           </a>
           <a
-            href="juancarloslopezmoreno@proton.me"
+            href="mailto:juancarloslopezmoreno@proton.me"
             className="p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
           >
             <Mail size={24} className="text-blue-400" />
@@ -59,7 +61,7 @@ const Hero = () => {
           className="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-lg zed-glow"
         >
           <Code2 className="mr-2" size={20} />
-          Explore My Work
+          {t('hero.exploreWork')}
         </a>
       </div>
     </section>

@@ -1,15 +1,18 @@
 
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const navItems = [
-    { name: 'About Me', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Stack', href: '#stack' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('navbar.about'), href: '#about' },
+    { name: t('navbar.projects'), href: '#projects' },
+    { name: t('navbar.stack'), href: '#stack' },
+    { name: t('navbar.contact'), href: '#contact' },
   ];
 
   return (
@@ -18,7 +21,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="text-2xl font-bold text-blue-400">
-              Portfolio
+              {t('navbar.portfolio')}
             </div>
           </div>
           
@@ -34,6 +37,7 @@ const Navbar = () => {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
+              <LanguageSelector />
             </div>
           </div>
           
@@ -61,6 +65,9 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <div className="px-3 py-2">
+              <LanguageSelector />
+            </div>
           </div>
         </div>
       )}

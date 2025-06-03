@@ -1,0 +1,88 @@
+{
+  "navbar": {
+    "about": "About Me",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Juan Carlos",
+    "subtitle": "Full Stack Developer creating innovative solutions with modern technologies",
+    "exploreWork": "Explore My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate Developer & Problem Solver",
+    "description": "I'm a full-stack developer specialized in JavaScript, TypeScript and Python, with a particular focus on creating accessible and usable interfaces. I have experience developing modern web applications with React, Express.js and relational databases.",
+    "journey": "My passion for software development centers on implementing clean architecture and clean code. I constantly seek to learn new technologies like Artificial Intelligence, DevOps and Cybersecurity, while automating tasks with Bash and Python scripts.",
+    "agile": "Agile Methodologies and Teamwork",
+    "cleanCode": "Clean Code and Clean Architecture",
+    "learning": "Focus on UX/UI and Automation",
+    "interests": "My Interests",
+    "aiDevOps": "Artificial Intelligence and DevOps",
+    "uxDesign": "User Experience Design",
+    "automation": "Automation and Cybersecurity"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Here are some of the projects I've worked on, showcasing my skills in various technologies and frameworks.",
+    "viewProject": "View Project",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "code": "Code",
+    "demo": "Demo",
+    "vetCareFrontend": {
+      "title": "Vet-Care Frontend",
+      "description": "Developed the user interface for veterinary appointment management, including dashboards for users and veterinarians, using React and Tailwind CSS."
+    },
+    "vetCareBackend": {
+      "title": "Vet-Care Backend",
+      "description": "Implemented RESTful API for business logic and data management with MySQL, plus implementation with Node.js, Express, Sequelize and JWT security."
+    },
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "description": "Developed my web portfolio created primarily to showcase my work, deployed on Netlify, built with a predefined color palette and minimalist design using React, TypeScript and TailwindCSS."
+    }
+  },
+  "stack": {
+    "title": "My Tech Stack",
+    "subtitle": "Technologies and tools I use to bring ideas to life. Always learning and adapting to new technologies.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "softSkills": "Soft Skills & Methodologies",
+    "design": "Design",
+    "tools": "Tools",
+    "continuousLearning": "Continuous Learning",
+    "learningDescription": "The tech world evolves rapidly, and I'm committed to staying updated with the latest trends, best practices, and emerging technologies. I regularly explore new frameworks, attend tech conferences, and contribute to open-source projects to enhance my skills and give back to the community."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with",
+    "contact": "Contact",
+    "portfolio": "Portfolio",
+    "description": "Creating innovative digital solutions with passion and precision. Let's build something amazing together.",
+    "quickLinks": "Quick Links",
+    "aboutMe": "About Me",
+    "projects": "Projects",
+    "techStack": "Tech Stack",
+    "getInTouch": "Get In Touch",
+    "availability": "Available for freelance work and collaboration opportunities.",
+    "workTogether": "Let's Work Together",
+    "builtWith": "Built with React & TypeScript",
+    "styledWith": "Styled with Tailwind CSS",
+    "coffeeMessage": "and lots of coffee."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "copyEmail": "Copy email",
+    "copied": "Copied!",
+    "sendEmail": "Send email",
+    "contactMe": "Contact me",
+    "getInTouch": "Get in touch"
+  }
+}
