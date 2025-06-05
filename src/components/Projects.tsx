@@ -43,30 +43,30 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 relative">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
       {/* Decorative lines */}
-      <div className="absolute top-20 left-0 w-32 h-0.5 bg-gradient-to-r from-blue-500 to-transparent"></div>
-      <div className="absolute bottom-20 right-0 w-48 h-0.5 bg-gradient-to-l from-blue-500 to-transparent"></div>
+      <div className="absolute top-20 left-0 w-16 sm:w-32 h-0.5 bg-gradient-to-r from-blue-500 to-transparent hidden sm:block"></div>
+      <div className="absolute bottom-20 right-0 w-24 sm:w-48 h-0.5 bg-gradient-to-l from-blue-500 to-transparent hidden sm:block"></div>
 
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" data-cursor="text">
-            <span className="text-blue-400" data-cursor="text">{t("projects.title")}</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4" data-cursor="text">
+            <span className="text-blue-500 dark:text-blue-400" data-cursor="text">{t("projects.title")}</span>
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto" data-cursor="text">
+          <div className="w-16 sm:w-20 lg:w-24 h-1 bg-blue-500 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-slate-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0" data-cursor="text">
             {t("projects.subtitle")}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group relative">
-              <div className="border border-blue-500/30 rounded-lg p-6 bg-slate-900/50 backdrop-blur-sm hover:bg-slate-900/70 transition-all duration-300 h-full">
+              <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm hover:bg-slate-200/70 dark:hover:bg-slate-900/70 transition-all duration-300 h-full">
                 {/* Project image */}
-                <div className="h-48 rounded-lg mb-6 relative overflow-hidden bg-slate-800 project-image">
+                <div className="h-40 sm:h-48 rounded-lg mb-4 sm:mb-6 relative overflow-hidden bg-slate-200 dark:bg-slate-800 project-image">
                   <img
                     src={project.image}
                     alt={t(project.titleKey)}
@@ -82,27 +82,27 @@ const Projects = () => {
                     }}
                   />
                   <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300"></div>
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
                     <Code
-                      size={24}
-                      className="text-white opacity-70 drop-shadow-lg"
+                      size={20}
+                      className="text-white opacity-70 drop-shadow-lg sm:w-6 sm:h-6"
                     />
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300" data-cursor="text">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300" data-cursor="text">
                   {t(project.titleKey)}
                 </h3>
 
-                <p className="text-gray-300 mb-4 leading-relaxed" data-cursor="text">
+                <p className="text-slate-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base" data-cursor="text">
                   {t(project.descriptionKey)}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30"
+                      className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-600 dark:text-blue-300 rounded-full text-xs sm:text-sm border border-blue-500/30"
                       data-cursor="text"
                     >
                       {tech}
@@ -110,21 +110,21 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex space-x-4">
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
                   <a
                     href={project.github}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
                     data-cursor="text"
                   >
-                    <Github size={18} />
+                    <Github size={16} className="sm:w-[18px] sm:h-[18px]" />
                     <span>{t("projects.code")}</span>
                   </a>
                   <a
                     href={project.demo}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
                     data-cursor="text"
                   >
-                    <ExternalLink size={18} />
+                    <ExternalLink size={16} className="sm:w-[18px] sm:h-[18px]" />
                     <span>{t("projects.demo")}</span>
                   </a>
                 </div>
