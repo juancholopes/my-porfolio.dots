@@ -21,21 +21,21 @@ const AboutMe = () => {
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-blue-400">{t('about.title')}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" data-cursor="text">
+            <span className="text-blue-400" data-cursor="text">{t('about.title')}</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-white">
+            <h3 className="text-2xl font-bold mb-6 text-white" data-cursor="text">
               {t('about.subtitle')}
             </h3>
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            <p className="text-gray-300 text-lg mb-6 leading-relaxed" data-cursor="text">
               {t('about.description')}
             </p>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+            <p className="text-gray-300 text-lg mb-8 leading-relaxed" data-cursor="text">
               {t('about.journey')}
             </p>
 
@@ -44,13 +44,13 @@ const AboutMe = () => {
                 <div className="p-2 bg-blue-500/20 rounded-lg">
                   <User size={20} className="text-blue-400" />
                 </div>
-                <span className="text-gray-300">{t('about.agile')}</span>
+                <span className="text-gray-300" data-cursor="text">{t('about.agile')}</span>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="p-2 bg-blue-500/20 rounded-lg">
                   <Target size={20} className="text-blue-400" />
                 </div>
-                <span className="text-gray-300">
+                <span className="text-gray-300" data-cursor="text">
                   {t('about.cleanCode')}
                 </span>
               </div>
@@ -58,7 +58,7 @@ const AboutMe = () => {
                 <div className="p-2 bg-blue-500/20 rounded-lg">
                   <Zap size={20} className="text-blue-400" />
                 </div>
-                <span className="text-gray-300">
+                <span className="text-gray-300" data-cursor="text">
                   {t('about.learning')}
                 </span>
               </div>
@@ -66,7 +66,7 @@ const AboutMe = () => {
           </div>
 
           <div className="relative">
-            <div className="w-full h-96 border border-blue-500/30 rounded-lg p-6 bg-slate-900/50 backdrop-blur-sm">
+            <div className="w-full h-96 border border-blue-500/30 rounded-lg p-6 bg-slate-900/50 backdrop-blur-sm project-image" data-cursor="image">
               <div className="flex justify-center items-center h-full">
                 <Carousel
                   opts={{

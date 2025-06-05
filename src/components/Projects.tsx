@@ -52,11 +52,11 @@ const Projects = () => {
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-blue-400">{t("projects.title")}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" data-cursor="text">
+            <span className="text-blue-400" data-cursor="text">{t("projects.title")}</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto" data-cursor="text">
             {t("projects.subtitle")}
           </p>
         </div>
@@ -66,11 +66,11 @@ const Projects = () => {
             <div key={index} className="group relative">
               <div className="border border-blue-500/30 rounded-lg p-6 bg-slate-900/50 backdrop-blur-sm hover:bg-slate-900/70 transition-all duration-300 h-full">
                 {/* Project image */}
-                <div className="h-48 rounded-lg mb-6 relative overflow-hidden bg-slate-800">
+                <div className="h-48 rounded-lg mb-6 relative overflow-hidden bg-slate-800 project-image">
                   <img
                     src={project.image}
                     alt={t(project.titleKey)}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 project-image"
                     onError={(e) => {
                       // Fallback to gradient placeholder if image fails to load
                       e.currentTarget.style.display = "none";
@@ -90,11 +90,11 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300" data-cursor="text">
                   {t(project.titleKey)}
                 </h3>
 
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-300 mb-4 leading-relaxed" data-cursor="text">
                   {t(project.descriptionKey)}
                 </p>
 
@@ -103,6 +103,7 @@ const Projects = () => {
                     <span
                       key={techIndex}
                       className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30"
+                      data-cursor="text"
                     >
                       {tech}
                     </span>
@@ -113,6 +114,7 @@ const Projects = () => {
                   <a
                     href={project.github}
                     className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    data-cursor="text"
                   >
                     <Github size={18} />
                     <span>{t("projects.code")}</span>
@@ -120,6 +122,7 @@ const Projects = () => {
                   <a
                     href={project.demo}
                     className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    data-cursor="text"
                   >
                     <ExternalLink size={18} />
                     <span>{t("projects.demo")}</span>
