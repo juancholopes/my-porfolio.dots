@@ -1,8 +1,10 @@
 <div align="center">
   <h1>🚀 Mi portafolio  personal</h1>
   <p><strong>Desarrollador Full Stack · Creando soluciones innovadoras con tecnologías modernas</strong></p>
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/juanchopi37/my-porfolio.dots/graphs/commit-activity)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/juanchopi37/my-porfolio.dots/graphs/commit-activity)
+
 </div>
 
 ---
