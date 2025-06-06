@@ -17,7 +17,7 @@ const Projects = () => {
       ],
       github: "https://github.com/juanchopi37/vet-care-frontend",
       demo: "#",
-      image: "./public/projects/vet-pet-frontend.png",
+      image: "/projects/vet-pet-frontend.png",
     },
     {
       titleKey: "projects.vetCareBackend.title",
@@ -25,7 +25,7 @@ const Projects = () => {
       technologies: ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
       github: "https://github.com/juanchopi37/vet-care-backend",
       demo: "#",
-      image: "./public/projects/vet-pet-backend.png",
+      image: "/projects/vet-pet-backend.png",
     },
     {
       titleKey: "projects.portfolio.title",
@@ -38,7 +38,7 @@ const Projects = () => {
       ],
       github: "https://github.com/juanchopi37/my-porfolio.dots",
       demo: "#",
-      image: "./public/projects/portafolio-personal.png",
+      image: "/projects/portafolio-personal.png",
     },
   ];
 
