@@ -1,7 +1,6 @@
 <div align="center">
   <h1>🚀 Mi portafolio  personal</h1>
   <p><strong>Desarrollador Full Stack · Creando soluciones innovadoras con tecnologías modernas</strong></p>
-  
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/juanchopi37/my-porfolio.dots/graphs/commit-activity)
 </div>
@@ -87,7 +86,7 @@ my-porfolio.dots/
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-carlos-lopez-moreno-9a29b0299/)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/juanchopi37)
-[![Email](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:juancarloslopezmoreno@proton.me)
+[![Email](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](juancarloslopezmoreno@proton.me)
 
 ---
 
@@ -111,4 +110,3 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
   <p>⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub! ⭐</p>
   <p>Hecho con ❤️ y mucho ☕ </strong></p>
 </div>
-
