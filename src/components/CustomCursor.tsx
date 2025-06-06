@@ -38,7 +38,7 @@ const CustomCursor: React.FC = () => {
             backdropFilter: cursorVariant === 'text' ? 'none' : cursorVariant === 'image' ? 'blur(16px)' : 'blur(15px)',
             boxShadow: cursorVariant === 'text' ? '0 0 8px rgba(59, 130, 246, 0.4)' : cursorVariant === 'image' ? '0 0 20px rgba(59, 130, 246, 0.6), inset 0 0 8px rgba(59, 130, 246, 0.2)' : '0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 10px rgba(59, 130, 246, 0.1)',
             fontSize: cursorVariant === 'image' ? '11px' : '0px',
-            color: cursorVariant === 'image' ? 'rgb(147, 197, 253)' : 'transparent',
+            color: cursorVariant === 'image' ? 'rgba(147, 197, 253, 1)' : 'rgba(147, 197, 253, 0)',
             display: cursorVariant === 'image' ? 'flex' : 'block',
             alignItems: cursorVariant === 'image' ? 'center' : 'flex-start',
             justifyContent: cursorVariant === 'image' ? 'center' : 'flex-start',
