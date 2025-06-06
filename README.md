@@ -109,6 +109,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 ---
 
 <div align="center">
-  <p>⭐ Si te gusta este proyecto, ¡dale una estrella en GitHub! ⭐</p>
+  <p>⭐ Si te gusto dale una estrella ⭐</p>
   <p>Hecho con ❤️ y mucho ☕ </strong></p>
 </div>
