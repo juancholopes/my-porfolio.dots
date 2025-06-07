@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+@font-face {
+    font-family: 'oddvalsemibold';
+    src: url('/fonts/oddval-semibold-webfont.woff2') format('woff2'),
+         url('/fonts/oddval-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -78,7 +86,7 @@
     --border: 217 33% 17%;
     --input: 217 33% 17%;
     --ring: 221 83% 53%;
-    
+
     --sidebar-background: 222 84% 5%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 221 83% 53%;
@@ -101,13 +109,22 @@
   }
 
   html {
-    font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Inconsolata', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    font-family:
+      "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
+      "Fira Mono", "Roboto Mono", monospace;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Inconsolata', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family:
+      "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
+      "Fira Mono", "Roboto Mono", monospace;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'oddvalsemibold', sans-serif !important;
   }
 }
 
@@ -156,7 +173,20 @@
 }
 
 /* Hide cursor on all interactive elements */
-button, a, input, textarea, select, h1, h2, h3, h4, h5, h6, p, span, div[data-cursor] {
+button,
+a,
+input,
+textarea,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div[data-cursor] {
   cursor: none !important;
 }
 
@@ -185,12 +215,18 @@ button, a, input, textarea, select, h1, h2, h3, h4, h5, h6, p, span, div[data-cu
 }
 
 /* Text elements hover states */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   transition: color 0.2s ease;
 }
 
 /* Button and link hover states */
-button:hover, a:hover {
+button:hover,
+a:hover {
   transition: all 0.2s ease;
 }
 
@@ -199,43 +235,43 @@ button:hover, a:hover {
   .text-responsive-xs {
     @apply text-xs sm:text-sm md:text-base;
   }
-  
+
   .text-responsive-sm {
     @apply text-sm sm:text-base md:text-lg;
   }
-  
+
   .text-responsive-base {
     @apply text-base sm:text-lg md:text-xl;
   }
-  
+
   .text-responsive-lg {
     @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
   }
-  
+
   .text-responsive-xl {
     @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
   }
-  
+
   .text-responsive-2xl {
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
   }
-  
+
   .text-responsive-3xl {
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
   }
-  
+
   .spacing-responsive {
     @apply space-y-2 sm:space-y-3 md:space-y-4;
   }
-  
+
   .padding-responsive {
     @apply p-3 sm:p-4 md:p-6;
   }
-  
+
   .margin-responsive {
     @apply m-3 sm:m-4 md:m-6;
   }
-  
+
   .container-responsive {
     @apply max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl;
   }
@@ -243,26 +279,33 @@ button:hover, a:hover {
 
 /* Cursor animations */
 @keyframes blink {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 1;
   }
-  51%, 100% {
+  51%,
+  100% {
     opacity: 0;
   }
 }
 
 @keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 10px rgba(59, 130, 246, 0.1);
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.3),
+      inset 0 0 10px rgba(59, 130, 246, 0.1);
   }
   50% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5), inset 0 0 15px rgba(59, 130, 246, 0.2);
+    box-shadow:
+      0 0 30px rgba(59, 130, 246, 0.5),
+      inset 0 0 15px rgba(59, 130, 246, 0.2);
   }
 }
 
 /* Terminal cursor effect */
 .cursor-terminal::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 4px;
   top: 50%;
@@ -283,11 +326,11 @@ button:hover, a:hover {
   .grid-pattern {
     background-size: 30px 30px;
   }
-  
+
   .zed-glow {
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
   }
-  
+
   .zed-glow:hover {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
     transform: translateY(-1px);
@@ -305,7 +348,10 @@ button:hover, a:hover {
 
 /* Theme transitions */
 * {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Tablet optimizations */
@@ -320,7 +366,7 @@ button:hover, a:hover {
   .hover\:scale-105:hover {
     transform: none;
   }
-  
+
   .group:hover .group-hover\:scale-110 {
     transform: none;
   }
