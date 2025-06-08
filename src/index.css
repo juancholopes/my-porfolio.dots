@@ -53,6 +53,9 @@
     --zed-blue: 59 130 246;
     --zed-dark: 15 23 42;
     --zed-gray: 100 116 139;
+    --bg-main: 241 245 249;
+    --text-main: 15 23 42;
+    --card-bg: 255 255 255;
   }
 
   .dark {
@@ -91,6 +94,9 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --bg-main: 15 23 42;
+    --text-main: 241 245 249;
+    --card-bg: 30 41 59;
   }
 }
 
@@ -100,7 +106,7 @@
   }
 
   body {
-    @apply bg-slate-950 text-white font-mono;
+    @apply bg-background text-foreground font-mono transition-colors;
   }
 }
 
@@ -109,6 +115,12 @@
     linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
+}
+
+.dark .grid-pattern {
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.2) 1px, transparent 1px);
 }
 
 .zed-glow {

@@ -29,13 +29,13 @@ const AboutMe = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-white">
+            <h3 className="text-2xl font-bold mb-6 text-foreground">
               {t('about.subtitle')}
             </h3>
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
               {t('about.description')}
             </p>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               {t('about.journey')}
             </p>
 
@@ -44,13 +44,13 @@ const AboutMe = () => {
                 <div className="p-2 bg-blue-500/20 rounded-lg">
                   <User size={20} className="text-blue-400" />
                 </div>
-                <span className="text-gray-300">{t('about.agile')}</span>
+                <span className="text-muted-foreground">{t('about.agile')}</span>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="p-2 bg-blue-500/20 rounded-lg">
                   <Target size={20} className="text-blue-400" />
                 </div>
-                <span className="text-gray-300">
+                <span className="text-muted-foreground">
                   {t('about.cleanCode')}
                 </span>
               </div>
@@ -58,7 +58,7 @@ const AboutMe = () => {
                 <div className="p-2 bg-blue-500/20 rounded-lg">
                   <Zap size={20} className="text-blue-400" />
                 </div>
-                <span className="text-gray-300">
+                <span className="text-muted-foreground">
                   {t('about.learning')}
                 </span>
               </div>
@@ -66,7 +66,7 @@ const AboutMe = () => {
           </div>
 
           <div className="relative">
-            <div className="w-full h-96 border border-blue-500/30 rounded-lg p-6 bg-slate-900/50 backdrop-blur-sm">
+            <div className="w-full h-96 border border-blue-500/30 rounded-lg p-6 bg-card/50 backdrop-blur-sm">
               <div className="flex justify-center items-center h-full">
                 <Carousel
                   opts={{

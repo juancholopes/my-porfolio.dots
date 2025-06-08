@@ -59,7 +59,7 @@ const Stack = () => {
             <span className="text-blue-400">{t('stack.title')}</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {t('stack.subtitle')}
           </p>
         </div>
@@ -74,12 +74,12 @@ const Stack = () => {
                 animation: 'fadeIn 0.6s ease-in-out'
               }}
             >
-              <div className="border border-blue-500/30 rounded-lg p-6 bg-slate-900/50 backdrop-blur-sm hover:bg-slate-900/70 transition-all duration-300 h-full hover:scale-105">
+              <div className="border border-blue-500/30 rounded-lg p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full hover:scale-105">
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <category.icon size={24} className="text-white" />
                 </div>
                 
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-blue-400 transition-colors duration-300">
                   {t(category.titleKey)}
                 </h3>
                 
@@ -90,7 +90,7 @@ const Stack = () => {
                       className="flex items-center space-x-3 group/tech"
                     >
                       <div className="w-2 h-2 bg-blue-400 rounded-full group-hover/tech:scale-125 transition-transform duration-200"></div>
-                      <span className="text-gray-300 group-hover/tech:text-white transition-colors duration-200">
+                      <span className="text-muted-foreground group-hover/tech:text-foreground transition-colors duration-200">
                         {tech}
                       </span>
                     </div>

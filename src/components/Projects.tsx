@@ -56,15 +56,15 @@ const Projects = () => {
             <span className="text-blue-400">{t("projects.title")}</span>
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            {t("projects.subtitle")}
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            {t('projects.subtitle')}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group relative">
-              <div className="border border-blue-500/30 rounded-lg p-6 bg-slate-900/50 backdrop-blur-sm hover:bg-slate-900/70 transition-all duration-300 h-full">
+              <div className="border border-blue-500/30 rounded-lg p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full">
                 {/* Project image */}
                 <div className="h-48 rounded-lg mb-6 relative overflow-hidden bg-slate-800">
                   <img
@@ -90,11 +90,11 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-blue-400 transition-colors duration-300">
                   {t(project.titleKey)}
                 </h3>
-
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                
+                <p className="text-muted-foreground mb-4 leading-relaxed">
                   {t(project.descriptionKey)}
                 </p>
 
@@ -110,19 +110,19 @@ const Projects = () => {
                 </div>
 
                 <div className="flex space-x-4">
-                  <a
+                  <a 
                     href={project.github}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    className="flex items-center space-x-2 text-muted-foreground hover:text-blue-400 transition-colors duration-300"
                   >
                     <Github size={18} />
-                    <span>{t("projects.code")}</span>
+                    <span>{t('projects.code')}</span>
                   </a>
-                  <a
+                  <a 
                     href={project.demo}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    className="flex items-center space-x-2 text-muted-foreground hover:text-blue-400 transition-colors duration-300"
                   >
                     <ExternalLink size={18} />
-                    <span>{t("projects.demo")}</span>
+                    <span>{t('projects.demo')}</span>
                   </a>
                 </div>
               </div>

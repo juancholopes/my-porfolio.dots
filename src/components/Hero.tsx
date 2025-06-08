@@ -25,13 +25,13 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="float-animation">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-white">{t('hero.greeting')}</span>
+            <span className="text-foreground">{t('hero.greeting')}</span>
             <br />
             <span className="text-blue-400 inline-block">{t('hero.name')}</span>
           </h1>
         </div>
 
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           {t('hero.subtitle')}
         </p>
 
@@ -58,7 +58,7 @@ const Hero = () => {
 
         <a
           href="#about"
-          className="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-lg zed-glow"
+          className="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-primary-foreground transition-all duration-300 rounded-lg zed-glow"
         >
           <Code2 className="mr-2" size={20} />
           {t('hero.exploreWork')}
