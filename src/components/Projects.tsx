@@ -17,7 +17,7 @@ const Projects = () => {
       ],
       github: "https://github.com/juanchopi37/vet-care-frontend",
       demo: "#",
-      image: "./public/projects/vet-pet-frontend.png",
+      image: "/projects/vet-pet-frontend.webp",
     },
     {
       titleKey: "projects.vetCareBackend.title",
@@ -25,7 +25,7 @@ const Projects = () => {
       technologies: ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
       github: "https://github.com/juanchopi37/vet-care-backend",
       demo: "#",
-      image: "./public/projects/vet-pet-backend.png",
+      image: "/projects/vet-pet-backend.webp",
     },
     {
       titleKey: "projects.portfolio.title",
@@ -38,39 +38,49 @@ const Projects = () => {
       ],
       github: "https://github.com/juanchopi37/my-porfolio.dots",
       demo: "#",
-      image: "./public/projects/portafolio-personal.png",
+      image: "/projects/portafolio-personal.webp",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 relative">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
       {/* Decorative lines */}
-      <div className="absolute top-20 left-0 w-32 h-0.5 bg-gradient-to-r from-blue-500 to-transparent"></div>
-      <div className="absolute bottom-20 right-0 w-48 h-0.5 bg-gradient-to-l from-blue-500 to-transparent"></div>
+      <div className="absolute top-20 left-0 w-16 sm:w-32 h-0.5 bg-gradient-to-r from-blue-500 to-transparent hidden sm:block"></div>
+      <div className="absolute bottom-20 right-0 w-24 sm:w-48 h-0.5 bg-gradient-to-l from-blue-500 to-transparent hidden sm:block"></div>
 
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-blue-400">{t("projects.title")}</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4" data-cursor="text">
+            <span className="text-blue-500 dark:text-blue-400" data-cursor="text">{t("projects.title")}</span>
           </h2>
+<<<<<<< HEAD
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {t('projects.subtitle')}
+=======
+          <div className="w-16 sm:w-20 lg:w-24 h-1 bg-blue-500 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-slate-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0" data-cursor="text">
+            {t("projects.subtitle")}
+>>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group relative">
+<<<<<<< HEAD
               <div className="border border-blue-500/30 rounded-lg p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full">
+=======
+              <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm hover:bg-slate-200/70 dark:hover:bg-slate-900/70 transition-all duration-300 h-full">
+>>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
                 {/* Project image */}
-                <div className="h-48 rounded-lg mb-6 relative overflow-hidden bg-slate-800">
+                <div className="h-40 sm:h-48 rounded-lg mb-4 sm:mb-6 relative overflow-hidden bg-slate-200 dark:bg-slate-800 project-image">
                   <img
                     src={project.image}
                     alt={t(project.titleKey)}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 project-image"
                     onError={(e) => {
                       // Fallback to gradient placeholder if image fails to load
                       e.currentTarget.style.display = "none";
@@ -82,33 +92,43 @@ const Projects = () => {
                     }}
                   />
                   <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300"></div>
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
                     <Code
-                      size={24}
-                      className="text-white opacity-70 drop-shadow-lg"
+                      size={20}
+                      className="text-white opacity-70 drop-shadow-lg sm:w-6 sm:h-6"
                     />
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-blue-400 transition-colors duration-300">
                   {t(project.titleKey)}
                 </h3>
                 
                 <p className="text-muted-foreground mb-4 leading-relaxed">
+=======
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300" data-cursor="text">
+                  {t(project.titleKey)}
+                </h3>
+
+                <p className="text-slate-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base" data-cursor="text">
+>>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
                   {t(project.descriptionKey)}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30"
+                      className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-600 dark:text-blue-300 rounded-full text-xs sm:text-sm border border-blue-500/30"
+                      data-cursor="text"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
+<<<<<<< HEAD
                 <div className="flex space-x-4">
                   <a 
                     href={project.github}
@@ -116,13 +136,31 @@ const Projects = () => {
                   >
                     <Github size={18} />
                     <span>{t('projects.code')}</span>
+=======
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                  <a
+                    href={project.github}
+                    className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
+                    data-cursor="text"
+                  >
+                    <Github size={16} className="sm:w-[18px] sm:h-[18px]" />
+                    <span>{t("projects.code")}</span>
+>>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
                   </a>
                   <a 
                     href={project.demo}
+<<<<<<< HEAD
                     className="flex items-center space-x-2 text-muted-foreground hover:text-blue-400 transition-colors duration-300"
                   >
                     <ExternalLink size={18} />
                     <span>{t('projects.demo')}</span>
+=======
+                    className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
+                    data-cursor="text"
+                  >
+                    <ExternalLink size={16} className="sm:w-[18px] sm:h-[18px]" />
+                    <span>{t("projects.demo")}</span>
+>>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
                   </a>
                 </div>
               </div>
