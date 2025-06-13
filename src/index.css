@@ -115,6 +115,21 @@
     cursor: none;
   }
 
+  /* Show normal cursor on touch devices */
+  @media (hover: none) or (pointer: coarse) {
+    * {
+      cursor: auto !important;
+    }
+
+    button,
+    a,
+    input,
+    textarea,
+    select {
+      cursor: pointer !important;
+    }
+  }
+
   html {
     font-family:
       "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
@@ -184,27 +199,29 @@
   cursor: none !important;
 }
 
-/* Hide cursor on all interactive elements */
-button,
-a,
-input,
-textarea,
-select,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-div[data-cursor] {
-  cursor: none !important;
-}
+/* Hide cursor on all interactive elements - Desktop only */
+@media (hover: hover) and (pointer: fine) {
+  button,
+  a,
+  input,
+  textarea,
+  select,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div[data-cursor] {
+    cursor: none !important;
+  }
 
-/* Ensure smooth cursor transitions */
-* {
-  cursor: none !important;
+  /* Ensure smooth cursor transitions */
+  * {
+    cursor: none !important;
+  }
 }
 
 /* Add smooth transitions for hover effects */

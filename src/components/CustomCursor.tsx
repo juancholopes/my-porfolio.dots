@@ -2,11 +2,18 @@ import React from "react";
 import { motion } from "motion/react";
 import { useCursor } from "../hooks/useCursor";
 import { useTheme } from "next-themes";
+import { useDesktopDevice } from "../hooks/useDesktopDevice";
 
 const CustomCursor: React.FC = () => {
   const { mousePosition, cursorVariant, textHeight } = useCursor();
   const { theme } = useTheme();
   const isDark = theme === "dark";
+  const isDesktop = useDesktopDevice();
+
+  // Don't render cursor on mobile/tablet devices
+  if (!isDesktop) {
+    return null;
+  }
 
   return (
     <>
