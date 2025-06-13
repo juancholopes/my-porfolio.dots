@@ -37,7 +37,9 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3 sm:space-x-4">
               <a
-                href="#"
+                href="https://github.com/juanchopi37"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-1.5 sm:p-2 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-all duration-300 group"
               >
                 <Github
@@ -46,7 +48,9 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/juan-carlos-lopez-moreno-9a29b0299/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-1.5 sm:p-2 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-all duration-300 group"
               >
                 <Linkedin
@@ -54,15 +58,37 @@ const Footer = () => {
                   className="text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform duration-200 sm:w-5 sm:h-5"
                 />
               </a>
-              <a
-                href="#"
+              <button
+                onClick={async () => {
+                  try {
+                    await navigator.clipboard.writeText(
+                      "juancarloslopezmoreno@proton.me",
+                    );
+                  } catch (err) {
+                    const textArea = document.createElement("textarea");
+                    textArea.value = "juancarloslopezmoreno@proton.me";
+                    textArea.style.position = "fixed";
+                    textArea.style.left = "-999999px";
+                    textArea.style.top = "-999999px";
+                    textArea.style.opacity = "0";
+                    textArea.style.pointerEvents = "none";
+                    textArea.setAttribute("readonly", "");
+                    textArea.setAttribute("tabindex", "-1");
+                    textArea.setAttribute("aria-hidden", "true");
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    textArea.setSelectionRange(0, 99999);
+                    document.execCommand("copy");
+                    document.body.removeChild(textArea);
+                  }
+                }}
                 className="p-1.5 sm:p-2 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-all duration-300 group"
               >
                 <Mail
                   size={18}
                   className="text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform duration-200 sm:w-5 sm:h-5"
                 />
-              </a>
+              </button>
             </div>
           </div>
 

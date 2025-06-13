@@ -16,7 +16,7 @@ const Projects = () => {
         "Responsive Design",
       ],
       github: "https://github.com/juanchopi37/vet-care-frontend",
-      demo: "#",
+      demo: "https://vet-care-frontend.netlify.app",
       image: "/projects/vet-pet-frontend.webp",
     },
     {
@@ -24,7 +24,7 @@ const Projects = () => {
       descriptionKey: "projects.vetCareBackend.description",
       technologies: ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
       github: "https://github.com/juanchopi37/vet-care-backend",
-      demo: "#",
+      demo: "https://github.com/juanchopi37/vet-care-backend#api-documentation",
       image: "/projects/vet-pet-backend.webp",
     },
     {
@@ -37,7 +37,7 @@ const Projects = () => {
         "Responsive Design",
       ],
       github: "https://github.com/juanchopi37/my-porfolio.dots",
-      demo: "#",
+      demo: "https://juancarloslopezmoreno.netlify.app",
       image: "/projects/portafolio-personal.webp",
     },
   ];
@@ -130,6 +130,8 @@ const Projects = () => {
                 <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
                     data-cursor="text"
                   >
@@ -138,6 +140,8 @@ const Projects = () => {
                   </a>
                   <a
                     href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
                     data-cursor="text"
                   >
