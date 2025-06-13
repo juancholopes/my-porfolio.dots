@@ -17,6 +17,7 @@ const App = () => (
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
+      storageKey="portfolio-theme"
     >
       <TooltipProvider>
         <CustomCursor />

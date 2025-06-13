@@ -85,5 +85,10 @@
     "sendEmail": "Send email",
     "contactMe": "Contact me",
     "getInTouch": "Get in touch"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   }
 }

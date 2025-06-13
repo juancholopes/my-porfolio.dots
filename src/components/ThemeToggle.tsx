@@ -1,6 +1,7 @@
 import React from "react";
 import { Moon, Sun, Monitor } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -11,6 +12,7 @@ import {
 
 const ThemeToggle = () => {
   const { setTheme, theme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <DropdownMenu>
@@ -31,24 +33,36 @@ const ThemeToggle = () => {
       >
         <DropdownMenuItem
           onClick={() => setTheme("light")}
-          className="hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer text-foreground"
+          className={`hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer transition-colors duration-200 ${
+            theme === "light"
+              ? "text-blue-500 dark:text-blue-400 bg-blue-500/10"
+              : "text-foreground"
+          }`}
         >
           <Sun className="mr-2 h-4 w-4" />
-          <span>Claro</span>
+          <span>{t("theme.light")}</span>
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
-          className="hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer text-foreground"
+          className={`hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer transition-colors duration-200 ${
+            theme === "dark"
+              ? "text-blue-500 dark:text-blue-400 bg-blue-500/10"
+              : "text-foreground"
+          }`}
         >
           <Moon className="mr-2 h-4 w-4" />
-          <span>Oscuro</span>
+          <span>{t("theme.dark")}</span>
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
-          className="hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer text-foreground"
+          className={`hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer transition-colors duration-200 ${
+            theme === "system"
+              ? "text-blue-500 dark:text-blue-400 bg-blue-500/10"
+              : "text-foreground"
+          }`}
         >
           <Monitor className="mr-2 h-4 w-4" />
-          <span>Sistema</span>
+          <span>{t("theme.system")}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

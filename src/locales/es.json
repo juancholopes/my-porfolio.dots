@@ -86,5 +86,10 @@
     "sendEmail": "Enviar email",
     "contactMe": "Contáctame",
     "getInTouch": "Ponte en contacto"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
   }
 }
