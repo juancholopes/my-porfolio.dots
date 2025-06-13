@@ -4,7 +4,8 @@
     "projects": "Projects",
     "stack": "Stack",
     "contact": "Contact",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "language": "Language"
   },
   "hero": {
     "greeting": "Hello, I'm",

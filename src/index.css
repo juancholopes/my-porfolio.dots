@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 @font-face {
-    font-family: 'oddvalsemibold';
-    src: url('/fonts/oddval-semibold-webfont.woff2') format('woff2'),
-         url('/fonts/oddval-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "oddvalsemibold";
+  src:
+    url("/fonts/oddval-semibold-webfont.woff2") format("woff2"),
+    url("/fonts/oddval-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @tailwind base;
@@ -94,15 +95,6 @@
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-<<<<<<< HEAD
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-    --bg-main: 15 23 42;
-    --text-main: 241 245 249;
-    --card-bg: 30 41 59;
-=======
     --sidebar-accent: 217 33% 17%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217 33% 17%;
@@ -111,7 +103,9 @@
     --zed-blue: 221 83% 53%;
     --zed-dark: 222 84% 5%;
     --zed-gray: 215 20% 65%;
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
+    --bg-main: 15 23 42;
+    --text-main: 241 245 249;
+    --card-bg: 30 41 59;
   }
 }
 
@@ -128,9 +122,6 @@
   }
 
   body {
-<<<<<<< HEAD
-    @apply bg-background text-foreground font-mono transition-colors;
-=======
     @apply bg-background text-foreground;
     font-family:
       "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
@@ -139,28 +130,27 @@
       background-color 0.3s ease,
       color 0.3s ease;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'oddvalsemibold', sans-serif !important;
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "oddvalsemibold", sans-serif !important;
   }
 }
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .dark .grid-pattern {
   background-image:
-<<<<<<< HEAD
-    linear-gradient(rgba(59, 130, 246, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.2) 1px, transparent 1px);
-=======
     linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
     linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
 }
 
 .zed-glow {

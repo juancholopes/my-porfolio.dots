@@ -1,13 +1,13 @@
-import React from 'react';
-import { Moon, Sun, Monitor } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { Moon, Sun, Monitor } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from "@/components/ui/dropdown-menu";
 
 const ThemeToggle = () => {
   const { setTheme, theme } = useTheme();
@@ -15,8 +15,8 @@ const ThemeToggle = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           size="icon"
           className="border-blue-500/30 bg-background/50 backdrop-blur-sm hover:bg-muted hover:border-blue-500/50 transition-all duration-300"
         >
@@ -25,25 +25,25 @@ const ThemeToggle = () => {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent 
+      <DropdownMenuContent
         align="end"
         className="border-blue-500/30 bg-background/90 backdrop-blur-sm"
       >
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme("light")}
           className="hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer text-foreground"
         >
           <Sun className="mr-2 h-4 w-4" />
           <span>Claro</span>
         </DropdownMenuItem>
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme("dark")}
           className="hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer text-foreground"
         >
           <Moon className="mr-2 h-4 w-4" />
           <span>Oscuro</span>
         </DropdownMenuItem>
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme("system")}
           className="hover:bg-blue-500/20 focus:bg-blue-500/20 cursor-pointer text-foreground"
         >

@@ -21,81 +21,92 @@ const AboutMe = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4" data-cursor="text">
-          <span className="text-blue-500 dark:text-blue-400" data-cursor="text">{t('about.title')}</span>
-        </h2>
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4"
+            data-cursor="text"
+          >
+            <span
+              className="text-blue-500 dark:text-blue-400"
+              data-cursor="text"
+            >
+              {t("about.title")}
+            </span>
+          </h2>
           <div className="w-16 sm:w-20 lg:w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
 
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-bold mb-6 text-foreground">
-              {t('about.subtitle')}
-            </h3>
-            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              {t('about.description')}
-            </p>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-=======
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-foreground" data-cursor="text">
-              {t('about.subtitle')}
+            <h3
+              className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-foreground"
+              data-cursor="text"
+            >
+              {t("about.subtitle")}
             </h3>
-            <p className="text-slate-600 dark:text-gray-300 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed" data-cursor="text">
-              {t('about.description')}
+            <p
+              className="text-slate-600 dark:text-gray-300 text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed"
+              data-cursor="text"
+            >
+              {t("about.description")}
             </p>
-            <p className="text-slate-600 dark:text-gray-300 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed" data-cursor="text">
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
-              {t('about.journey')}
+            <p
+              className="text-slate-600 dark:text-gray-300 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed"
+              data-cursor="text"
+            >
+              {t("about.journey")}
             </p>
 
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-center space-x-3 sm:space-x-4">
                 <div className="p-1.5 sm:p-2 bg-blue-500/20 rounded-lg flex-shrink-0">
-                  <User size={16} className="text-blue-500 dark:text-blue-400 sm:w-5 sm:h-5" />
+                  <User
+                    size={16}
+                    className="text-blue-500 dark:text-blue-400 sm:w-5 sm:h-5"
+                  />
                 </div>
-<<<<<<< HEAD
-                <span className="text-muted-foreground">{t('about.agile')}</span>
-=======
-                <span className="text-slate-600 dark:text-gray-300 text-sm sm:text-base" data-cursor="text">{t('about.agile')}</span>
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
-              </div>
-              <div className="flex items-center space-x-3 sm:space-x-4">
-                <div className="p-1.5 sm:p-2 bg-blue-500/20 rounded-lg flex-shrink-0">
-                  <Target size={16} className="text-blue-500 dark:text-blue-400 sm:w-5 sm:h-5" />
-                </div>
-<<<<<<< HEAD
-                <span className="text-muted-foreground">
-=======
-                <span className="text-slate-600 dark:text-gray-300 text-sm sm:text-base" data-cursor="text">
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
-                  {t('about.cleanCode')}
+                <span
+                  className="text-slate-600 dark:text-gray-300 text-sm sm:text-base"
+                  data-cursor="text"
+                >
+                  {t("about.agile")}
                 </span>
               </div>
               <div className="flex items-center space-x-3 sm:space-x-4">
                 <div className="p-1.5 sm:p-2 bg-blue-500/20 rounded-lg flex-shrink-0">
-                  <Zap size={16} className="text-blue-500 dark:text-blue-400 sm:w-5 sm:h-5" />
+                  <Target
+                    size={16}
+                    className="text-blue-500 dark:text-blue-400 sm:w-5 sm:h-5"
+                  />
                 </div>
-<<<<<<< HEAD
-                <span className="text-muted-foreground">
-=======
-                <span className="text-slate-600 dark:text-gray-300 text-sm sm:text-base" data-cursor="text">
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
-                  {t('about.learning')}
+                <span
+                  className="text-slate-600 dark:text-gray-300 text-sm sm:text-base"
+                  data-cursor="text"
+                >
+                  {t("about.cleanCode")}
+                </span>
+              </div>
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="p-1.5 sm:p-2 bg-blue-500/20 rounded-lg flex-shrink-0">
+                  <Zap
+                    size={16}
+                    className="text-blue-500 dark:text-blue-400 sm:w-5 sm:h-5"
+                  />
+                </div>
+                <span
+                  className="text-slate-600 dark:text-gray-300 text-sm sm:text-base"
+                  data-cursor="text"
+                >
+                  {t("about.learning")}
                 </span>
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="relative">
-            <div className="w-full h-96 border border-blue-500/30 rounded-lg p-6 bg-card/50 backdrop-blur-sm">
-=======
           <div className="relative order-1 lg:order-2">
-            <div className="w-full h-64 sm:h-80 lg:h-96 border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image" data-cursor="image">
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
+            <div
+              className="w-full h-64 sm:h-80 lg:h-96 border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image"
+              data-cursor="image"
+            >
               <div className="flex justify-center items-center h-full">
                 <Carousel
                   opts={{
@@ -103,7 +114,7 @@ const AboutMe = () => {
                   }}
                   className="w-full max-w-xs sm:max-w-sm"
                 >
-                  <CarouselContent className="flex direction-row justify-center   ">
+                  <CarouselContent className="flex direction-row justify-center">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <CarouselItem
                         key={index}
@@ -111,8 +122,8 @@ const AboutMe = () => {
                       >
                         <div className="p-1">
                           <Card>
-                            <CardContent className="flex aspect-square  justify-end p-6">
-                              <span className="text-3xl  font-semibold">
+                            <CardContent className="flex aspect-square justify-center items-center p-6">
+                              <span className="text-3xl font-semibold">
                                 {index + 1}
                               </span>
                             </CardContent>
@@ -123,7 +134,7 @@ const AboutMe = () => {
                   </CarouselContent>
                   <CarouselPrevious />
                   <CarouselNext />
-                </Carousel>{" "}
+                </Carousel>
               </div>
             </div>
 

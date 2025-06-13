@@ -1,10 +1,40 @@
-import React from "react";
-import { Code2, Github, Linkedin, Mail } from "lucide-react";
+import React, { useState } from "react";
+import { Code2, Github, Linkedin, Mail, Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const { t } = useTranslation();
-  
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = async () => {
+    const email = "juancarloslopezmoreno@proton.me";
+    try {
+      await navigator.clipboard.writeText(email);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch (err) {
+      const textArea = document.createElement("textarea");
+      textArea.value = email;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      textArea.style.top = "-999999px";
+      textArea.style.opacity = "0";
+      textArea.style.pointerEvents = "none";
+      textArea.setAttribute("readonly", "");
+      textArea.setAttribute("tabindex", "-1");
+      textArea.setAttribute("aria-hidden", "true");
+
+      document.body.appendChild(textArea);
+      textArea.select();
+      textArea.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Grid background */}
@@ -24,24 +54,28 @@ const Hero = () => {
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="float-animation">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-foreground">{t('hero.greeting')}</span>
-=======
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6" data-cursor="text">
-            <span className="text-foreground" data-cursor="text">{t('hero.greeting')}</span>
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
+            data-cursor="text"
+          >
+            <span className="text-foreground" data-cursor="text">
+              {t("hero.greeting")}
+            </span>
             <br />
-            <span className="text-blue-500 dark:text-blue-400 inline-block" data-cursor="text">{t('hero.name')}</span>
+            <span
+              className="text-blue-500 dark:text-blue-400 inline-block"
+              data-cursor="text"
+            >
+              {t("hero.name")}
+            </span>
           </h1>
         </div>
 
-<<<<<<< HEAD
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-=======
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2 sm:px-0" data-cursor="text">
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
-          {t('hero.subtitle')}
+        <p
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2 sm:px-0"
+          data-cursor="text"
+        >
+          {t("hero.subtitle")}
         </p>
 
         <div className="flex justify-center space-x-4 sm:space-x-6 mb-6 sm:mb-8">
@@ -50,35 +84,48 @@ const Hero = () => {
             className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
             data-cursor="text"
           >
-            <Github size={20} className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6" />
+            <Github
+              size={20}
+              className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/juan-carlos-lopez-moreno-9a29b0299/"
             className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
             data-cursor="text"
           >
-            <Linkedin size={20} className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6" />
+            <Linkedin
+              size={20}
+              className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+            />
           </a>
-          <a
-            href="mailto:juancarloslopezmoreno@proton.me"
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
+          <button
+            onClick={copyEmail}
+            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow relative"
             data-cursor="text"
+            title={emailCopied ? t("common.copied") : t("common.copyEmail")}
           >
-            <Mail size={20} className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6" />
-          </a>
+            {emailCopied ? (
+              <Check
+                size={20}
+                className="text-green-400 sm:w-6 sm:h-6 animate-pulse"
+              />
+            ) : (
+              <Mail
+                size={20}
+                className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+              />
+            )}
+          </button>
         </div>
 
         <a
           href="#about"
-<<<<<<< HEAD
-          className="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-primary-foreground transition-all duration-300 rounded-lg zed-glow"
-=======
           className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 border border-blue-500 text-blue-500 dark:text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-lg zed-glow text-sm sm:text-base"
           data-cursor="text"
->>>>>>> a1e8df674923eb5af543656546a64d6e343f08e9
         >
           <Code2 className="mr-2" size={16} />
-          <span className="sm:inline">{t('hero.exploreWork')}</span>
+          <span className="sm:inline">{t("hero.exploreWork")}</span>
         </a>
       </div>
     </section>

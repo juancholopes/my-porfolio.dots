@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export type CursorVariant = 'default' | 'text' | 'image';
+export type CursorVariant = 'default' | 'text' | 'image' | 'hover';
 
 interface CursorPosition {
   x: number;
@@ -24,7 +24,7 @@ export const useCursor = () => {
 
   const handleMouseOver = useCallback((e: MouseEvent) => {
     const target = e.target as HTMLElement;
-    
+
     // Check cursor data attribute first
     const cursorType = target.getAttribute('data-cursor');
     if (cursorType === 'image') {
@@ -50,17 +50,22 @@ export const useCursor = () => {
       return;
     }
 
-    // Check if hovering over buttons first (exclude from text effect)
+    // Check if hovering over buttons and links (use hover variant for larger cursor)
     if (
       target.tagName === 'BUTTON' ||
       target.closest('button') ||
-      target.role === 'button'
+      target.role === 'button' ||
+      target.tagName === 'A' ||
+      target.closest('a') ||
+      (target as HTMLAnchorElement).href ||
+      target.getAttribute('href') ||
+      target.classList.contains('cursor-link')
     ) {
-      setCursorVariant('default');
+      setCursorVariant('hover');
       return;
     }
 
-    // Check if hovering over text elements and links (excluding buttons)
+    // Check if hovering over text elements (excluding buttons and links)
     if (
       target.tagName === 'H1' ||
       target.tagName === 'H2' ||
@@ -70,9 +75,7 @@ export const useCursor = () => {
       target.tagName === 'H6' ||
       target.tagName === 'P' ||
       target.tagName === 'SPAN' ||
-      target.tagName === 'A' ||
       target.tagName === 'LI' ||
-      target.closest('a') ||
       target.classList.contains('cursor-text')
     ) {
       // Get text height for adaptive cursor
