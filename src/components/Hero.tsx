@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Code2, Github, Linkedin, Mail, Check } from "lucide-react";
+import { Code2, Github, Linkedin, Mail, Check, Download } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [emailCopied, setEmailCopied] = useState(false);
+  const [showEmailTooltip, setShowEmailTooltip] = useState(false);
+  const [showDownloadTooltip, setShowDownloadTooltip] = useState(false);
 
   const copyEmail = async () => {
     const email = "juancarloslopezmoreno@proton.me";
@@ -33,6 +35,17 @@ const Hero = () => {
       setEmailCopied(true);
       setTimeout(() => setEmailCopied(false), 2000);
     }
+  };
+
+  const downloadCV = () => {
+    const isSpanish = i18n.language === "es";
+    const cvFileName = isSpanish ? "CV-ES.pdf" : "CV-EN.pdf";
+    const link = document.createElement("a");
+    link.href = `/files/${cvFileName}`;
+    link.download = cvFileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -105,9 +118,10 @@ const Hero = () => {
           </a>
           <button
             onClick={copyEmail}
+            onMouseEnter={() => setShowEmailTooltip(true)}
+            onMouseLeave={() => setShowEmailTooltip(false)}
             className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow relative"
             data-cursor="text"
-            title={emailCopied ? t("common.copied") : t("common.copyEmail")}
           >
             {emailCopied ? (
               <Check
@@ -121,6 +135,17 @@ const Hero = () => {
               />
             )}
 
+            {/* Tooltip hover */}
+            {showEmailTooltip && !emailCopied && (
+              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-slate-900/95 backdrop-blur-sm text-white text-sm rounded-lg border border-blue-500/30 whitespace-nowrap z-20 animate-fade-in">
+                <span>{t("common.copyEmail")}</span>
+                {/* Flecha del tooltip */}
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                  <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900/95"></div>
+                </div>
+              </div>
+            )}
+
             {/* Tooltip de confirmación */}
             {emailCopied && (
               <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-slate-900/95 backdrop-blur-sm text-white text-sm rounded-lg border border-blue-500/30 whitespace-nowrap z-20 animate-fade-in">
@@ -128,6 +153,29 @@ const Hero = () => {
                   <Check size={14} className="text-green-400" />
                   <span className="text-green-400">{t("common.copied")}</span>
                 </span>
+                {/* Flecha del tooltip */}
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                  <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900/95"></div>
+                </div>
+              </div>
+            )}
+          </button>
+          <button
+            onClick={downloadCV}
+            onMouseEnter={() => setShowDownloadTooltip(true)}
+            onMouseLeave={() => setShowDownloadTooltip(false)}
+            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow relative"
+            data-cursor="text"
+          >
+            <Download
+              size={20}
+              className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+            />
+
+            {/* Tooltip hover */}
+            {showDownloadTooltip && (
+              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-slate-900/95 backdrop-blur-sm text-white text-sm rounded-lg border border-blue-500/30 whitespace-nowrap z-20 animate-fade-in">
+                <span>{t("common.downloadCV")}</span>
                 {/* Flecha del tooltip */}
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2">
                   <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900/95"></div>
