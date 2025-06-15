@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/juanchopi37/my-porfolio.dots/graphs/commit-activity)
+<img src="./src/assets/preview.png" alt="preview" />
 
 </div>
 
