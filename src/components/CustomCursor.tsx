@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { useCursor } from "../hooks/useCursor";
 import { useTheme } from "next-themes";
@@ -10,6 +10,19 @@ const CustomCursor: React.FC = () => {
   const isDark = theme === "dark";
   const isDesktop = useDesktopDevice();
 
+  // Add CSS class to hide default cursor when custom cursor is active
+  useEffect(() => {
+    if (isDesktop) {
+      document.body.classList.add('custom-cursor-enabled');
+      return () => {
+        document.body.classList.remove('custom-cursor-enabled');
+      };
+    }
+  }, [isDesktop]);
+
+  // Debug: Log para verificar si se está renderizando
+  console.log('CustomCursor render - isDesktop:', isDesktop, 'mousePosition:', mousePosition, 'cursorVariant:', cursorVariant);
+
   // Don't render cursor on mobile/tablet devices
   if (!isDesktop) {
     return null;
@@ -18,7 +31,7 @@ const CustomCursor: React.FC = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-normal"
+        className="fixed top-0 left-0 pointer-events-none z-[999] mix-blend-normal"
         animate={{
           x:
             mousePosition.x -
@@ -41,16 +54,12 @@ const CustomCursor: React.FC = () => {
         }}
         transition={{
           type: "spring",
-          stiffness: 800,
-          damping: 35,
-          mass: 0.08,
+          stiffness: 500,
+          damping: 28,
+          mass: 0.5,
         }}
         style={{
-          fontFamily:
-            'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace',
-          fontWeight: "600",
-          letterSpacing: "0.5px",
-          textShadow: "0 0 8px rgba(59, 130, 246, 0.5)",
+          willChange: "transform",
         }}
       >
         <motion.div
@@ -84,53 +93,46 @@ const CustomCursor: React.FC = () => {
                   ? "rgba(15, 23, 42, 0.9)"
                   : cursorVariant === "hover"
                     ? "rgba(59, 130, 246, 0.3)"
-                    : "rgba(59, 130, 246, 0.2)",
+                    : "rgba(59, 130, 246, 0.8)",
             border:
               cursorVariant === "text"
                 ? "none"
                 : cursorVariant === "image"
-                  ? "1px solid rgba(59, 130, 246, 0.9)"
+                  ? "2px solid rgba(59, 130, 246, 0.9)"
                   : cursorVariant === "hover"
                     ? "2px solid rgba(59, 130, 246, 1)"
-                    : "3px solid rgba(59, 130, 246, 1)",
-            backdropFilter:
-              cursorVariant === "text"
-                ? "none"
-                : cursorVariant === "image"
-                  ? "blur(16px)"
-                  : "blur(15px)",
+                    : "2px solid rgba(59, 130, 246, 1)",
             boxShadow:
               cursorVariant === "text"
-                ? "0 0 8px rgba(59, 130, 246, 0.4)"
+                ? "0 0 8px rgba(59, 130, 246, 0.6)"
                 : cursorVariant === "image"
-                  ? "0 0 20px rgba(59, 130, 246, 0.6), inset 0 0 8px rgba(59, 130, 246, 0.2)"
+                  ? "0 0 20px rgba(59, 130, 246, 0.6)"
                   : cursorVariant === "hover"
-                    ? "0 0 30px rgba(59, 130, 246, 0.8), inset 0 0 20px rgba(59, 130, 246, 0.3)"
-                    : "0 0 25px rgba(59, 130, 246, 0.6), inset 0 0 15px rgba(59, 130, 246, 0.2)",
+                    ? "0 0 25px rgba(59, 130, 246, 0.8)"
+                    : "0 0 15px rgba(59, 130, 246, 0.6)",
             fontSize: cursorVariant === "image" ? "11px" : "0px",
             color:
               cursorVariant === "image"
                 ? "rgba(147, 197, 253, 1)"
-                : "rgba(147, 197, 253, 0)",
+                : "transparent",
             display: cursorVariant === "image" ? "flex" : "block",
             alignItems: cursorVariant === "image" ? "center" : "flex-start",
             justifyContent: cursorVariant === "image" ? "center" : "flex-start",
             padding: cursorVariant === "image" ? "4px 8px" : "0px",
             opacity: 1,
           }}
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-          }}
-          exit={{
-            opacity: 0,
-            scale: 0.8,
-          }}
           transition={{
             type: "spring",
-            stiffness: 400,
-            damping: 25,
-            mass: 0.5,
+            stiffness: 300,
+            damping: 20,
+            mass: 0.8,
+          }}
+          style={{
+            fontFamily: cursorVariant === "image" 
+              ? 'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace'
+              : "inherit",
+            fontWeight: cursorVariant === "image" ? "600" : "normal",
+            letterSpacing: cursorVariant === "image" ? "0.5px" : "normal",
           }}
         >
           {cursorVariant === "image" && "image"}

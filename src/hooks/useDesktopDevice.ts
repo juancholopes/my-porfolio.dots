@@ -17,8 +17,21 @@ export const useDesktopDevice = () => {
       // Check if it's a touch device
       const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-      // Consider it desktop if it has hover AND fine pointer AND is not primarily touch
-      const desktopDevice = hasHover && hasPointer && isLargeScreen && !isTouchDevice;
+      // Firefox-specific detection: be less restrictive
+      const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+      
+      // Consider it desktop if it has hover AND fine pointer AND large screen
+      // For Firefox, we're more lenient with touch detection
+      const desktopDevice = hasHover && hasPointer && isLargeScreen && (isFirefox || !isTouchDevice);
+
+      console.log('Desktop detection:', {
+        hasHover,
+        hasPointer,
+        isLargeScreen,
+        isTouchDevice,
+        isFirefox,
+        desktopDevice
+      });
 
       setIsDesktop(desktopDevice);
     };

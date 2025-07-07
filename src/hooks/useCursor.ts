@@ -16,6 +16,22 @@ export const useCursor = () => {
   const [textHeight, setTextHeight] = useState<number>(16);
   const [isDesktop, setIsDesktop] = useState(false);
 
+  useEffect(() => {
+    const checkIsDesktop = () => {
+      const hasHover = window.matchMedia('(hover: hover)').matches;
+      const hasPointer = window.matchMedia('(pointer: fine)').matches;
+      const isLargeScreen = window.innerWidth >= 1024;
+      setIsDesktop(hasHover && hasPointer && isLargeScreen);
+    };
+
+    checkIsDesktop();
+    window.addEventListener('resize', checkIsDesktop);
+
+    return () => {
+      window.removeEventListener('resize', checkIsDesktop);
+    };
+  }, []);
+
   const updateMousePosition = useCallback((e: MouseEvent) => {
     setMousePosition({
       x: e.clientX,
@@ -90,41 +106,28 @@ export const useCursor = () => {
     setCursorVariant('default');
   }, []);
 
-
-
   useEffect(() => {
-    // Check if it's a desktop device
-    const checkIsDesktop = () => {
-      const hasHover = window.matchMedia('(hover: hover)').matches;
-      const hasPointer = window.matchMedia('(pointer: fine)').matches;
-      const isLargeScreen = window.innerWidth >= 1024;
-      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (!isDesktop) return;
 
-      return hasHover && hasPointer && isLargeScreen && !isTouchDevice;
+    const onMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
     };
 
-    const desktopDevice = checkIsDesktop();
-    setIsDesktop(desktopDevice);
-
-    // Only add event listeners on desktop devices
-    if (desktopDevice) {
-      window.addEventListener('mousemove', updateMousePosition);
-      document.addEventListener('mouseover', handleMouseOver);
-    }
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
     return () => {
-      if (desktopDevice) {
-        window.removeEventListener('mousemove', updateMousePosition);
-        document.removeEventListener('mouseover', handleMouseOver);
-      }
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseover', handleMouseOver);
     };
-  }, [updateMousePosition, handleMouseOver]);
+  }, [isDesktop, handleMouseOver]);
 
   return {
     mousePosition,
     cursorVariant,
-    setCursorVariant,
     textHeight,
-    isDesktop,
   };
 };

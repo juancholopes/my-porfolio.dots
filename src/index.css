@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
+/* Firefox-specific cursor fix */
+@-moz-document url-prefix() {
+  * {
+    cursor: none !important;
+  }
+  
+  body {
+    cursor: none !important;
+  }
+}
+
+/* General cursor hide for custom cursor */
+body.custom-cursor-enabled * {
+  cursor: none !important;
+}
+
+body.custom-cursor-enabled {
+  cursor: none !important;
+}
+
 @font-face {
   font-family: "oddvalsemibold";
   src:
