@@ -13,15 +13,12 @@ const CustomCursor: React.FC = () => {
   // Add CSS class to hide default cursor when custom cursor is active
   useEffect(() => {
     if (isDesktop) {
-      document.body.classList.add('custom-cursor-enabled');
+      document.body.classList.add("custom-cursor-enabled");
       return () => {
-        document.body.classList.remove('custom-cursor-enabled');
+        document.body.classList.remove("custom-cursor-enabled");
       };
     }
   }, [isDesktop]);
-
-  // Debug: Log para verificar si se está renderizando
-  console.log('CustomCursor render - isDesktop:', isDesktop, 'mousePosition:', mousePosition, 'cursorVariant:', cursorVariant);
 
   // Don't render cursor on mobile/tablet devices
   if (!isDesktop) {
@@ -128,9 +125,10 @@ const CustomCursor: React.FC = () => {
             mass: 0.8,
           }}
           style={{
-            fontFamily: cursorVariant === "image" 
-              ? 'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace'
-              : "inherit",
+            fontFamily:
+              cursorVariant === "image"
+                ? 'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace'
+                : "inherit",
             fontWeight: cursorVariant === "image" ? "600" : "normal",
             letterSpacing: cursorVariant === "image" ? "0.5px" : "normal",
           }}
