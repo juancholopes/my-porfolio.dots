@@ -32,7 +32,6 @@ const AboutMe = () => {
               {t("about.title")}
             </span>
           </h2>
-          <div className="w-16 sm:w-20 lg:w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">

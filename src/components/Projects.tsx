@@ -63,7 +63,6 @@ const Projects = () => {
               {t("projects.title")}
             </span>
           </h2>
-          <div className="w-16 sm:w-20 lg:w-24 h-1 bg-blue-500 mx-auto mb-4 sm:mb-6"></div>
           <p
             className="text-slate-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0"
             data-cursor="text"

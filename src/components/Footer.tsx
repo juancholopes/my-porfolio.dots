@@ -124,7 +124,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 text-slate-600 dark:text-gray-300 text-center sm:text-left">
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <span className="text-sm sm:text-base">
-                  © {currentYear} {t("footer.portfolio")}.{" "}
+                  {currentYear} {t("footer.portfolio")}.{" "}
                   {t("footer.madeWith")}
                 </span>
                 <Heart
