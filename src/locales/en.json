@@ -45,6 +45,10 @@
     "portfolio": {
       "title": "Personal Portfolio",
       "description": "Developed my web portfolio created primarily to showcase my work, deployed on Netlify, built with a predefined color palette and minimalist design using React, TypeScript and TailwindCSS."
+    }, 
+    "api-auth": {
+      "title": "Authentication API",
+      "description": "A simple login and registration API built with Express.js in JavaScript, using PostgreSQL as the database, JWT for authentication, middleware for request validation, and additional supporting features."
     }
   },
   "stack": {

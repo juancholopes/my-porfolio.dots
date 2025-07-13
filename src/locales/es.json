@@ -1,92 +1,95 @@
 {
   "navbar": {
-    "about": "Sobre Mí",
-    "projects": "Proyectos",
-    "stack": "Stack",
-    "contact": "Contacto",
-    "portfolio": "Portfolio",
+    "about": "Quién Soy",
+    "projects": "Mis Creaciones",
+    "stack": "Mi Arsenal",
+    "contact": "Hablemos",
+    "portfolio": "Portafolio",
     "language": "Idioma"
   },
   "hero": {
-    "greeting": "Hola, soy",
-    "name": "Juan Carlos",
-    "subtitle": "Desarrollador Full Stack creando soluciones innovadoras con tecnologías modernas",
-    "exploreWork": "Explora Mi Trabajo"
+    "greeting": "¡Qué tal Soy",
+    "name": "Juan Carlos!",
+    "subtitle": "Convierto ideas en código en soluciones digitales. Explora mi universo de desarrollo.",
+    "exploreWork": "Descubre Mis Proyectos"
   },
   "about": {
-    "title": "Sobre Mí",
-    "subtitle": "Desarrollador Apasionado y Solucionador de Problemas",
-    "description": "Soy un desarrollador full stack especializado en JavaScript, TypeScript y Python, con un enfoque particular en crear interfaces accesibles y usables. Tengo experiencia desarrollando aplicaciones web modernas con React, Express.js y bases de datos relacionales.",
-    "journey": "Mi pasión por el desarrollo de software se centra en la implementación de clean architecture y código limpio. Busco constantemente aprender nuevas tecnologías como Inteligencia Artificial, DevOps y Ciberseguridad, mientras automatizo tareas con scripts en Bash y Python.",
-    "agile": "Metodologías Ágiles y Trabajo en Equipo",
-    "cleanCode": "Código Limpio y Arquitectura Limpia",
-    "learning": "Enfoque en UX/UI y Automatización",
-    "interests": "Mis Intereses",
+    "title": "Un Poco Sobre Mí",
+    "subtitle": "Más que un dev, un artesano digital",
+    "description": "Me muevo como pez en el agua con JavaScript, TypeScript y Python. Mi misión es construir aplicaciones web que no solo funcionen de maravilla, sino que también sean un placer de usar. Desde el frontend con React hasta el backend con Express.js, me encargo de todo el ciclo.",
+    "journey": "Soy un firme creyente del código limpio y la arquitectura sólida. Siempre estoy explorando nuevos horizontes como la IA, DevOps y Ciberseguridad. Además, si algo se puede automatizar con un script de Bash o Python, ¡lo haré!",
+    "agile": "Fan de las Metodologías Ágiles",
+    "cleanCode": "Código Limpio como Filosofía",
+    "learning": "Enfocado en UX/UI y Automatización",
+    "interests": "Lo que me Mueve",
     "aiDevOps": "Inteligencia Artificial y DevOps",
     "uxDesign": "Diseño de Experiencias de Usuario",
     "automation": "Automatización y Ciberseguridad"
   },
   "projects": {
-    "title": "Proyectos",
-    "subtitle": "Aquí están algunos de los proyectos en los que he trabajado, mostrando mis habilidades en varias tecnologías y frameworks.",
+    "title": "Mis Creaciones",
+    "subtitle": "Una muestra de los proyectos donde he dejado mi huella digital. ¡Echa un vistazo!",
     "viewProject": "Ver Proyecto",
-    "liveDemo": "Demo en Vivo",
-    "sourceCode": "Código Fuente",
+    "liveDemo": "Ver Demo",
+    "sourceCode": "Ver Código",
     "code": "Código",
     "demo": "Demo",
     "vetCareFrontend": {
       "title": "Vet-Care Frontend",
-      "description": "Desarrollé la interfaz de usuario para gestión de citas veterinarias, incluyendo dashboards para usuarios y veterinarios, con React y Tailwind CSS."
+      "description": "Le di vida a la interfaz para una app de citas veterinarias. Creé dashboards intuitivos para usuarios y veterinarios usando React y Tailwind CSS."
     },
     "vetCareBackend": {
       "title": "Vet-Care Backend",
-      "description": "Implementé la API RESTful para la lógica de negocio y gestión de datos con MySQL, además de la implementación con Node.js, Express, Sequelize y seguridad JWT."
+      "description": "Construí el cerebro de la app con una API RESTful usando Node.js, Express y Sequelize. La seguridad la blindé con JWT."
     },
     "portfolio": {
-      "title": "Portafolio Personal",
-      "description": "Desarrollé mi portafolio web creado principalmente para darme a conocer, desplegado en Netlify, construido con una paleta de colores predefinida y diseño minimalista usando React, TypeScript y TailwindCSS."
+      "title": "Este Portafolio",
+      "description": "Mi rincón personal en la web. Un proyecto hecho con React, TypeScript y TailwindCSS para mostrar lo que hago. ¡Espero que te guste!"
+    },
+    "api-auth": {
+      "title": "API de Autenticación",
+      "description": "Una API simple de login y registro usando PosgreSQL como base de datos, JWT, Middlewares de autenticación y demas, construida con Express.js en Javascript"
     }
   },
   "stack": {
-    "title": "Mi Stack Tecnológico",
-    "subtitle": "Tecnologías y herramientas que uso para dar vida a las ideas. Siempre aprendiendo y adaptándome a nuevas tecnologías.",
+    "title": "Mi Arsenal Tecnológico",
+    "subtitle": "Las herramientas que uso para construir cosas increíbles. Siempre listo para aprender algo nuevo.",
     "frontend": "Frontend",
     "backend": "Backend",
-    "database": "Base de Datos",
-    "softSkills": "Habilidades Blandas & Metodologías",
+    "database": "Bases de Datos",
+    "softSkills": "Habilidades Blandas y Metodologías",
     "design": "Diseño",
     "tools": "Herramientas",
-    "continuousLearning": "Aprendizaje Continuo",
-    "learningDescription": "El mundo tecnológico evoluciona rápidamente, y estoy comprometido a mantenerme actualizado con las últimas tendencias, mejores prácticas y tecnologías emergentes. Regularmente exploro nuevos frameworks, asisto a conferencias tecnológicas y contribuyo a proyectos de código abierto para mejorar mis habilidades y retribuir a la comunidad."
+    "continuousLearning": "Siempre Aprendiendo",
+    "learningDescription": "El mundo tech no para, y yo tampoco. Me encanta explorar nuevas tecnologías, asistir a eventos y colaborar en proyectos open-source para seguir creciendo y aportar mi granito de arena a la comunidad."
   },
   "footer": {
-    "rights": "Todos los derechos reservados",
+    "rights": "Hecho con ❤️ por Juan Carlos",
     "madeWith": "Hecho con",
     "contact": "Contacto",
-    "portfolio": "Portfolio",
-    "description": "Creando soluciones digitales innovadoras con pasión y precisión. Construyamos algo increíble juntos.",
-    "quickLinks": "Enlaces Rápidos",
-    "aboutMe": "Sobre Mí",
-    "projects": "Proyectos",
-    "techStack": "Stack Tecnológico",
-    "getInTouch": "Ponte en Contacto",
-
-    "availability": "Disponible para trabajo freelance y oportunidades de colaboración.",
-    "workTogether": "Trabajemos Juntos",
+    "portfolio": "Portafolio",
+    "description": "Creando soluciones digitales con pasión y píxeles. ¿Construimos algo genial juntos?",
+    "quickLinks": "Atajos",
+    "aboutMe": "Quién Soy",
+    "projects": "Mis Creaciones",
+    "techStack": "Mi Arsenal",
+    "getInTouch": "Hablemos",
+    "availability": "Abierto a propuestas freelance y colaboraciones. ¡Dispara!",
+    "workTogether": "¿Hacemos equipo?",
     "builtWith": "Construido con React y TypeScript",
     "styledWith": "Estilizado con Tailwind CSS",
-    "coffeeMessage": "y mucho café."
+    "coffeeMessage": "y mucho ☕."
   },
   "common": {
     "loading": "Cargando...",
-    "error": "Error",
-    "success": "Éxito",
-    "copyEmail": "Copiar email",
-    "copied": "¡Copiado!",
-    "sendEmail": "Enviar email",
+    "error": "¡Ups! Algo salió mal",
+    "success": "¡Genial!",
+    "copyEmail": "Copiar mi email",
+    "copied": "¡Email copiado!",
+    "sendEmail": "Enviar un email",
     "contactMe": "Contáctame",
     "getInTouch": "Ponte en contacto",
-    "downloadCV": "Descargar CV"
+    "downloadCV": "Descargar mi CV"
   },
   "theme": {
     "light": "Claro",

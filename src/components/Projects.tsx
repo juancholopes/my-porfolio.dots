@@ -40,6 +40,20 @@ const Projects = () => {
       demo: "https://juancarloslopezmoreno.netlify.app",
       image: "/projects/portafolio-personal.webp",
     },
+    {
+      titleKey: "projects.api-auth.title",
+      descriptionKey: "projects.api-auth.description",
+      technologies: [
+        "PostgreSQL",
+        "JavaScript",
+        "JWT",
+        "Sequelize",
+        "REST API"
+      ],
+      github: "https://github.com/juanchopi37/my-porfolio.dots",
+      demo: "https://juancarloslopezmoreno.netlify.app",
+      image: "/projects/portafolio-personal.webp",
+    },
   ];
 
   return (
