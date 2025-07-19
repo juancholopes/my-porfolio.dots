@@ -41,7 +41,7 @@ const CopyEmailButton: React.FC<CopyEmailButtonProps> = ({
       requestAnimationFrame(() => {
         try {
           textArea.select();
-          textArea.setSelectionRange(0, 99999); // Para móviles
+          textArea.setSelectionRange(0, 99999); // Selección completa en dispositivos móviles
           document.execCommand("copy");
           setIsAnimating(true);
           setCopied(true);

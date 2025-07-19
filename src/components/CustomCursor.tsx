@@ -10,7 +10,7 @@ const CustomCursor: React.FC = () => {
   const isDark = theme === "dark";
   const isDesktop = useDesktopDevice();
 
-  // Add CSS class to hide default cursor when custom cursor is active
+  // Agregar clase CSS para ocultar el cursor predeterminado cuando el cursor personalizado está activo
   useEffect(() => {
     if (isDesktop) {
       document.body.classList.add("custom-cursor-enabled");
@@ -20,7 +20,7 @@ const CustomCursor: React.FC = () => {
     }
   }, [isDesktop]);
 
-  // Don't render cursor on mobile/tablet devices
+  // No renderizar cursor en dispositivos móviles/tablet
   if (!isDesktop) {
     return null;
   }

@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { lazy, Suspense } from "react";
 import CustomCursor from "./components/CustomCursor";
 
-// Lazy loading para páginas
+// Carga diferida de componentes de página
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 

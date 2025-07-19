@@ -42,7 +42,7 @@ export const useCursor = () => {
   const handleMouseOver = useCallback((e: MouseEvent) => {
     const target = e.target as HTMLElement;
 
-    // Check cursor data attribute first
+    // Verificación de atributo data-cursor
     const cursorType = target.getAttribute('data-cursor');
     if (cursorType === 'image') {
       setCursorVariant('image');
@@ -56,7 +56,7 @@ export const useCursor = () => {
       return;
     }
 
-    // Check if hovering over images
+    // Verificación de elementos de imagen
     if (
       target.tagName === 'IMG' ||
       target.classList.contains('project-image') ||
@@ -67,7 +67,7 @@ export const useCursor = () => {
       return;
     }
 
-    // Check if hovering over buttons and links (use hover variant for larger cursor)
+    // Verificación de botones y enlaces (cursor hover para mayor tamaño)
     if (
       target.tagName === 'BUTTON' ||
       target.closest('button') ||
@@ -82,7 +82,7 @@ export const useCursor = () => {
       return;
     }
 
-    // Check if hovering over text elements (excluding buttons and links)
+    // Verificación de elementos de texto (excluyendo botones y enlaces)
     if (
       target.tagName === 'H1' ||
       target.tagName === 'H2' ||
@@ -95,7 +95,7 @@ export const useCursor = () => {
       target.tagName === 'LI' ||
       target.classList.contains('cursor-text')
     ) {
-      // Get text height for adaptive cursor
+      // Obtención de altura de texto para cursor adaptativo
       const computedStyle = window.getComputedStyle(target);
       const fontSize = parseFloat(computedStyle.fontSize);
       setTextHeight(fontSize * 1.2);

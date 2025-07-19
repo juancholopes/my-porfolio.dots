@@ -3,6 +3,7 @@
     "about": "Quién Soy",
     "projects": "Mis Creaciones",
     "stack": "Mi Arsenal",
+    "certificates": "Certificados",
     "contact": "Hablemos",
     "portfolio": "Portafolio",
     "language": "Idioma"
@@ -62,6 +63,36 @@
     "tools": "Herramientas",
     "continuousLearning": "Siempre Aprendiendo",
     "learningDescription": "El mundo tech no para, y yo tampoco. Me encanta explorar nuevas tecnologías, asistir a eventos y colaborar en proyectos open-source para seguir creciendo y aportar mi granito de arena a la comunidad."
+  },
+  "certificates": {
+    "title": "Certificaciones & Logros",
+    "subtitle": "Mi camino de aprendizaje continuo respaldado por certificaciones de las mejores plataformas.",
+    "viewCertificate": "Ver Certificado",
+    "issuedBy": "Emitido por",
+    "microsoftAzure": {
+      "title": "Azure Fundamentals",
+      "description": "Fundamentos de la nube de Microsoft Azure, servicios principales y arquitectura."
+    },
+    "googleCloud": {
+      "title": "Google Cloud Digital Leader",
+      "description": "Liderazgo digital en la nube de Google, transformación digital y estrategia cloud."
+    },
+    "awsCloudPractitioner": {
+      "title": "AWS Cloud Practitioner",
+      "description": "Conceptos fundamentales de Amazon Web Services y mejores prácticas de cloud."
+    },
+    "ibmDataScience": {
+      "title": "IBM Data Science Professional",
+      "description": "Ciencia de datos profesional con Python, machine learning y análisis estadístico."
+    },
+    "platziJavaScript": {
+      "title": "Escuela de JavaScript",
+      "description": "Desarrollo frontend moderno con JavaScript, frameworks y mejores prácticas."
+    },
+    "minticProgramming": {
+      "title": "Programación MinTIC",
+      "description": "Certificación en programación y desarrollo de software del Ministerio de las TIC."
+    }
   },
   "footer": {
     "rights": "Hecho con ❤️ por Juan Carlos",

@@ -19,7 +19,7 @@ const LanguageSelector = () => {
     i18n.changeLanguage(langCode);
   };
 
-  // Get the display text based on current language
+  // Obtener el texto de visualización según el idioma actual
   const getDisplayText = () => {
     return i18n.language === "es" ? "Idioma" : "Language";
   };

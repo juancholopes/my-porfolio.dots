@@ -3,6 +3,7 @@
     "about": "About Me",
     "projects": "Projects",
     "stack": "Stack",
+    "certificates": "Certificates",
     "contact": "Contact",
     "portfolio": "Portfolio",
     "language": "Language"
@@ -62,6 +63,36 @@
     "tools": "Tools",
     "continuousLearning": "Continuous Learning",
     "learningDescription": "The tech world evolves rapidly, and I'm committed to staying updated with the latest trends, best practices, and emerging technologies. I regularly explore new frameworks, attend tech conferences, and contribute to open-source projects to enhance my skills and give back to the community."
+  },
+  "certificates": {
+    "title": "Certifications & Achievements",
+    "subtitle": "My continuous learning journey backed by certifications from the best platforms.",
+    "viewCertificate": "View Certificate",
+    "issuedBy": "Issued by",
+    "microsoftAzure": {
+      "title": "Azure Fundamentals",
+      "description": "Microsoft Azure cloud fundamentals, core services and architecture."
+    },
+    "googleCloud": {
+      "title": "Google Cloud Digital Leader",
+      "description": "Digital leadership in Google cloud, digital transformation and cloud strategy."
+    },
+    "awsCloudPractitioner": {
+      "title": "AWS Cloud Practitioner",
+      "description": "Fundamental concepts of Amazon Web Services and cloud best practices."
+    },
+    "ibmDataScience": {
+      "title": "IBM Data Science Professional",
+      "description": "Professional data science with Python, machine learning and statistical analysis."
+    },
+    "platziJavaScript": {
+      "title": "JavaScript School",
+      "description": "Modern frontend development with JavaScript, frameworks and best practices."
+    },
+    "minticProgramming": {
+      "title": "MinTIC Programming",
+      "description": "Programming and software development certification from the Ministry of ICT."
+    }
   },
   "footer": {
     "rights": "All rights reserved",

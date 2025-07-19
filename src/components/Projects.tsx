@@ -1,60 +1,10 @@
 import React from "react";
 import { Github, ExternalLink, Code } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import projectsData from "../data/projects.json";
 
 const Projects = () => {
   const { t } = useTranslation();
-
-  const projects = [
-    {
-      titleKey: "projects.vetCareFrontend.title",
-      descriptionKey: "projects.vetCareFrontend.description",
-      technologies: [
-        "React",
-        "Tailwind CSS",
-        "JavaScript",
-        "Responsive Design",
-      ],
-      github: "https://github.com/juanchopi37/vet-care-frontend",
-      demo: "https://vet-care-frontend.netlify.app",
-      image: "/projects/vet-pet-frontend.webp",
-    },
-    {
-      titleKey: "projects.vetCareBackend.title",
-      descriptionKey: "projects.vetCareBackend.description",
-      technologies: ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
-      github: "https://github.com/juanchopi37/vet-care-backend",
-      demo: "https://github.com/juanchopi37/vet-care-backend#api-documentation",
-      image: "/projects/vet-pet-backend.webp",
-    },
-    {
-      titleKey: "projects.portfolio.title",
-      descriptionKey: "projects.portfolio.description",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Responsive Design",
-      ],
-      github: "https://github.com/juanchopi37/my-porfolio.dots",
-      demo: "https://juancarloslopezmoreno.netlify.app",
-      image: "/projects/portafolio-personal.webp",
-    },
-    {
-      titleKey: "projects.api-auth.title",
-      descriptionKey: "projects.api-auth.description",
-      technologies: [
-        "PostgreSQL",
-        "JavaScript",
-        "JWT",
-        "Sequelize",
-        "REST API"
-      ],
-      github: "https://github.com/juanchopi37/my-porfolio.dots",
-      demo: "https://juancarloslopezmoreno.netlify.app",
-      image: "/projects/portafolio-personal.webp",
-    },
-  ];
 
   return (
     <section id="projects" className="py-12 sm:py-16 lg:py-20 relative">
@@ -86,17 +36,17 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {projects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <div key={index} className="group relative">
               <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full">
-                {/* Project image */}
-                <div className="h-40 sm:h-48 rounded-lg mb-4 sm:mb-6 relative overflow-hidden bg-muted project-image">
+                {/* Imagen del proyecto */}
+                <div className="aspect-video w-full rounded-lg mb-4 sm:mb-6 relative overflow-hidden bg-muted project-image">
                   <img
                     src={project.image}
                     alt={t(project.titleKey)}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 project-image"
                     onError={(e) => {
-                      // Fallback to gradient placeholder if image fails to load
+                      // Imagen de respaldo en caso de error de carga
                       e.currentTarget.style.display = "none";
                       e.currentTarget.parentElement!.classList.add(
                         "bg-gradient-to-br",

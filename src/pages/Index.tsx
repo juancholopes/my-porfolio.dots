@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import Stack from "../components/Stack";
+import Certificates from "../components/Certificates";
 import Footer from "../components/Footer";
 import { useThemeSystem } from "../hooks/useThemeSystem";
 
@@ -17,6 +18,7 @@ const Index = () => {
       <AboutMe />
       <Projects />
       <Stack />
+      <Certificates />
       <Footer />
     </div>
   );

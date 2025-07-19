@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: t("navbar.about"), href: "#about" },
     { name: t("navbar.projects"), href: "#projects" },
     { name: t("navbar.stack"), href: "#stack" },
+    { name: t("navbar.certificates"), href: "#certificates" },
     { name: t("navbar.contact"), href: "#contact" },
   ];
 

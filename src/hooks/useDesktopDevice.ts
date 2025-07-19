@@ -5,23 +5,23 @@ export const useDesktopDevice = () => {
 
   useEffect(() => {
     const checkIsDesktop = () => {
-      // Check if device has hover capability (desktop/laptop)
+      // Verificación de capacidad hover (desktop/laptop)
       const hasHover = window.matchMedia('(hover: hover)').matches;
 
-      // Check if device has a pointer device (mouse)
+      // Verificación de dispositivo puntero (mouse)
       const hasPointer = window.matchMedia('(pointer: fine)').matches;
 
-      // Check screen width (fallback)
+      // Verificación de ancho de pantalla (fallback)
       const isLargeScreen = window.innerWidth >= 1024;
 
-      // Check if it's a touch device
+      // Verificación de dispositivo táctil
       const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-      // Firefox-specific detection: be less restrictive
+      // Detección específica para Firefox: menos restrictiva
       const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
       
-      // Consider it desktop if it has hover AND fine pointer AND large screen
-      // For Firefox, we're more lenient with touch detection
+      // Consideración de dispositivo desktop si tiene hover Y pointer fino Y pantalla grande
+      // Para Firefox, se es más tolerante con detección táctil
       const desktopDevice = hasHover && hasPointer && isLargeScreen && (isFirefox || !isTouchDevice);
 
       console.log('Desktop detection:', {
@@ -36,18 +36,19 @@ export const useDesktopDevice = () => {
       setIsDesktop(desktopDevice);
     };
 
-    // Initial check
+    // Verificación inicial
     checkIsDesktop();
 
-    // Listen for changes in media queries
+    // Escucha de cambios en media queries
     const hoverQuery = window.matchMedia('(hover: hover)');
     const pointerQuery = window.matchMedia('(pointer: fine)');
 
+    // Función de manejo de cambios en media queries
     const handleChange = () => {
       checkIsDesktop();
     };
 
-    // Add event listeners
+    // Configuración de event listeners
     hoverQuery.addEventListener('change', handleChange);
     pointerQuery.addEventListener('change', handleChange);
     window.addEventListener('resize', handleChange);

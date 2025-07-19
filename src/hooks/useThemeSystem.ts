@@ -5,30 +5,30 @@ export const useThemeSystem = () => {
   const { theme, setTheme, systemTheme } = useTheme();
 
   useEffect(() => {
-    // Verificar si es la primera visita (no hay tema guardado en localStorage)
+    // Verificación de primera visita sin tema guardado
     const storedTheme = localStorage.getItem('portfolio-theme');
 
     if (!storedTheme || storedTheme === 'undefined' || storedTheme === 'null') {
-      // Primera visita: establecer tema como 'system'
+      // Primera visita: establecer tema del sistema
       setTheme('system');
     }
   }, [setTheme]);
 
   useEffect(() => {
-    // Asegurar que el tema del sistema se aplique correctamente
+    // Aplicación correcta del tema del sistema
     if (theme === 'system') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
       const handleChange = () => {
-        // Forzar re-renderizado cuando cambie la preferencia del sistema
+        // Re-renderizado al cambiar preferencia del sistema
         const currentTheme = mediaQuery.matches ? 'dark' : 'light';
         document.documentElement.className = currentTheme;
       };
 
-      // Aplicar tema inicial del sistema
+      // Aplicación inicial del tema del sistema
       handleChange();
 
-      // Escuchar cambios en la preferencia del sistema
+      // Escucha de cambios en preferencias del sistema
       mediaQuery.addEventListener('change', handleChange);
 
       return () => {
