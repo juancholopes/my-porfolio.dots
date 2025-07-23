@@ -47,25 +47,25 @@ Personal portfolio developed with a minimalist and modern approach, designed to 
 
 ```
 my-porfolio.dots/
-├── 📁 public/                 # Static assets
-│   ├── 📁 projects/          # Project Images
-│   └── 📄 CV-Juan.pdf        # Curriculum Vitae
+├── 📁 public/                       # Static assets
+│   ├── 📁 projects/                 # Project Images
+│   └── 📄 CV-Juan.pdf               # Curriculum Vitae
 ├── 📁 src/
-│   ├── 📁 components/        # React Components
-│   │   ├── 🎨 CustomCursor.tsx    # Custom Cursor
-│   │   ├── 🏠 Hero.tsx            # Hero Section
-│   │   ├── 👤 AboutMe.tsx         # About me Section
-│   │   ├── 🚀 Projects.tsx        # Projects Section 
-│   │   └── 🛠️ Stack.tsx           # Tech Stack Section
-│   ├── 📁 hooks/            # Custom hooks
-│   │   └── 🖱️ useCursor.ts        # Cursor Logic
-│   ├── 📁 locales/          # Translation Files
-│   │   ├── 🇪🇸 es.json           # Spanish
-│   │   └── 🇺🇸 en.json           # English
-│   └── 📁 pages/            # Main pages
-├── 📄 tailwind.config.ts    # Tailwind configuration
-├── 📄 vite.config.ts        # Vite configuration
-└── 📄 package.json          # Project depnedencies
+│   ├── 📁 components/               # React Components
+│   │   ├── 🎨 CustomCursor.tsx      # Custom Cursor
+│   │   ├── 🏠 Hero.tsx              # Hero Section
+│   │   ├── 👤 AboutMe.tsx           # About me Section
+│   │   ├── 🚀 Projects.tsx          # Projects Section 
+│   │   └── 🛠️ Stack.tsx             # Tech Stack Section
+│   ├── 📁 hooks/                    # Custom hooks
+│   │   └── 🖱️ useCursor.ts          # Cursor Logic
+│   ├── 📁 locales/                  # Translation Files
+│   │   ├── 🇪🇸 es.json                # Spanish
+│   │   └── 🇺🇸 en.json                # English
+│   └── 📁 pages/                    # Main pages
+├── 📄 tailwind.config.ts            # Tailwind configuration
+├── 📄 vite.config.ts                # Vite configuration
+└── 📄 package.json                  # Project depnedencies
 
 ```
 
