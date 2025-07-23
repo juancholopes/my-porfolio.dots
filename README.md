@@ -1,3 +1,6 @@
+
+<img src="./src/assets/preview.png" alt="preview" />
+
 # 💼 Personal Portfolio
 
 ## 🎯 About the Project
