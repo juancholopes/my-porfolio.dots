@@ -2,9 +2,9 @@
 <img src="./src/assets/preview.png" alt="preview" />
 
 # 💼 Personal Portfolio
-<div center>
+
   [![Netlify Status](https://api.netlify.com/api/v1/badges/70865c9b-4210-4a2c-8f50-fb43af754549/deploy-status)](https://app.netlify.com/projects/juancarloslopezmoreno/deploys)
-</div>
+
 
 ## 🎯 About the Project
 
@@ -89,4 +89,5 @@ my-porfolio.dots/
 <div align="center">
   <p>⭐ If you like it, give it a star</p>
 </div>
+
 
