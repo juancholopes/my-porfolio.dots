@@ -1,49 +1,5 @@
 [
   {
-    "id": "microsoft-azure-fundamentals",
-    "titleKey": "certificates.microsoftAzure.title",
-    "descriptionKey": "certificates.microsoftAzure.description",
-    "issuer": "Microsoft",
-    "date": "2024/03",
-    "credentialUrl": "https://www.credly.com/badges/your-azure-badge",
-    "skills": ["Azure", "Cloud Computing", "Microsoft Azure"],
-    "icon": "microsoft",
-    "color": "blue"
-  },
-  {
-    "id": "google-cloud-digital-leader",
-    "titleKey": "certificates.googleCloud.title",
-    "descriptionKey": "certificates.googleCloud.description",
-    "issuer": "Google",
-    "date": "2024/06",
-    "credentialUrl": "https://www.credential.net/your-google-credential",
-    "skills": ["Google Cloud", "Cloud Architecture", "GCP"],
-    "icon": "google",
-    "color": "red"
-  },
-  {
-    "id": "aws-cloud-practitioner",
-    "titleKey": "certificates.awsCloudPractitioner.title",
-    "descriptionKey": "certificates.awsCloudPractitioner.description",
-    "issuer": "Amazon Web Services",
-    "date": "2024/09",
-    "credentialUrl": "https://www.credly.com/badges/your-aws-badge",
-    "skills": ["AWS", "Cloud Computing", "Amazon Web Services"],
-    "icon": "aws",
-    "color": "orange"
-  },
-  {
-    "id": "ibm-data-science",
-    "titleKey": "certificates.ibmDataScience.title",
-    "descriptionKey": "certificates.ibmDataScience.description",
-    "issuer": "IBM",
-    "date": "2023/11",
-    "credentialUrl": "https://www.coursera.org/account/accomplishments/specialization/your-ibm-cert",
-    "skills": ["Data Science", "Python", "Machine Learning"],
-    "icon": "ibm",
-    "color": "blue"
-  },
-  {
     "id": "platzi-javascript",
     "titleKey": "certificates.platziJavaScript.title",
     "descriptionKey": "certificates.platziJavaScript.description",
@@ -51,18 +7,7 @@
     "date": "2023/08",
     "credentialUrl": "https://platzi.com/p/your-username/curso/your-course/diploma/",
     "skills": ["JavaScript", "Frontend Development", "Web Development"],
-    "icon": "platzi",
+    "icon": "data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UGxhdHppPC90aXRsZT48cGF0aCBkPSJN...ZSIvPjwvc3ZnPg==",
     "color": "green"
-  },
-  {
-    "id": "mintic-programming",
-    "titleKey": "certificates.minticProgramming.title",
-    "descriptionKey": "certificates.minticProgramming.description",
-    "issuer": "Ministerio de las TIC - Colombia",
-    "date": "2023/05",
-    "credentialUrl": "https://example.com/mintic-certificate",
-    "skills": ["Programming", "Software Development", "Digital Skills"],
-    "icon": "mintic",
-    "color": "blue"
   }
 ]

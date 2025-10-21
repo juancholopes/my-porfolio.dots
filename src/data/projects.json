@@ -15,13 +15,7 @@
   {
     "titleKey": "projects.vetCareBackend.title",
     "descriptionKey": "projects.vetCareBackend.description",
-    "technologies": [
-      "Node.js",
-      "Express.js",
-      "MySQL",
-      "Sequelize",
-      "JWT"
-    ],
+    "technologies": ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
     "github": "https://github.com/juanchopi37/vet-care-backend",
     "demo": "https://github.com/juanchopi37/vet-care-backend#api-documentation",
     "image": "/projects/vet-pet-backend.webp"
