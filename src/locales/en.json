@@ -50,6 +50,10 @@
     "api-auth": {
       "title": "Authentication API",
       "description": "A simple login and registration API built with Express.js in JavaScript, using PostgreSQL as the database, JWT for authentication, middleware for request validation, and additional supporting features."
+    },
+    "dragonBall": {
+      "title": "Dragon Ball API",
+      "description": "A web application that displays information about Dragon Ball characters using an external API. Built with React, JavaScript and Tailwind CSS, featuring a responsive design and interactive user interface."
     }
   },
   "stack": {

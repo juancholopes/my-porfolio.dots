@@ -8,7 +8,7 @@
       "JavaScript",
       "Responsive Design"
     ],
-    "github": "https://github.com/juanchopi37/vet-care-frontend",
+    "github": "https://github.com/juancholopes/vet-care-frontend",
     "demo": "https://vet-care-frontend.netlify.app",
     "image": "/projects/vet-pet-frontend.webp"
   },
@@ -16,8 +16,8 @@
     "titleKey": "projects.vetCareBackend.title",
     "descriptionKey": "projects.vetCareBackend.description",
     "technologies": ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
-    "github": "https://github.com/juanchopi37/vet-care-backend",
-    "demo": "https://github.com/juanchopi37/vet-care-backend#api-documentation",
+    "github": "https://github.com/juancholopes/vet-care-backend",
+    "demo": "https://github.com/juancholopes/vet-care-backend#api-documentation",
     "image": "/projects/vet-pet-backend.webp"
   },
   {
@@ -29,7 +29,7 @@
       "Tailwind CSS",
       "Responsive Design"
     ],
-    "github": "https://github.com/juanchopi37/my-porfolio.dots",
+    "github": "https://github.com/juancholopes/my-porfolio.dots",
     "demo": "https://juancarloslopezmoreno.netlify.app",
     "image": "/projects/portafolio-personal.webp"
   },
@@ -43,8 +43,20 @@
       "Sequelize",
       "REST API"
     ],
-    "github": "https://github.com/juanchopi37/my-porfolio.dots",
+    "github": "https://github.com/juancholopes/my-porfolio.dots",
     "demo": "https://juancarloslopezmoreno.netlify.app",
     "image": "/projects/portafolio-personal.webp"
+  },
+  {
+    "titleKey": "projects.dragonBall.title",
+    "descriptionKey": "projects.dragonBall.description",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Tailwind CSS"
+    ],
+    "github": "https://github.com/juancholopes/dragon-ball",
+    "demo": "https://reactdragonball.netlify.app/",
+    "image": "/projects/dragon-ball-api.webp"
   }
 ]
