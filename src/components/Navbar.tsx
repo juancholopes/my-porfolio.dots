@@ -26,7 +26,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="flex justify-center items-start  md:block">
             <div className="ml-6 lg:ml-10 flex items-baseline space-x-4 lg:space-x-8">
               {navItems.map((item) => (
                 <a

@@ -15,10 +15,6 @@ const AboutMe = () => {
     <section id="about" className="py-12 sm:py-16 lg:py-20 relative">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-6 left-4 sm:top-10 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 border border-blue-500/30 rotate-45 hidden sm:block"></div>
-      <div className="absolute bottom-6 right-4 sm:bottom-10 sm:right-10 w-10 h-10 sm:w-16 sm:h-16 border border-blue-500/30 rotate-12 hidden sm:block"></div>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2
@@ -136,10 +132,6 @@ const AboutMe = () => {
                 </Carousel>
               </div>
             </div>
-
-            {/* Floating elements */}
-            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 border border-blue-500/50 rotate-45 hidden sm:block"></div>
-            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-4 h-4 sm:w-6 sm:h-6 bg-blue-500/30 rotate-12 hidden sm:block"></div>
           </div>
         </div>
       </div>

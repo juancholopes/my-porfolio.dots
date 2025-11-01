@@ -90,10 +90,6 @@ const Stack = () => {
     <section id="stack" className="py-12 sm:py-16 lg:py-20 relative">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-6 right-8 sm:top-10 sm:right-20 w-16 h-16 sm:w-24 sm:h-24 border border-blue-500/20 rounded-full hidden sm:block"></div>
-      <div className="absolute bottom-10 left-8 sm:bottom-20 sm:left-20 w-12 h-12 sm:w-16 sm:h-16 border border-blue-500/30 rotate-45 hidden sm:block"></div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2
@@ -159,9 +155,6 @@ const Stack = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Floating decoration */}
-              <div className="absolute -top-2 -right-2 w-3 h-3 sm:w-4 sm:h-4 border border-blue-500/50 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block"></div>
             </div>
           ))}
         </div>

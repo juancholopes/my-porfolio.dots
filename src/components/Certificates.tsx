@@ -81,10 +81,6 @@ const Certificates = () => {
     <section id="certificates" className="py-12 sm:py-16 lg:py-20 relative">
       <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
-      {/* Decorative lines */}
-      <div className="absolute top-20 right-0 w-16 sm:w-32 h-0.5 bg-gradient-to-l from-blue-500 to-transparent hidden sm:block"></div>
-      <div className="absolute bottom-20 left-0 w-24 sm:w-48 h-0.5 bg-gradient-to-r from-blue-500 to-transparent hidden sm:block"></div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2

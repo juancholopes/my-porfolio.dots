@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Code2, Github, Linkedin, Mail, Check, Download } from "lucide-react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import { Github, Linkedin, Mail, Check, Download, Code2 } from "lucide-react";
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const [emailCopied, setEmailCopied] = useState(false);
@@ -52,18 +51,6 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Grid background */}
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
-
-      {/* Animated lines */}
-      <div className="absolute inset-0 hidden sm:block">
-        <div className="absolute top-20 left-4 sm:left-10 w-16 sm:w-32 h-0.5 bg-gradient-to-r from-blue-500 to-transparent"></div>
-        <div className="absolute top-40 right-8 sm:right-20 w-24 sm:w-48 h-0.5 bg-gradient-to-l from-blue-500 to-transparent"></div>
-        <div className="absolute bottom-40 left-8 sm:left-20 w-32 sm:w-64 h-0.5 bg-gradient-to-r from-blue-500 to-transparent"></div>
-        <div className="absolute bottom-20 right-4 sm:right-10 w-20 sm:w-40 h-0.5 bg-gradient-to-l from-blue-500 to-transparent"></div>
-
-        {/* Vertical lines */}
-        <div className="absolute left-16 sm:left-32 top-20 w-0.5 h-12 sm:h-24 bg-gradient-to-b from-blue-500 to-transparent"></div>
-        <div className="absolute right-16 sm:right-32 bottom-20 w-0.5 h-16 sm:h-32 bg-gradient-to-t from-blue-500 to-transparent"></div>
-      </div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="float-animation">

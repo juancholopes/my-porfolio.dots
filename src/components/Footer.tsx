@@ -15,10 +15,6 @@ const Footer = () => {
     >
       <div className="absolute inset-0 grid-pattern opacity-10"></div>
 
-      {/* Decorative lines */}
-      <div className="absolute top-0 left-1/4 w-32 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
-      <div className="absolute top-0 right-1/4 w-48 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12">
           {/* Brand section */}
@@ -37,7 +33,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3 sm:space-x-4">
               <a
-                href="https://github.com/juanchopi37"
+                href="https://github.com/juancholopes"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-1.5 sm:p-2 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-all duration-300 group"
@@ -124,8 +120,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 text-slate-600 dark:text-gray-300 text-center sm:text-left">
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <span className="text-sm sm:text-base">
-                  {currentYear} {t("footer.portfolio")}.{" "}
-                  {t("footer.madeWith")}
+                  {currentYear} {t("footer.portfolio")}. {t("footer.madeWith")}
                 </span>
                 <Heart
                   size={14}
@@ -145,10 +140,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute bottom-6 left-4 sm:bottom-10 sm:left-10 w-6 h-6 sm:w-8 sm:h-8 border border-blue-500/30 rotate-45 hidden sm:block"></div>
-      <div className="absolute bottom-6 right-4 sm:bottom-10 sm:right-10 w-4 h-4 sm:w-6 sm:h-6 bg-blue-500/20 rotate-12 hidden sm:block"></div>
     </footer>
   );
 };
