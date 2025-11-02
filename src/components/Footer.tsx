@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart, Code2 } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Code2, Coffee } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import CopyEmailButton from "./CopyEmailButton";
 import ContactButton from "./ContactButton";
