@@ -19,15 +19,24 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-blue-500/20">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16">
-          <div className="flex items-center">
-            <div className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-500 dark:text-blue-400">
-              {t("navbar.portfolio")}
-            </div>
+        <div className="flex items-center justify-start md:justify-center h-14 sm:h-16">
+          {/* Botón hamburguesa - solo visible en móvil, alineado a la izquierda */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 p-1.5 sm:p-2"
+            >
+              {isOpen ? (
+                <X size={20} className="sm:w-6 sm:h-6" />
+              ) : (
+                <Menu size={20} className="sm:w-6 sm:h-6" />
+              )}
+            </button>
           </div>
 
-          <div className="flex justify-center items-start  md:block">
-            <div className="ml-6 lg:ml-10 flex items-baseline space-x-4 lg:space-x-8">
+          {/* Menu Desktop - oculto en móvil, centrado */}
+          <div className="hidden md:flex md:items-center">
+            <div className="flex items-baseline space-x-4 lg:space-x-8 relative">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -42,19 +51,6 @@ const Navbar = () => {
               <LanguageSelector />
               <ThemeToggle />
             </div>
-          </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 p-1.5 sm:p-2"
-            >
-              {isOpen ? (
-                <X size={20} className="sm:w-6 sm:h-6" />
-              ) : (
-                <Menu size={20} className="sm:w-6 sm:h-6" />
-              )}
-            </button>
           </div>
         </div>
       </div>

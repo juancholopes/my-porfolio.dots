@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart, Code2 } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Code2, Coffee } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import CopyEmailButton from "./CopyEmailButton";
 import ContactButton from "./ContactButton";
@@ -129,6 +129,10 @@ const Footer = () => {
               <span className="text-sm sm:text-base">
                 {t("footer.coffeeMessage")}
               </span>
+                <Coffee
+                size={14}
+                className="text-blue-400 animate-pulse sm:m-4 sm:w-4 sm:h-4"
+                />
             </div>
 
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-xs sm:text-sm text-slate-500 dark:text-gray-400">

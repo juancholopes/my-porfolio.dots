@@ -113,7 +113,7 @@
     "workTogether": "Let's Work Together",
     "builtWith": "Built with React & TypeScript",
     "styledWith": "Styled with Tailwind CSS",
-    "coffeeMessage": "and lots of coffee."
+    "coffeeMessage": "and lots of coffee"
   },
   "common": {
     "loading": "Loading...",

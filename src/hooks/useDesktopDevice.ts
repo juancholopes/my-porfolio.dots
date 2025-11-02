@@ -22,16 +22,7 @@ export const useDesktopDevice = () => {
       
       // Consideración de dispositivo desktop si tiene hover Y pointer fino Y pantalla grande
       // Para Firefox, se es más tolerante con detección táctil
-      const desktopDevice = hasHover && hasPointer && isLargeScreen && (isFirefox || !isTouchDevice);
-
-      console.log('Desktop detection:', {
-        hasHover,
-        hasPointer,
-        isLargeScreen,
-        isTouchDevice,
-        isFirefox,
-        desktopDevice
-      });
+      const desktopDevice = hasHover && hasPointer && isLargeScreen && (isFirefox || !isTouchDevice)
 
       setIsDesktop(desktopDevice);
     };
