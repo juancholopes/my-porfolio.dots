@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLink, Award } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import certificatesData from "../data/certificates.json";
 
@@ -49,20 +49,16 @@ const CompanyIcons = {
   ),
   ibm: () => (
     <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-sm">
-      <svg viewBox="0 0 24 24" className="w-7 h-4 text-white">
-        <path
-          fill="currentColor"
-          d="M0 9.875h1.615v4.25H0zm2.155 0h1.616v4.25H2.155zm2.156 0h1.615v4.25H4.31zm2.156.54h1.615v3.17H6.466zm2.156-.54h1.615v4.25H8.622zm2.156 0h1.615v4.25h-1.615zm2.156 0h1.615v4.25h-1.615zm2.156.54h1.615v3.17h-1.615zm2.156-.54H24v4.25h-1.615zm-13.25.54h1.075v3.17h-1.075z"
-        />
-      </svg>
+      <span className="text-white font-bold text-xs tracking-tight">IBM</span>
     </div>
   ),
   platzi: () => (
-    <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center shadow-sm">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 text-white">
+    <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center shadow-sm p-1.5">
+      <svg viewBox="0 0 108 121.8" className="w-full h-full">
         <path
-          fill="currentColor"
-          d="M10.6389,1.9805 C9.40278,1.9805 8.41667,2.9889 8.41667,4.25 L8.41667,7.75 C8.41667,9.0111 9.40278,10.0195 10.6389,10.0195 L14.1667,10.0195 C15.4028,10.0195 16.3889,9.0111 16.3889,7.75 L16.3889,4.25 C16.3889,2.9889 15.4028,1.9805 14.1667,1.9805 L10.6389,1.9805 Z M9.80556,14.0195 C8.56944,14.0195 7.58333,15.0279 7.58333,16.289 L7.58333,19.789 C7.58333,21.0501 8.56944,22.0585 9.80556,22.0585 L13.3333,22.0585 C14.5694,22.0585 15.5556,21.0501 15.5556,19.789 L15.5556,16.289 C15.5556,15.0279 14.5694,14.0195 13.3333,14.0195 L9.80556,14.0195 Z"
+          fill="#ffffff"
+          d="M47.1,5.7L5.7,47.1c-7.6,7.6-7.6,20,0,27.6l41.4,41.4c7.6,7.6,20,7.6,27.6,0l13.8-13.8L74.7,88.5l-13.8,13.8
+          L19.5,60.9l41.4-41.4l27.6,27.6L60.9,74.7l13.8,13.8l27.6-27.6c7.6-7.6,7.6-20,0-27.6L74.7,5.7C67.1-1.9,54.7-1.9,47.1,5.7z"
         />
       </svg>
     </div>
@@ -104,14 +100,23 @@ const Certificates = () => {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {certificatesData.map((certificate) => (
-            <div key={certificate.id} className="group relative">
-              <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full">
+            <div key={certificate.id} className="group relative h-full">
+              <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full flex flex-col">
                 {/* Header with icon and title */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3 flex-1">
-                    {CompanyIcons[certificate.icon]?.() || (
-                      <Award className="w-10 h-10 text-blue-500" />
-                    )}
+                    {/* Company icon */}
+                    <div>
+                      {CompanyIcons[
+                        certificate.issuer.toLowerCase() as keyof typeof CompanyIcons
+                      ]?.() || (
+                        <img
+                          src={certificate.icon}
+                          alt={certificate.issuer}
+                          className="w-10 h-10"
+                        />
+                      )}
+                    </div>
                     <div className="flex-1">
                       <h3
                         className="text-lg sm:text-xl font-bold text-foreground group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight"
@@ -135,11 +140,11 @@ const Certificates = () => {
                 </p>
 
                 {/* Skills tags */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6 flex-grow">
                   {certificate.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-600 dark:text-blue-300 rounded-full text-xs sm:text-sm border border-blue-500/30"
+                      className="px-2 sm:px-3 py-1 bg-blue-500/20 text-blue-600 dark:text-blue-300 rounded-full text-xs sm:text-sm border border-blue-500/30 h-fit"
                       data-cursor="text"
                     >
                       {skill}
@@ -148,7 +153,7 @@ const Certificates = () => {
                 </div>
 
                 {/* Bottom section with button and date */}
-                <div className="flex items-end justify-between">
+                <div className="flex items-end justify-between gap-3 mt-auto">
                   {/* View certificate button */}
                   <a
                     href={certificate.credentialUrl}

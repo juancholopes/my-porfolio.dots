@@ -7,7 +7,40 @@
     "date": "2023/08",
     "credentialUrl": "https://platzi.com/p/cupinacop/curso/11059-gitgithub/diploma/detalle/",
     "skills": ["JavaScript", "Frontend Development", "Web Development"],
-    "icon": "platzi",
+    "icon": "/icons/platzi.svg",
     "color": "green"
+  },
+  {
+    "id": "ibm-cybersecurity",
+    "titleKey": "certificates.ibmCybersecurity.title",
+    "descriptionKey": "certificates.ibmCybersecurity.description",
+    "issuer": "IBM",
+    "date": "2025/07",
+    "credentialUrl": "https://www.credly.com/badges/bed6c707-70de-4c09-8e3b-84f4cedb79aa/linked_in_profile",
+    "skills": ["Cybersecurity", "Cryptography", "Security"],
+    "icon": "/icons/ibm.svg",
+    "color": "blue"
+  },
+  {
+    "id": "aws-devops",
+    "titleKey": "certificates.awsDevOps.title",
+    "descriptionKey": "certificates.awsDevOps.description",
+    "issuer": "AWS",
+    "date": "2025/07",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/YOUR_CREDENTIAL_ID",
+    "skills": ["DevOps", "CI/CD", "Agile Methodology", "Project Management"],
+    "icon": "/icons/aws.svg",
+    "color": "orange"
+  },
+  {
+    "id": "mintic-bootcamp",
+    "titleKey": "certificates.minticProgramming.title",
+    "descriptionKey": "certificates.minticProgramming.description",
+    "issuer": "MinTIC",
+    "date": "2023/12",
+    "credentialUrl": "https://app.certika.co/certificate/OTk0MTY",
+    "skills": ["JavaScript", "HTML", "CSS", "Python"],
+    "icon": "/icons/min-tic.svg",
+    "color": "yellow"
   }
 ]

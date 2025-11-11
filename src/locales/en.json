@@ -91,11 +91,19 @@
     },
     "platziJavaScript": {
       "title": "Git & GitHub",
-      "description": "Version control with Git and collaboration on projects using GitHub."
+      "description": "Master version control with Git and collaborative development using GitHub, including branching strategies, pull requests, code reviews, and team workflows for professional software development."
     },
     "minticProgramming": {
-      "title": "MinTIC Programming",
-      "description": "Programming and software development certification from the Ministry of ICT."
+      "title": "Basic Programming Bootcamp",
+      "description": "Comprehensive bootcamp covering programming fundamentals with JavaScript and Python, web development with HTML and CSS, and building real-world projects."
+    },
+    "ibmCybersecurity": {
+      "title": "Cybersecurity Fundamentals",
+      "description": "Foundational understanding of cybersecurity concepts including threat groups, attack types, cryptography, and organizational security strategies."
+    },
+    "awsDevOps": {
+      "title": "DevOps on AWS and Project Management",
+      "description": "Learn about project management use cases in business, understanding the differences between Agile and Waterfall methodologies, and implementing DevOps practices on AWS."
     }
   },
   "footer": {
