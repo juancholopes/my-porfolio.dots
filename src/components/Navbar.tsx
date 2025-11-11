@@ -57,13 +57,13 @@ const Navbar = () => {
 
       {/*Menu Mobile - visible solo en móvil */}
       {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-blue-500/20">
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-blue-500/20 #ff0000">
           <div className="px-3 pt-2 pb-3 space-y-1 sm:px-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 block px-3 py-2.5 text-base font-medium transition-colors duration-200"
+                className=" text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 block px-3 py-2.5 text-base font-medium transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
