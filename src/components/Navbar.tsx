@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* TODO : Menu Mobile - visible solo en móvil */}
+      {/*Menu Mobile - visible solo en móvil */}
       {isOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-blue-500/20">
           <div className="px-3 pt-2 pb-3 space-y-1 sm:px-4">
