@@ -5,9 +5,9 @@
     "descriptionKey": "certificates.platziJavaScript.description",
     "issuer": "Platzi",
     "date": "2023/08",
-    "credentialUrl": "https://platzi.com/p/your-username/curso/your-course/diploma/",
+    "credentialUrl": "https://platzi.com/p/cupinacop/curso/11059-gitgithub/diploma/detalle/",
     "skills": ["JavaScript", "Frontend Development", "Web Development"],
-    "icon": "data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UGxhdHppPC90aXRsZT48cGF0aCBkPSJN...ZSIvPjwvc3ZnPg==",
+    "icon": "platzi",
     "color": "green"
   }
 ]

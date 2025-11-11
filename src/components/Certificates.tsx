@@ -109,9 +109,9 @@ const Certificates = () => {
                 {/* Header with icon and title */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3 flex-1">
-                    {CompanyIcons[
-                      certificate.icon as keyof typeof CompanyIcons
-                    ]?.() || <Award className="w-8 h-8 text-blue-500" />}
+                    {CompanyIcons[certificate.icon]?.() || (
+                      <Award className="w-10 h-10 text-blue-500" />
+                    )}
                     <div className="flex-1">
                       <h3
                         className="text-lg sm:text-xl font-bold text-foreground group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight"
