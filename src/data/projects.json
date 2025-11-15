@@ -9,7 +9,7 @@
       "Responsive Design"
     ],
     "github": "https://github.com/juancholopes/vet-care-frontend",
-    "demo": "https://vet-care-frontend.netlify.app",
+    "demo": null,
     "image": "/projects/vet-pet-frontend.webp"
   },
   {
@@ -17,7 +17,7 @@
     "descriptionKey": "projects.vetCareBackend.description",
     "technologies": ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
     "github": "https://github.com/juancholopes/vet-care-backend",
-    "demo": "https://github.com/juancholopes/vet-care-backend#api-documentation",
+    "demo": null,
     "image": "/projects/vet-pet-backend.webp"
   },
   {
@@ -43,8 +43,8 @@
       "Sequelize",
       "REST API"
     ],
-    "github": "https://github.com/juancholopes/my-porfolio.dots",
-    "demo": "https://juancarloslopezmoreno.netlify.app",
+    "github": "https://github.com/juancholopes/api-postgresql",
+    "demo": null,
     "image": "/projects/portafolio-personal.webp"
   },
   {

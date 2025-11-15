@@ -97,19 +97,21 @@ const Projects = () => {
                     <Github size={16} className="sm:w-[18px] sm:h-[18px]" />
                     <span>{t("projects.code")}</span>
                   </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
-                    data-cursor="text"
-                  >
-                    <ExternalLink
-                      size={16}
-                      className="sm:w-[18px] sm:h-[18px]"
-                    />
-                    <span>{t("projects.demo")}</span>
-                  </a>
+                  {project.demo !== null && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
+                      data-cursor="text"
+                    >
+                      <ExternalLink
+                        size={16}
+                        className="sm:w-[18px] sm:h-[18px]"
+                      />
+                      <span>{t("projects.demo")}</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
