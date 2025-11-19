@@ -153,7 +153,7 @@ const Certificates = () => {
                 </div>
 
                 {/* Bottom section with button and date */}
-                <div className="flex items-end justify-between gap-3 mt-auto">
+                <div className="flex items-center justify-between gap-3 mt-auto">
                   {/* View certificate button */}
                   <a
                     href={certificate.credentialUrl}

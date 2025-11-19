@@ -34,7 +34,7 @@ const Projects = () => {
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projectsData.map((project, index) => (
             <div key={index} className="group relative">
-              <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full">
+              <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full flex flex-col">
                 {/* Imagen del proyecto */}
                 <div className="aspect-video w-full rounded-lg mb-4 sm:mb-6 relative overflow-hidden bg-muted project-image">
                   <img
@@ -86,7 +86,8 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                {/* Project and demo link sections */}
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mt-auto">
                   <a
                     href={project.github}
                     target="_blank"

@@ -1,0 +1,9 @@
+/* caskaydia-cove */
+@font-face {
+	font-family: "Caskaydia Cove";
+	font-style: normal;
+	font-weight: 200 700;
+	font-stretch: 100%;
+	src: local("Caskaydia Cove Regular"), local("CaskaydiaCove-Regular"), url(caskaydia-cove.woff2) format("woff2"), url(caskaydia-cove.woff) format("woff");
+}
+

@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("/fonts/caskaydia-cove/caskaydia-cove.css");
 
 /* Firefox-specific cursor fix */
 @-moz-document url-prefix() {
   * {
     cursor: none !important;
   }
-  
+
   body {
     cursor: none !important;
   }
@@ -18,15 +18,6 @@ body.custom-cursor-enabled * {
 
 body.custom-cursor-enabled {
   cursor: none !important;
-}
-
-@font-face {
-  font-family: "oddvalsemibold";
-  src:
-    url("/fonts/oddval-semibold-webfont.woff2") format("woff2"),
-    url("/fonts/oddval-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @tailwind base;
@@ -152,26 +143,30 @@ body.custom-cursor-enabled {
 
   html {
     font-family:
-      "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
+      "Caskaydia Cove", "SF Mono", Monaco, "Inconsolata", "Fira Code",
       "Fira Mono", "Roboto Mono", monospace;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family:
-      "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
+      "Caskaydia Cove", "SF Mono", Monaco, "Inconsolata", "Fira Code",
       "Fira Mono", "Roboto Mono", monospace;
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
   }
   h1,
-  h2,
+  h2 {
+    font-family: "Notable", sans-serif !important ;
+    letter-spacing: 2px;
+  }
+  
   h3,
   h4,
   h5,
   h6 {
-    font-family: "oddvalsemibold", sans-serif !important;
+    font-family: "Caskaydia Cove", monospace !important;
   }
 }
 

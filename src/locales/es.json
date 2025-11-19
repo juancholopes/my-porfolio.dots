@@ -34,7 +34,7 @@
     "liveDemo": "Ver demostración",
     "sourceCode": "Ver código",
     "code": "Código",
-    "demo": "Demostración",
+    "demo": "Demo",
     "vetCareFrontend": {
       "title": "Vet-Care Frontend",
       "description": "Desarrollo de la interfaz para una aplicación de citas veterinarias. Se implementaron paneles intuitivos para usuarios y profesionales utilizando React y Tailwind CSS."
@@ -45,7 +45,7 @@
     },
     "portfolio": {
       "title": "Este portafolio",
-      "description": "Portafolio personal desarrollado con React, TypeScript y Tailwind CSS."
+      "description": "Portafolio personal desarrollado con React, TypeScript y Tailwind CSS. Inspirado en una interfaz limpia y moderna, con cursor personalizado que cambia dependiendo del tipo de contenido en el que se haga hover, tema oscuro/claro y diseño responsivo."
     },
     "api-auth": {
       "title": "API de autenticación",
