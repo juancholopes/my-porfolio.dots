@@ -169,6 +169,12 @@ body::-webkit-scrollbar {
       background-color 0.3s ease,
       color 0.3s ease;
   }
+
+  ::selection {
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
+  }
+
   h1,
   h2 {
     font-family: "Notable", sans-serif !important ;
