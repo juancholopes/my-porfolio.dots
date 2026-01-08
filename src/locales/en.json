@@ -54,6 +54,10 @@
     "dragonBall": {
       "title": "Dragon Ball API",
       "description": "A web application that displays information about Dragon Ball characters using an external API. Built with React, JavaScript and Tailwind CSS, featuring a responsive design and interactive user interface."
+    },
+    "cafeYamara": {
+      "title": "Café Yamara",
+      "description": "Web application for coffee shop menu and order management. Built with Next.js for server-side rendering, Tailwind CSS for styling, Supabase as database, and Zustand for global state management."
     }
   },
   "stack": {

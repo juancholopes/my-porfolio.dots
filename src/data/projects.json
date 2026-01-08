@@ -58,5 +58,18 @@
     "github": "https://github.com/juancholopes/dragon-ball",
     "demo": "https://reactdragonball.netlify.app/",
     "image": "/projects/dragon-ball-api.webp"
+  },
+  {
+    "titleKey": "projects.cafeYamara.title",
+    "descriptionKey": "projects.cafeYamara.description",
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Zustand"
+    ],
+    "github": "https://github.com/juancholopes/cafe-yamara",
+    "demo": "https://cafe-yamara.vercel.app/",
+    "image": "/projects/cafe-yamara.webp"
   }
 ]
