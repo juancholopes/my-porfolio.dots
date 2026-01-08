@@ -29,7 +29,6 @@ const LanguageSelector = () => {
       <DropdownMenuTrigger asChild>
         <button className="text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 px-2 lg:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-200 relative group">
           {getDisplayText()}
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

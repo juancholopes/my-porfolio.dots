@@ -52,10 +52,10 @@ const Hero = () => {
       {/* Grid background */}
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 text-left max-w-full">
         <div className="float-animation">
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-bold mb-4 sm:mb-6 leading-none"
             data-cursor="text"
           >
             <span className="text-foreground" data-cursor="text">
@@ -72,18 +72,18 @@ const Hero = () => {
         </div>
 
         <p
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2 sm:px-0"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl px-2 sm:px-0"
           data-cursor="text"
         >
           {t("hero.subtitle")}
         </p>
 
-        <div className="flex justify-center space-x-4 sm:space-x-6 mb-6 sm:mb-8">
+        <div className="flex justify-start space-x-4 sm:space-x-6 mb-6 sm:mb-8">
           <a
             href="https://github.com/juancholopes"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
+            className="p-2 sm:p-3 border   rounded-lg hover:bg-blue-500/10 transition-colors duration-300"
             data-cursor="text"
           >
             <Github
@@ -95,7 +95,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/juan-carlos-lopez-moreno-9a29b0299/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
+            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300"
             data-cursor="text"
           >
             <Linkedin
@@ -107,7 +107,7 @@ const Hero = () => {
             onClick={copyEmail}
             onMouseEnter={() => setShowEmailTooltip(true)}
             onMouseLeave={() => setShowEmailTooltip(false)}
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow relative"
+            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 relative"
             data-cursor="text"
           >
             {emailCopied ? (
@@ -151,7 +151,7 @@ const Hero = () => {
             onClick={downloadCV}
             onMouseEnter={() => setShowDownloadTooltip(true)}
             onMouseLeave={() => setShowDownloadTooltip(false)}
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow relative"
+            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 relative"
             data-cursor="text"
           >
             <Download
@@ -172,14 +172,16 @@ const Hero = () => {
           </button>
         </div>
 
-        <a
-          href="#about"
-          className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 border border-blue-500 text-blue-500 dark:text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-lg zed-glow text-sm sm:text-base"
-          data-cursor="text"
-        >
-          <Code2 className="mr-2" size={16} />
-          <span className="sm:inline">{t("hero.exploreWork")}</span>
-        </a>
+        <div className="flex justify-start">
+          <a
+            href="#about"
+            className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 border border-blue-500 text-blue-500 dark:text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-lg text-sm sm:text-base"
+            data-cursor="text"
+          >
+            <Code2 className="mr-2" size={16} />
+            <span className="sm:inline">{t("hero.exploreWork")}</span>
+          </a>
+        </div>
       </div>
     </section>
   );

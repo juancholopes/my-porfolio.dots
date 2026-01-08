@@ -1,12 +1,5 @@
 import { User, Target, Zap } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import Carrusel from "./Carrusel";
 import { useTranslation } from "react-i18next";
 
 const AboutMe = () => {
@@ -99,38 +92,10 @@ const AboutMe = () => {
 
           <div className="relative order-1 lg:order-2">
             <div
-              className="w-full h-64 sm:h-80 lg:h-96 border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image"
+              className="w-full h-64 sm:h-80 lg:h-96 border border-blue-500/30 rounded-lg bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image overflow-hidden"
               data-cursor="image"
             >
-              <div className="flex justify-center items-center h-full">
-                <Carousel
-                  opts={{
-                    align: "start",
-                  }}
-                  className="w-full max-w-xs sm:max-w-sm"
-                >
-                  <CarouselContent className="flex direction-row justify-center">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <CarouselItem
-                        key={index}
-                        className="md:basis-1/2 lg:basis-1/2"
-                      >
-                        <div className="p-1">
-                          <Card>
-                            <CardContent className="flex aspect-square justify-center items-center p-6">
-                              <span className="text-3xl font-semibold">
-                                {index + 1}
-                              </span>
-                            </CardContent>
-                          </Card>
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
-              </div>
+              <Carrusel />
             </div>
           </div>
         </div>
