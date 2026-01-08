@@ -80,7 +80,7 @@ const Hero = () => {
 
         <div className="flex justify-center space-x-4 sm:space-x-6 mb-6 sm:mb-8">
           <a
-            href="https://github.com/juanchopi37"
+            href="https://github.com/juancholopes"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 zed-glow"
