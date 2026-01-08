@@ -27,7 +27,7 @@
     "descriptionKey": "certificates.awsDevOps.description",
     "issuer": "AWS",
     "date": "2025/07",
-    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/YOUR_CREDENTIAL_ID",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/UB9JHSSKK5EL",
     "skills": ["DevOps", "CI/CD", "Agile Methodology", "Project Management"],
     "icon": "/icons/aws.svg",
     "color": "orange"
