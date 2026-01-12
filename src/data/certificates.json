@@ -37,7 +37,7 @@
     "titleKey": "certificates.minticProgramming.title",
     "descriptionKey": "certificates.minticProgramming.description",
     "issuer": "MinTIC",
-    "date": "2023/12",
+    "date": "2025/05",
     "credentialUrl": "https://app.certika.co/certificate/OTk0MTY",
     "skills": ["JavaScript", "HTML", "CSS", "Python"],
     "icon": "/icons/min-tic.svg",
