@@ -6,8 +6,8 @@ import certificatesData from "../data/certificates.json";
 // Configuración de iconos para cada empresa certificadora
 const CompanyIcons = {
   microsoft: () => (
-    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center shadow-sm">
-      <svg viewBox="0 0 24 24" className="w-6 h-6">
+    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center shadow-sm">
+      <svg viewBox="0 0 24 24" className="w-10 h-10">
         <path
           fill="#ffffff"
           d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"
@@ -16,8 +16,8 @@ const CompanyIcons = {
     </div>
   ),
   google: () => (
-    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-      <svg viewBox="0 0 24 24" className="w-6 h-6">
+    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-sm">
+      <svg viewBox="0 0 24 24" className="w-10 h-10">
         <path
           fill="#4285F4"
           d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -38,7 +38,7 @@ const CompanyIcons = {
     </div>
   ),
   aws: () => (
-    <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center shadow-sm p-1.5">
+    <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center shadow-sm p-2.5">
       <svg viewBox="0 0 256 153" className="w-full h-full">
         <path
           fill="#ffffff"
@@ -56,12 +56,12 @@ const CompanyIcons = {
     </div>
   ),
   ibm: () => (
-    <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-sm">
-      <span className="text-white font-bold text-xs tracking-tight">IBM</span>
+    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-sm">
+      <span className="text-white font-bold text-lg tracking-tight">IBM</span>
     </div>
   ),
   platzi: () => (
-    <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center shadow-sm p-1.5">
+    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center shadow-sm p-2.5">
       <svg viewBox="0 0 108 121.8" className="w-full h-full">
         <path
           fill="#ffffff"
@@ -72,8 +72,8 @@ const CompanyIcons = {
     </div>
   ),
   mintic: () => (
-    <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 via-blue-500 to-red-500 rounded-lg flex items-center justify-center shadow-sm">
-      <span className="text-white font-bold text-xs">TIC</span>
+    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 via-blue-500 to-red-500 rounded-lg flex items-center justify-center shadow-sm">
+      <span className="text-white font-bold text-lg">TIC</span>
     </div>
   ),
 };
@@ -121,7 +121,7 @@ const Certificates = () => {
                         <img
                           src={certificate.icon}
                           alt={certificate.issuer}
-                          className="w-10 h-10"
+                          className="w-16 h-16"
                         />
                       )}
                     </div>
