@@ -41,6 +41,8 @@ const Projects = () => {
                     src={project.image}
                     alt={t(project.titleKey)}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 project-image"
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       // Imagen de respaldo en caso de error de carga
                       e.currentTarget.style.display = "none";

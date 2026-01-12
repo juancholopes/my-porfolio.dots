@@ -1,0 +1,23 @@
+# Cache de imágenes por 1 año
+/about-me/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/projects/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/icons/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/icons/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache de fuentes
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache de archivos estáticos
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML sin caché para permitir actualizaciones
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

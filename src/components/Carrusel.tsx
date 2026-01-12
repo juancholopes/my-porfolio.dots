@@ -11,6 +11,30 @@ const Carrusel = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
+
+  // Pre-cargar todas las imágenes al montar el componente
+  useEffect(() => {
+    images.forEach((src, index) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        setLoadedImages((prev) => new Set(prev).add(index));
+      };
+    });
+  }, []);
+
+  // Pre-cargar la siguiente imagen cuando cambia el índice
+  useEffect(() => {
+    const nextIndex = (currentIndex + 1) % images.length;
+    if (!loadedImages.has(nextIndex)) {
+      const img = new Image();
+      img.src = images[nextIndex];
+      img.onload = () => {
+        setLoadedImages((prev) => new Set(prev).add(nextIndex));
+      };
+    }
+  }, [currentIndex, images, loadedImages]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,6 +86,9 @@ const Carrusel = () => {
                 src={images[currentIndex]}
                 alt={`Galería ${currentIndex + 1}`}
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
               {/* Overlay con gradiente sutil */}
               <motion.div
