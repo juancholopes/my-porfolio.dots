@@ -2,6 +2,7 @@ import React from "react";
 import { Github, ExternalLink, Code } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import projectsData from "../data/projects.json";
+import LazyImage from "./LazyImage";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -37,12 +38,11 @@ const Projects = () => {
               <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full flex flex-col">
                 {/* Imagen del proyecto */}
                 <div className="aspect-video w-full rounded-lg mb-4 sm:mb-6 relative overflow-hidden bg-muted project-image">
-                  <img
+                  <LazyImage
                     src={project.image}
                     alt={t(project.titleKey)}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 project-image"
-                    loading="lazy"
-                    decoding="async"
+                    priority={index < 2} // Priorizar las primeras 2 imágenes
                     onError={(e) => {
                       // Imagen de respaldo en caso de error de carga
                       e.currentTarget.style.display = "none";

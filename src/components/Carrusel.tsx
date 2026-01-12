@@ -1,13 +1,17 @@
 import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import LazyImage from "./LazyImage";
 
 const Carrusel = () => {
-  const images = [
-    "/about-me/foto-1.webp",
-    "/about-me/foto-2.webp",
-    "/about-me/foto-3.webp",
-    "/about-me/foto-4.webp",
-  ];
+  const images = useMemo(
+    () => [
+      "/about-me/foto-1.webp",
+      "/about-me/foto-2.webp",
+      "/about-me/foto-3.webp",
+      "/about-me/foto-4.webp",
+    ],
+    []
+  );
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -22,7 +26,7 @@ const Carrusel = () => {
         setLoadedImages((prev) => new Set(prev).add(index));
       };
     });
-  }, []);
+  }, [images]);
 
   // Pre-cargar la siguiente imagen cuando cambia el índice
   useEffect(() => {
@@ -82,13 +86,11 @@ const Carrusel = () => {
         >
           <div className="relative w-full h-full max-w-2xl mx-auto">
             <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-              <img
+              <LazyImage
                 src={images[currentIndex]}
                 alt={`Galería ${currentIndex + 1}`}
                 className="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
+                priority={true}
               />
               {/* Overlay con gradiente sutil */}
               <motion.div
