@@ -11,14 +11,14 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Juan Carlos",
-    "subtitle": "Desarrollador Web construyendo aplicaciones accesibles con JavaScript y TypeScript. Actualmente buscando oportunidades de pasantía para aplicar mis habilidades en un entorno profesional.",
+    "subtitle": "Desarrollador Web construyendo aplicaciones accesibles con JavaScript y TypeScript.",
     "exploreWork": "Ver proyectos"
   },
   "about": {
     "title": "Sobre mí",
     "subtitle": "Desarrollador Web basado en Colombia",
-    "description": "Soy Juan Carlos, estudiante de Tecnología Empresarial en la UIS y aprendiz de Desarrollo de Aplicaciones en la Nube en el SENA. Me enfoco en construir aplicaciones web confiables usando JavaScript, TypeScript, React y Node.js, priorizando código limpio y fundamentos sólidos.",
-    "journey": "Busco activamente oportunidades de pasantía remota donde pueda contribuir a proyectos reales mientras crezco como desarrollador. Disfruto trabajando en desafíos tanto de frontend como backend y estoy ansioso por aprender de equipos experimentados.",
+    "description": "Soy Juan Carlos, estudiante de Tecnología Empresarial en la UIS y aprendiz de Desarrollo de Aplicaciones en la Nube en el SENA. Me enfoco en construir aplicaciones web confiables usando JavaScript y algunos de sus frameworks.",
+    "journey": "Me enfoco en comprender los fundamentos del desarrollo web; así puedo aprender más rápido cualquier tecnología, no depender solo de un framework o librería, y ofrecer soluciones más sólidas a problemas reales.",
     "agile": "Metodologías ágiles y trabajo en equipo",
     "cleanCode": "Código limpio y Arquitectura limpia",
     "learning": "Enfoque en UX/UI y Automatización",

@@ -11,14 +11,14 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Juan Carlos",
-    "subtitle": "Web Developer building accessible applications with JavaScript and TypeScript. Currently seeking internship opportunities to apply my skills in a professional environment.",
+    "subtitle": "Web Developer building accessible applications with JavaScript and TypeScript.",
     "exploreWork": "Explore My Work"
   },
   "about": {
     "title": "About Me",
     "subtitle": "Web Developer based in Colombia",
-    "description": "I'm Juan Carlos, a Business Technology student at UIS and Cloud Application Development apprentice at SENA. I focus on building reliable web applications using JavaScript, TypeScript, React, and Node.js, prioritizing clean code and solid fundamentals.",
-    "journey": "I am actively looking for remote internship opportunities where I can contribute to real-world projects while growing as a developer. I enjoy working on both frontend and backend challenges and am eager to learn from experienced teams.",
+    "description": "I'm Juan Carlos, a Business Technology student at UIS and a Cloud Application Development apprentice at SENA. I build reliable web applications using JavaScript and some of its frameworks.",
+    "journey": "I focus on understanding web development fundamentals; this lets me learn new technologies faster, avoid depending on a single framework or library, and deliver more robust solutions to real problems.",
     "agile": "Agile Methodologies and Teamwork",
     "cleanCode": "Clean Code and Clean Architecture",
     "learning": "Focus on UX/UI and Automation",
