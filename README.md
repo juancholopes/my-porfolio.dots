@@ -1,5 +1,4 @@
 
-<img src="./src/assets/preview.png" alt="preview" />
 
 #  Personal Portfolio
 
@@ -86,6 +85,7 @@ my-porfolio.dots/
 <div align="center">
   <p>⭐ If you like it, give it a star</p>
 </div>
+
 
 
 
