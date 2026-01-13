@@ -126,13 +126,15 @@ const Footer = () => {
                   className="text-red-400 animate-pulse sm:w-4 sm:h-4"
                 />
               </div>
-              <span className="text-sm sm:text-base">
-                {t("footer.coffeeMessage")}
-              </span>
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <span className="text-sm sm:text-base">
+                  {t("footer.coffeeMessage")}
+                </span>
                 <Coffee
-                size={14}
-                className="text-blue-400 animate-pulse sm:m-4 sm:w-4 sm:h-4"
+                  size={14}
+                  className="text-blue-400 animate-pulse sm:w-4 sm:h-4"
                 />
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-xs sm:text-sm text-slate-500 dark:text-gray-400">
