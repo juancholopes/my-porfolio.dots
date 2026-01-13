@@ -1,20 +1,20 @@
 
 <img src="./src/assets/preview.png" alt="preview" />
 
-# 💼 Personal Portfolio
+#  Personal Portfolio
 
   [![Netlify Status](https://api.netlify.com/api/v1/badges/70865c9b-4210-4a2c-8f50-fb43af754549/deploy-status)](https://app.netlify.com/projects/juancarloslopezmoreno/deploys)
 
 
-## 🎯 About the Project
+##  About the Project
 
 Personal portfolio developed with a minimalist and modern approach, designed to showcase my skills as a Full Stack Developer. It features an interactive custom cursor inspired by Framer and offers a fully responsive user experience.
 
-### ✨ Key Features
+###  Key Features
 
-- 🎨 **Minimalist Design** – Clean interface with a dark theme and blue accents
+-  **Minimalist Design** – Clean interface with a dark theme and blue accents
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 
@@ -43,13 +43,13 @@ Personal portfolio developed with a minimalist and modern approach, designed to 
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
-🔗 **[View Portfolio](https://juancarloslopezmoreno.netlify.app/)**
+**[View Portfolio](https://juancarloslopezmoreno.netlify.app/)**
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 my-porfolio.dots/
@@ -75,7 +75,7 @@ my-porfolio.dots/
 
 ```
 
-## 📞 Contact
+##  Contact
 
 **Juan Carlos López Moreno**
 
@@ -89,5 +89,6 @@ my-porfolio.dots/
 <div align="center">
   <p>⭐ If you like it, give it a star</p>
 </div>
+
 
 
