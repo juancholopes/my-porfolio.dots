@@ -118,7 +118,7 @@
   },
   "footer": {
     "rights": "Hecho con ❤️ por Juan Carlos",
-    "madeWith": "Hecho con",
+    "madeWith": "Hecho por Juancho con",
     "contact": "Contacto",
     "portfolio": "Portafolio",
     "description": "Abierto a oportunidades de pasantía y colaboración.",
@@ -130,7 +130,7 @@
     "availability": "Disponible para proyectos y colaboraciones.",
     "workTogether": "Trabajemos juntos",
     "builtWith": "Desarrollado con React y TypeScript",
-    "styledWith": "Estilizado con Tailwind CSS",
+    "styledWith": "Estilizado por Juancho con Tailwind CSS",
     "coffeeMessage": "y café"
   },
   "common": {

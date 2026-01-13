@@ -49,14 +49,14 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12">
       {/* Grid background */}
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
 
-      <div className="relative z-10 text-left max-w-full">
+      <div className="relative z-10 text-center lg:text-left max-w-full w-full">
         <div className="float-animation">
           <h1
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-bold mb-4 sm:mb-6 leading-none"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-bold mb-4 md:mb-6 leading-tight md:leading-none"
             data-cursor="text"
           >
             <span className="text-foreground" data-cursor="text">
@@ -73,53 +73,53 @@ const Hero = () => {
         </div>
 
         <p
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl px-2 sm:px-0"
+          className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-600 dark:text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto lg:mx-0"
           data-cursor="text"
         >
           {t("hero.subtitle")}
         </p>
 
-        <div className="flex justify-start space-x-4 sm:space-x-6 mb-6 sm:mb-8">
+        <div className="flex justify-center lg:justify-start flex-wrap gap-3 sm:gap-4 md:gap-6 mb-6 md:mb-8">
           <a
             href="https://github.com/juancholopes"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 sm:p-3 border   rounded-lg hover:bg-blue-500/10 transition-colors duration-300"
+            className="p-2 md:p-3 border rounded-lg hover:bg-blue-500/10 transition-colors duration-300"
             data-cursor="text"
           >
             <Github
               size={20}
-              className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+              className="text-blue-500 dark:text-blue-400 md:w-6 md:h-6"
             />
           </a>
           <a
             href="https://www.linkedin.com/in/juan-carlos-lopez-moreno-9a29b0299/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300"
+            className="p-2 md:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300"
             data-cursor="text"
           >
             <Linkedin
               size={20}
-              className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+              className="text-blue-500 dark:text-blue-400 md:w-6 md:h-6"
             />
           </a>
           <button
             onClick={copyEmail}
             onMouseEnter={() => setShowEmailTooltip(true)}
             onMouseLeave={() => setShowEmailTooltip(false)}
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 relative"
+            className="p-2 md:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 relative"
             data-cursor="text"
           >
             {emailCopied ? (
               <Check
                 size={20}
-                className="text-green-400 sm:w-6 sm:h-6 animate-pulse"
+                className="text-green-400 md:w-6 md:h-6 animate-pulse"
               />
             ) : (
               <Mail
                 size={20}
-                className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+                className="text-blue-500 dark:text-blue-400 md:w-6 md:h-6"
               />
             )}
 
@@ -152,12 +152,12 @@ const Hero = () => {
             onClick={downloadCV}
             onMouseEnter={() => setShowDownloadTooltip(true)}
             onMouseLeave={() => setShowDownloadTooltip(false)}
-            className="p-2 sm:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 relative"
+            className="p-2 md:p-3 border border-blue-500/30 rounded-lg hover:bg-blue-500/10 transition-colors duration-300 relative"
             data-cursor="text"
           >
             <Download
               size={20}
-              className="text-blue-500 dark:text-blue-400 sm:w-6 sm:h-6"
+              className="text-blue-500 dark:text-blue-400 md:w-6 md:h-6"
             />
 
             {/* Tooltip hover */}
@@ -174,7 +174,7 @@ const Hero = () => {
         </div>
 
         {/* Botón ver mas */}
-        <div className="flex justify-start">
+        <div className="flex justify-center lg:justify-start">
           <PrimaryButton href="#about" icon={Code2}>
             {t("hero.exploreWork")}
           </PrimaryButton>

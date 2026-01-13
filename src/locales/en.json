@@ -118,7 +118,7 @@
   },
   "footer": {
     "rights": "All rights reserved",
-    "madeWith": "Made with",
+    "madeWith": "Made by Juancho with",
     "contact": "Contact",
     "portfolio": "Portfolio",
     "description": "Open to internship and collaboration opportunities.",
@@ -130,8 +130,8 @@
     "availability": "Available for freelance work and collaboration opportunities.",
     "workTogether": "Let's Work Together",
     "builtWith": "Built with React & TypeScript",
-    "styledWith": "Styled with Tailwind CSS",
-    "coffeeMessage": "and lots of coffee"
+    "styledWith": "Styled by Juancho with Tailwind CSS",
+    "coffeeMessage": "and coffee"
   },
   "common": {
     "loading": "Loading...",
