@@ -35,6 +35,7 @@
     "sourceCode": "Source Code",
     "code": "Code",
     "demo": "Demo",
+    "showMore": "Show More",
     "timeToFocus": {
       "title": "Time To Focus",
       "description": "A real-time Twitch bot integrating Spotify and OpenWeather APIs with bidirectional WebSocket communication. Features include OAuth authentication, rate limiting, and a configurable Pomodoro timer managed via chat commands."
@@ -71,6 +72,11 @@
     "tools": "Tools",
     "continuousLearning": "Continuous Learning",
     "learningDescription": "I consistently improve my skills by reading documentation, building practical projects, and exploring new development tools."
+  },
+  "common": {
+    "primaryButton": "See more",
+    "primaryButtonProjects": "Show more",
+    "primaryButtonHero": "Explore My Work"
   },
   "certificates": {
     "title": "Learning",

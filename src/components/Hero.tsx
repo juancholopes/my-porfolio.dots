@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Github, Linkedin, Mail, Check, Download, Code2 } from "lucide-react";
+import PrimaryButton from "./ui/primary-button";
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const [emailCopied, setEmailCopied] = useState(false);
@@ -172,15 +173,11 @@ const Hero = () => {
           </button>
         </div>
 
+        {/* Botón ver mas */}
         <div className="flex justify-start">
-          <a
-            href="#about"
-            className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 border border-blue-500 text-blue-500 dark:text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 rounded-lg text-sm sm:text-base"
-            data-cursor="text"
-          >
-            <Code2 className="mr-2" size={16} />
-            <span className="sm:inline">{t("hero.exploreWork")}</span>
-          </a>
+          <PrimaryButton href="#about" icon={Code2}>
+            {t("hero.exploreWork")}
+          </PrimaryButton>
         </div>
       </div>
     </section>

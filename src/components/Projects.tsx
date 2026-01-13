@@ -1,11 +1,22 @@
-import React from "react";
-import { Github, ExternalLink, Code } from "lucide-react";
+import React, { useState } from "react";
+import { Github, ExternalLink, Code, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import projectsData from "../data/projects.json";
 import LazyImage from "./LazyImage";
+import PrimaryButton from "./ui/primary-button";
+
+const INITIAL_PROJECTS = 4;
+const LOAD_MORE_COUNT = 2;
 
 const Projects = () => {
   const { t } = useTranslation();
+  const [visibleProjects, setVisibleProjects] = useState(INITIAL_PROJECTS);
+
+  const showMoreProjects = () => {
+    setVisibleProjects((prev) => Math.min(prev + LOAD_MORE_COUNT, projectsData.length));
+  };
+
+  const hasMoreProjects = visibleProjects < projectsData.length;
 
   return (
     <section id="projects" className="py-12 sm:py-16 lg:py-20 relative">
@@ -33,7 +44,7 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {projectsData.map((project, index) => (
+          {projectsData.slice(0, visibleProjects).map((project, index) => (
             <div key={index} className="group relative">
               <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full flex flex-col">
                 {/* Imagen del proyecto */}
@@ -120,6 +131,15 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        {/* Botón "show more" */}
+        {hasMoreProjects && (
+          <div className="flex justify-center mt-8 sm:mt-12">
+            <PrimaryButton onClick={showMoreProjects} icon={ChevronDown}>
+              {t("projects.showMore")}
+            </PrimaryButton>
+          </div>
+        )}
       </div>
     </section>
   );

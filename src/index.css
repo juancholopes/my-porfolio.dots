@@ -84,6 +84,7 @@ body::-webkit-scrollbar {
     --bg-main: 241 245 249;
     --text-main: 15 23 42;
     --card-bg: 255 255 255;
+    --button-hover: #020817;
   }
 
   .dark {
@@ -98,6 +99,7 @@ body::-webkit-scrollbar {
 
     --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
+    --button-hover: #020817;
 
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;

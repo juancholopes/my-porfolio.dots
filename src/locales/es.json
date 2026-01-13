@@ -12,7 +12,7 @@
     "greeting": "Hola, soy",
     "name": "Juan Carlos",
     "subtitle": "Desarrollador Web construyendo aplicaciones accesibles con JavaScript y TypeScript.",
-    "exploreWork": "Ver proyectos"
+    "exploreWork": "Explorar más"
   },
   "about": {
     "title": "Sobre mí",
@@ -35,6 +35,7 @@
     "sourceCode": "Ver código",
     "code": "Código",
     "demo": "Demo",
+    "showMore": "Mostrar más",
     "timeToFocus": {
       "title": "Time To Focus",
       "description": "Bot de Twitch en tiempo real integrando APIs de Spotify y OpenWeather con comunicación WebSocket bidireccional. Incluye autenticación OAuth, limitación de velocidad y un temporizador Pomodoro configurable gestionado mediante comandos de chat."
@@ -71,6 +72,11 @@
     "tools": "Herramientas",
     "continuousLearning": "Aprendizaje continuo",
     "learningDescription": "Mejoro constantemente mis habilidades leyendo documentación, construyendo proyectos prácticos y explorando nuevas herramientas de desarrollo."
+  },
+  "common": {
+    "primaryButton": "Ver más",
+    "primaryButtonProjects": "Mostrar más proyectos",
+    "primaryButtonHero": "Explorar mas"
   },
   "certificates": {
     "title": "Aprendizaje",
