@@ -1,24 +1,42 @@
 [
   {
-    "titleKey": "projects.vetCareFrontend.title",
-    "descriptionKey": "projects.vetCareFrontend.description",
+    "titleKey": "projects.timeToFocus.title",
+    "descriptionKey": "projects.timeToFocus.description",
+    "technologies": [
+      "Node.js",
+      "WebSockets",
+      "APIs",
+      "OAuth"
+    ],
+    "github": "https://github.com/juancholopes/time-to-focus",
+    "demo": null,
+    "image": "/projects/time-to-focus.webp"
+  },
+  {
+    "titleKey": "projects.cafeYamara.title",
+    "descriptionKey": "projects.cafeYamara.description",
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Zustand"
+    ],
+    "github": "https://github.com/juancholopes/cafe-yamara",
+    "demo": "https://cafe-yamara.vercel.app/",
+    "image": "/projects/cafe-yamara.webp"
+  },
+  {
+    "titleKey": "projects.vetCare.title",
+    "descriptionKey": "projects.vetCare.description",
     "technologies": [
       "React",
-      "Tailwind CSS",
-      "JavaScript",
-      "Responsive Design"
+      "Node.js",
+      "MySQL",
+      "JWT"
     ],
     "github": "https://github.com/juancholopes/vet-care-frontend",
     "demo": null,
     "image": "/projects/vet-pet-frontend.webp"
-  },
-  {
-    "titleKey": "projects.vetCareBackend.title",
-    "descriptionKey": "projects.vetCareBackend.description",
-    "technologies": ["Node.js", "Express.js", "MySQL", "Sequelize", "JWT"],
-    "github": "https://github.com/juancholopes/vet-care-backend",
-    "demo": null,
-    "image": "/projects/vet-pet-backend.webp"
   },
   {
     "titleKey": "projects.portfolio.title",
@@ -26,26 +44,11 @@
     "technologies": [
       "React",
       "TypeScript",
-      "Tailwind CSS",
-      "Responsive Design"
+      "Tailwind CSS"
     ],
     "github": "https://github.com/juancholopes/my-porfolio.dots",
     "demo": "https://juancholopez.netlify.app/",
     "image": "/projects/portafolio-personal.webp"
-  },
-  {
-    "titleKey": "projects.api-auth.title",
-    "descriptionKey": "projects.api-auth.description",
-    "technologies": [
-      "PostgreSQL",
-      "JavaScript",
-      "JWT",
-      "Sequelize",
-      "REST API"
-    ],
-    "github": "https://github.com/juancholopes/api-postgresql",
-    "demo": null,
-    "image": "/projects/api-postgresql.webp"
   },
   {
     "titleKey": "projects.dragonBall.title",
@@ -60,16 +63,16 @@
     "image": "/projects/dragon-ball-api.webp"
   },
   {
-    "titleKey": "projects.cafeYamara.title",
-    "descriptionKey": "projects.cafeYamara.description",
+    "titleKey": "projects.api-auth.title",
+    "descriptionKey": "projects.api-auth.description",
     "technologies": [
-      "Next.js",
-      "Tailwind CSS",
-      "Supabase",
-      "Zustand"
+      "PostgreSQL",
+      "JavaScript",
+      "JWT",
+      "Sequelize"
     ],
-    "github": "https://github.com/juancholopes/cafe-yamara",
-    "demo": "https://cafe-yamara.vercel.app/",
-    "image": "/projects/cafe-yamara.webp"
+    "github": "https://github.com/juancholopes/api-postgresql",
+    "demo": null,
+    "image": "/projects/api-postgresql.webp"
   }
 ]

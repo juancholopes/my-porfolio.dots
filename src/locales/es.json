@@ -11,58 +11,58 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Juan Carlos",
-    "subtitle": "Transformo ideas en soluciones digitales. Le invito a conocer mi trabajo.",
+    "subtitle": "Desarrollador Web construyendo aplicaciones accesibles con JavaScript y TypeScript. Actualmente buscando oportunidades de pasantía para aplicar mis habilidades en un entorno profesional.",
     "exploreWork": "Ver proyectos"
   },
   "about": {
     "title": "Sobre mí",
-    "subtitle": "Desarrollador de software",
-    "description": "Trabajo con JavaScript, TypeScript y Python. Desarrollo aplicaciones web con foco en calidad, rendimiento y experiencia de usuario. Desde el frontend con React hasta el backend con Express.js, participo en todo el ciclo de desarrollo.",
-    "journey": "Valoro el código limpio y la arquitectura bien diseñada. Exploro continuamente áreas como inteligencia artificial, DevOps y ciberseguridad. También automatizo tareas con scripts en Bash o Python cuando resulta adecuado.",
-    "agile": "Metodologías ágiles",
-    "cleanCode": "Código limpio",
-    "learning": "Enfoque en UX/UI y automatización",
-    "interests": "Áreas de interés",
+    "subtitle": "Desarrollador Web basado en Colombia",
+    "description": "Soy Juan Carlos, estudiante de Tecnología Empresarial en la UIS y aprendiz de Desarrollo de Aplicaciones en la Nube en el SENA. Me enfoco en construir aplicaciones web confiables usando JavaScript, TypeScript, React y Node.js, priorizando código limpio y fundamentos sólidos.",
+    "journey": "Busco activamente oportunidades de pasantía remota donde pueda contribuir a proyectos reales mientras crezco como desarrollador. Disfruto trabajando en desafíos tanto de frontend como backend y estoy ansioso por aprender de equipos experimentados.",
+    "agile": "Metodologías ágiles y trabajo en equipo",
+    "cleanCode": "Código limpio y Arquitectura limpia",
+    "learning": "Enfoque en UX/UI y Automatización",
+    "interests": "Mis Intereses",
     "aiDevOps": "Inteligencia artificial y DevOps",
     "uxDesign": "Diseño de experiencia de usuario",
     "automation": "Automatización y ciberseguridad"
   },
   "projects": {
     "title": "Proyectos",
-    "subtitle": "Selección de proyectos realizados.",
+    "subtitle": "Algunos proyectos en los que he trabajado, demostrando mis habilidades en diversas tecnologías.",
     "viewProject": "Ver proyecto",
     "liveDemo": "Ver demostración",
     "sourceCode": "Ver código",
     "code": "Código",
     "demo": "Demo",
-    "vetCareFrontend": {
-      "title": "Vet-Care Frontend",
-      "description": "Desarrollo de la interfaz para una aplicación de citas veterinarias. Se implementaron paneles intuitivos para usuarios y profesionales utilizando React y Tailwind CSS."
+    "timeToFocus": {
+      "title": "Time To Focus",
+      "description": "Bot de Twitch en tiempo real integrando APIs de Spotify y OpenWeather con comunicación WebSocket bidireccional. Incluye autenticación OAuth, limitación de velocidad y un temporizador Pomodoro configurable gestionado mediante comandos de chat."
     },
-    "vetCareBackend": {
-      "title": "Vet-Care Backend",
-      "description": "Implementación del backend mediante una API RESTful con Node.js, Express y Sequelize. Autenticación y autorización con JWT."
+    "vetCare": {
+      "title": "Vet Care",
+      "description": "Sistema integral de gestión veterinaria con frontend en React y API REST en Node.js. Incluye autenticación segura JWT, acceso basado en roles para usuarios y veterinarios, y base de datos MySQL gestionada con Sequelize."
     },
     "portfolio": {
-      "title": "Este portafolio",
-      "description": "Portafolio personal desarrollado con React, TypeScript y Tailwind CSS. Inspirado en una interfaz limpia y moderna, con cursor personalizado que cambia dependiendo del tipo de contenido en el que se haga hover, tema oscuro/claro y diseño responsivo."
+      "title": "Portafolio Personal",
+      "description": "Mi portafolio profesional construido con React y TypeScript, con diseño responsivo y optimizaciones de rendimiento. Demuestra mi capacidad para escribir código limpio, mantenible e implementar una interfaz minimalista."
     },
     "api-auth": {
-      "title": "API de autenticación",
-      "description": "API para autenticación (registro e inicio de sesión) con PostgreSQL como base de datos, JWT y middlewares de autenticación, desarrollada con Express.js en JavaScript."
+      "title": "API de Autenticación",
+      "description": "Sistema seguro de inicio de sesión y registro usando Node.js, PostgreSQL y JWT, con middleware robusto para validación de solicitudes."
     },
     "dragonBall": {
       "title": "Dragon Ball API",
-      "description": "Aplicación web que consume una API externa para mostrar información de personajes de Dragon Ball. Desarrollada con React, JavaScript y Tailwind CSS, con interfaz responsiva e interactiva."
+      "description": "Visor de información de personajes responsivo aprovechando una API externa, construido con React y Tailwind CSS."
     },
     "cafeYamara": {
       "title": "Café Yamara",
-      "description": "Aplicación web para gestión de menú y pedidos de cafetería. Desarrollada con Next.js para renderizado del lado del servidor, Tailwind CSS para estilos, Supabase como base de datos y Zustand para manejo de estado global."
+      "description": "Aplicación de gestión de cafetería implementando el Patrón Repositorio y autenticación JWT. Optimizada con Next.js para renderizado del lado del servidor, logrando un First Contentful Paint de menos de 3 segundos."
     }
   },
   "stack": {
-    "title": "Tecnologías y herramientas",
-    "subtitle": "Tecnologías que utilizo en el desarrollo de software.",
+    "title": "Tecnologías",
+    "subtitle": "Tecnologías principales que uso para el desarrollo web.",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Bases de Datos",
@@ -70,11 +70,11 @@
     "design": "Diseño",
     "tools": "Herramientas",
     "continuousLearning": "Aprendizaje continuo",
-    "learningDescription": "Mantengo una actualización constante de conocimientos, explorando nuevas tecnologías, participando en eventos y colaborando en proyectos de código abierto."
+    "learningDescription": "Mejoro constantemente mis habilidades leyendo documentación, construyendo proyectos prácticos y explorando nuevas herramientas de desarrollo."
   },
   "certificates": {
-    "title": "Certificaciones y logros",
-    "subtitle": "Formación respaldada por certificaciones emitidas por diversas plataformas.",
+    "title": "Aprendizaje",
+    "subtitle": "",
     "viewCertificate": "Ver certificado",
     "issuedBy": "Emitido por",
     "microsoftAzure": {
@@ -115,7 +115,7 @@
     "madeWith": "Hecho con",
     "contact": "Contacto",
     "portfolio": "Portafolio",
-    "description": "Desarrollo soluciones digitales con enfoque en calidad y experiencia de usuario.",
+    "description": "Abierto a oportunidades de pasantía y colaboración.",
     "quickLinks": "Accesos directos",
     "aboutMe": "Sobre mí",
     "projects": "Proyectos",

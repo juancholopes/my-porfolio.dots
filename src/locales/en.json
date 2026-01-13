@@ -11,14 +11,14 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Juan Carlos",
-    "subtitle": "Full Stack Developer creating innovative solutions with modern technologies",
+    "subtitle": "Web Developer building accessible applications with JavaScript and TypeScript. Currently seeking internship opportunities to apply my skills in a professional environment.",
     "exploreWork": "Explore My Work"
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Passionate Developer & Problem Solver",
-    "description": "I'm a full-stack developer specialized in JavaScript, TypeScript and Python, with a particular focus on creating accessible and usable interfaces. I have experience developing modern web applications with React, Express.js and relational databases.",
-    "journey": "My passion for software development centers on implementing clean architecture and clean code. I constantly seek to learn new technologies like Artificial Intelligence, DevOps and Cybersecurity, while automating tasks with Bash and Python scripts.",
+    "subtitle": "Web Developer based in Colombia",
+    "description": "I'm Juan Carlos, a Business Technology student at UIS and Cloud Application Development apprentice at SENA. I focus on building reliable web applications using JavaScript, TypeScript, React, and Node.js, prioritizing clean code and solid fundamentals.",
+    "journey": "I am actively looking for remote internship opportunities where I can contribute to real-world projects while growing as a developer. I enjoy working on both frontend and backend challenges and am eager to learn from experienced teams.",
     "agile": "Agile Methodologies and Teamwork",
     "cleanCode": "Clean Code and Clean Architecture",
     "learning": "Focus on UX/UI and Automation",
@@ -35,34 +35,34 @@
     "sourceCode": "Source Code",
     "code": "Code",
     "demo": "Demo",
-    "vetCareFrontend": {
-      "title": "Vet-Care Frontend",
-      "description": "Developed the user interface for veterinary appointment management, including dashboards for users and veterinarians, using React and Tailwind CSS."
+    "timeToFocus": {
+      "title": "Time To Focus",
+      "description": "A real-time Twitch bot integrating Spotify and OpenWeather APIs with bidirectional WebSocket communication. Features include OAuth authentication, rate limiting, and a configurable Pomodoro timer managed via chat commands."
     },
-    "vetCareBackend": {
-      "title": "Vet-Care Backend",
-      "description": "Implemented RESTful API for business logic and data management with MySQL, plus implementation with Node.js, Express, Sequelize and JWT security."
+    "vetCare": {
+      "title": "Vet Care",
+      "description": "Comprehensive veterinary management system featuring a React frontend and Node.js REST API. Includes secure JWT authentication, role-based access for users and veterinarians, and a MySQL database managed with Sequelize."
     },
     "portfolio": {
       "title": "Personal Portfolio",
-      "description": "Developed my web portfolio created primarily to showcase my work, deployed on Netlify, built with a predefined color palette and minimalist design using React, TypeScript and TailwindCSS."
+      "description": "My professional portfolio built with React and TypeScript, featuring a responsive design and performance optimizations. It demonstrates my ability to write clean, maintainable code and implement a minimalist UI."
     },
     "api-auth": {
       "title": "Authentication API",
-      "description": "A simple login and registration API built with Express.js in JavaScript, using PostgreSQL as the database, JWT for authentication, middleware for request validation, and additional supporting features."
+      "description": "Secure login and registration system using Node.js, PostgreSQL, and JWT, featuring robust middleware for request validation."
     },
     "dragonBall": {
       "title": "Dragon Ball API",
-      "description": "A web application that displays information about Dragon Ball characters using an external API. Built with React, JavaScript and Tailwind CSS, featuring a responsive design and interactive user interface."
+      "description": "Responsive character information viewer leveraging an external API, built with React and Tailwind CSS."
     },
     "cafeYamara": {
       "title": "Café Yamara",
-      "description": "Web application for coffee shop menu and order management. Built with Next.js for server-side rendering, Tailwind CSS for styling, Supabase as database, and Zustand for global state management."
+      "description": "Coffee shop management app implementing the Repository Pattern and JWT authentication. Optimized with Next.js for server-side rendering, achieving a First Contentful Paint under 3 seconds."
     }
   },
   "stack": {
-    "title": "My Tech Stack",
-    "subtitle": "Technologies and tools I use to bring ideas to life. Always learning and adapting to new technologies.",
+    "title": "Technologies",
+    "subtitle": "Core technologies I use for web development.",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Database",
@@ -70,11 +70,11 @@
     "design": "Design",
     "tools": "Tools",
     "continuousLearning": "Continuous Learning",
-    "learningDescription": "The tech world evolves rapidly, and I'm committed to staying updated with the latest trends, best practices, and emerging technologies. I regularly explore new frameworks, attend tech conferences, and contribute to open-source projects to enhance my skills and give back to the community."
+    "learningDescription": "I consistently improve my skills by reading documentation, building practical projects, and exploring new development tools."
   },
   "certificates": {
-    "title": "Certifications & Achievements",
-    "subtitle": "My continuous learning journey backed by certifications from the best platforms.",
+    "title": "Learning",
+    "subtitle": "",
     "viewCertificate": "View Certificate",
     "issuedBy": "Issued by",
     "microsoftAzure": {
@@ -115,7 +115,7 @@
     "madeWith": "Made with",
     "contact": "Contact",
     "portfolio": "Portfolio",
-    "description": "Creating innovative digital solutions with passion and precision. Let's build something amazing together.",
+    "description": "Open to internship and collaboration opportunities.",
     "quickLinks": "Quick Links",
     "aboutMe": "About Me",
     "projects": "Projects",
