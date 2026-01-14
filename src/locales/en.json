@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Web Developer based in Colombia",
+    "subtitle": "Web Developer",
     "description": "I'm Juan Carlos, a Business Technology student at UIS and a Cloud Application Development apprentice at SENA. I build reliable web applications using JavaScript and some of its frameworks.",
     "journey": "I focus on understanding web development fundamentals; this lets me learn new technologies faster, avoid depending on a single framework or library, and deliver more robust solutions to real problems.",
     "agile": "Agile Methodologies and Teamwork",
@@ -101,23 +101,23 @@
     },
     "platziJavaScript": {
       "title": "Git & GitHub",
-      "description": "Master version control with Git and collaborative development using GitHub, including branching strategies, pull requests, code reviews, and team workflows for professional software development."
+      "description": "Comprehensive training in version control with Git and collaborative workflows using GitHub. Covered branching strategies, pull requests, code reviews, and professional teamwork for robust software development in real-world projects."
     },
     "minticProgramming": {
       "title": "Basic Programming Bootcamp",
-      "description": "Intensive 159-hour program in a synchronous virtual format (Monday to Saturday, 4 hours daily). I built a solid foundation in full-stack web development, mastering programming fundamentals with JavaScript and Python, web layout with HTML and CSS, and developing practical projects using agile methodologies."
+      "description": "Intensive 159-hour bootcamp in a live virtual format. Built a strong foundation in full-stack web development, mastering JavaScript, Python, HTML, and CSS, and applying agile methodologies to create practical, real-world projects from scratch."
     },
     "minticProgrammingIntermediate": {
       "title": "Intermediate Programming Bootcamp",
-      "description": "Intensive 159-hour program in a synchronous virtual format (Monday to Saturday, 4 hours daily). I deepened my knowledge of modern web development technologies, building interactive applications with React, implementing backend architectures with Node.js and Express.js, and managing relational databases with SQL."
+      "description": "Intensive 159-hour bootcamp in a live virtual format. Advanced training in modern web development: built interactive apps with React, implemented backend architectures with Node.js and Express.js, and managed relational databases using SQL."
     },
     "ibmCybersecurity": {
       "title": "Cybersecurity Fundamentals",
-      "description": "Foundational understanding of cybersecurity concepts including threat groups, attack types, cryptography, and organizational security strategies."
+      "description": "Intensive program on cybersecurity principles, including threat groups, attack types, cryptography, and organizational security. Developed practical skills to identify, prevent, and respond to digital threats in modern environments."
     },
     "awsDevOps": {
       "title": "DevOps on AWS and Project Management",
-      "description": "Learn about project management use cases in business, understanding the differences between Agile and Waterfall methodologies, and implementing DevOps practices on AWS."
+      "description": "Comprehensive overview of project management in business, exploring Agile and Waterfall methodologies, and hands-on implementation of DevOps practices on AWS for efficient, collaborative, and scalable software delivery."
     }
   },
   "footer": {

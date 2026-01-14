@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "subtitle": "Desarrollador Web basado en Colombia",
+    "subtitle": "Desarrollador Web",
     "description": "Soy Juan Carlos, estudiante de Tecnología Empresarial en la UIS y aprendiz de Desarrollo de Aplicaciones en la Nube en el SENA. Me enfoco en construir aplicaciones web confiables usando JavaScript y algunos de sus frameworks.",
     "journey": "Me enfoco en comprender los fundamentos del desarrollo web; así puedo aprender más rápido cualquier tecnología, no depender solo de un framework o librería, y ofrecer soluciones más sólidas a problemas reales.",
     "agile": "Metodologías ágiles y trabajo en equipo",
@@ -101,23 +101,23 @@
     },
     "platziJavaScript": {
       "title": "Git y GitHub",
-      "description": "Dominio del control de versiones con Git y desarrollo colaborativo usando GitHub, incluyendo estrategias de ramificación, pull requests, revisiones de código y flujos de trabajo en equipo para desarrollo profesional."
+      "description": "Formación integral en control de versiones con Git y flujos colaborativos en GitHub. Incluye ramas, pull requests, revisiones de código y trabajo en equipo profesional para el desarrollo de software robusto en proyectos reales."
     },
     "minticProgramming": {
       "title": "Bootcamp Programación Básico",
-      "description": "Programa intensivo de 159 horas en modalidad virtual sincrónica (lunes a sábado, 4 horas diarias). Construí bases sólidas en desarrollo web full-stack, dominando fundamentos de programación con JavaScript y Python, maquetación web con HTML y CSS, y desarrollo de proyectos prácticos aplicando metodologías ágiles."
+      "description": "Bootcamp intensivo de 159 horas en formato virtual en vivo. Bases sólidas en desarrollo web full-stack: JavaScript, Python, HTML y CSS, aplicando metodologías ágiles para crear proyectos prácticos y reales desde cero."
     },
     "minticProgrammingIntermediate": {
       "title": "Bootcamp Programación Intermedio",
-      "description": "Programa intensivo de 159 horas en modalidad virtual sincrónica (lunes a sábado, 4 horas diarias). Profundicé en tecnologías modernas de desarrollo web, construyendo aplicaciones interactivas con React, implementando arquitecturas backend con Node.js y Express.js, y gestionando bases de datos relacionales con SQL."
+      "description": "Bootcamp intensivo de 159 horas en formato virtual en vivo. Formación avanzada en desarrollo web moderno: apps interactivas con React, backend con Node.js y Express.js, y gestión de bases de datos relacionales con SQL."
     },
     "ibmCybersecurity": {
       "title": "Cybersecurity Fundamentals",
-      "description": "Comprensión fundamental de conceptos de ciberseguridad incluyendo grupos de amenazas, tipos de ataques, criptografía y estrategias de seguridad organizacional."
+      "description": "Programa intensivo sobre principios de ciberseguridad: grupos de amenazas, tipos de ataques, criptografía y seguridad organizacional. Desarrollo de habilidades prácticas para identificar, prevenir y responder a amenazas digitales."
     },
     "awsDevOps": {
       "title": "DevOps on AWS and Project Management",
-      "description": "Aprende sobre casos de uso de gestión de proyectos en negocios, comprendiendo las diferencias entre metodologías Agile y Waterfall, e implementando prácticas DevOps en AWS."
+      "description": "Visión integral de la gestión de proyectos en negocios, explorando metodologías Agile y Waterfall, e implementación práctica de DevOps en AWS para lograr entregas colaborativas, eficientes y escalables."
     }
   },
   "footer": {
