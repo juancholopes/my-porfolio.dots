@@ -105,7 +105,11 @@
     },
     "minticProgramming": {
       "title": "Bootcamp Programación Básico",
-      "description": "Bootcamp integral que cubre fundamentos de programación con JavaScript y Python, desarrollo web con HTML y CSS, y construcción de proyectos reales."
+      "description": "Programa intensivo de 159 horas en modalidad virtual sincrónica (lunes a sábado, 4 horas diarias). Construí bases sólidas en desarrollo web full-stack, dominando fundamentos de programación con JavaScript y Python, maquetación web con HTML y CSS, y desarrollo de proyectos prácticos aplicando metodologías ágiles."
+    },
+    "minticProgrammingIntermediate": {
+      "title": "Bootcamp Programación Intermedio",
+      "description": "Programa intensivo de 159 horas en modalidad virtual sincrónica (lunes a sábado, 4 horas diarias). Profundicé en tecnologías modernas de desarrollo web, construyendo aplicaciones interactivas con React, implementando arquitecturas backend con Node.js y Express.js, y gestionando bases de datos relacionales con SQL."
     },
     "ibmCybersecurity": {
       "title": "Cybersecurity Fundamentals",
@@ -132,17 +136,6 @@
     "builtWith": "Desarrollado con React y TypeScript",
     "styledWith": "Estilizado por Juancho con Tailwind CSS",
     "coffeeMessage": "y café"
-  },
-  "common": {
-    "loading": "Cargando…",
-    "error": "Ha ocurrido un error",
-    "success": "Éxito",
-    "copyEmail": "Copiar email",
-    "copied": "Correo copiado",
-    "sendEmail": "Enviar email",
-    "contactMe": "Contactar",
-    "getInTouch": "Póngase en contacto",
-    "downloadCV": "Descargar CV"
   },
   "theme": {
     "light": "Claro",

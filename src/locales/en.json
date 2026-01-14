@@ -105,7 +105,11 @@
     },
     "minticProgramming": {
       "title": "Basic Programming Bootcamp",
-      "description": "Comprehensive bootcamp covering programming fundamentals with JavaScript and Python, web development with HTML and CSS, and building real-world projects."
+      "description": "Intensive 159-hour program in a synchronous virtual format (Monday to Saturday, 4 hours daily). I built a solid foundation in full-stack web development, mastering programming fundamentals with JavaScript and Python, web layout with HTML and CSS, and developing practical projects using agile methodologies."
+    },
+    "minticProgrammingIntermediate": {
+      "title": "Intermediate Programming Bootcamp",
+      "description": "Intensive 159-hour program in a synchronous virtual format (Monday to Saturday, 4 hours daily). I deepened my knowledge of modern web development technologies, building interactive applications with React, implementing backend architectures with Node.js and Express.js, and managing relational databases with SQL."
     },
     "ibmCybersecurity": {
       "title": "Cybersecurity Fundamentals",
@@ -132,17 +136,6 @@
     "builtWith": "Built with React & TypeScript",
     "styledWith": "Styled by Juancho with Tailwind CSS",
     "coffeeMessage": "and coffee"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "copyEmail": "Copy email",
-    "copied": "Copied!",
-    "sendEmail": "Send email",
-    "contactMe": "Contact me",
-    "getInTouch": "Get in touch",
-    "downloadCV": "Download CV"
   },
   "theme": {
     "light": "Light",

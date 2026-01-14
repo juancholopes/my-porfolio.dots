@@ -42,5 +42,16 @@
     "skills": ["JavaScript", "HTML", "CSS", "Python"],
     "icon": "/icons/min-tic.svg",
     "color": "yellow"
+  },
+  {
+    "id": "mintic-bootcamp-intermediate",
+    "titleKey": "certificates.minticProgrammingIntermediate.title",
+    "descriptionKey": "certificates.minticProgrammingIntermediate.description",
+    "issuer": "MinTIC",
+    "date": "2026/01",
+    "credentialUrl": "https://app.certika.co/certificate/MTEwOTc1",
+    "skills": ["React", "TypeScript", "SQL", "Express.js", "Node.js"],
+    "icon": "/icons/min-tic.svg",
+    "color": "yellow"
   }
 ]
