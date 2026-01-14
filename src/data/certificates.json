@@ -1,25 +1,14 @@
 [
   {
-    "id": "platzi-javascript",
-    "titleKey": "certificates.platziJavaScript.title",
-    "descriptionKey": "certificates.platziJavaScript.description",
-    "issuer": "Platzi",
-    "date": "2025/08",
-    "credentialUrl": "https://platzi.com/p/cupinacop/curso/11059-gitgithub/diploma/detalle/",
-    "skills": ["JavaScript", "Frontend Development", "Web Development"],
-    "icon": "/icons/platzi.svg",
-    "color": "green"
-  },
-  {
-    "id": "ibm-cybersecurity",
-    "titleKey": "certificates.ibmCybersecurity.title",
-    "descriptionKey": "certificates.ibmCybersecurity.description",
-    "issuer": "IBM",
-    "date": "2025/07",
-    "credentialUrl": "https://www.credly.com/badges/bed6c707-70de-4c09-8e3b-84f4cedb79aa/linked_in_profile",
-    "skills": ["Cybersecurity", "Cryptography", "Security"],
-    "icon": "/icons/ibm.svg",
-    "color": "blue"
+    "id": "mintic-bootcamp",
+    "titleKey": "certificates.minticProgramming.title",
+    "descriptionKey": "certificates.minticProgramming.description",
+    "issuer": "MinTIC",
+    "date": "2025/05",
+    "credentialUrl": "https://app.certika.co/certificate/OTk0MTY",
+    "skills": ["JavaScript", "HTML", "CSS", "Python"],
+    "icon": "/icons/min-tic.svg",
+    "color": "yellow"
   },
   {
     "id": "aws-devops",
@@ -33,17 +22,6 @@
     "color": "orange"
   },
   {
-    "id": "mintic-bootcamp",
-    "titleKey": "certificates.minticProgramming.title",
-    "descriptionKey": "certificates.minticProgramming.description",
-    "issuer": "MinTIC",
-    "date": "2025/05",
-    "credentialUrl": "https://app.certika.co/certificate/OTk0MTY",
-    "skills": ["JavaScript", "HTML", "CSS", "Python"],
-    "icon": "/icons/min-tic.svg",
-    "color": "yellow"
-  },
-  {
     "id": "mintic-bootcamp-intermediate",
     "titleKey": "certificates.minticProgrammingIntermediate.title",
     "descriptionKey": "certificates.minticProgrammingIntermediate.description",
@@ -53,5 +31,27 @@
     "skills": ["React", "TypeScript", "SQL", "Express.js", "Node.js"],
     "icon": "/icons/min-tic.svg",
     "color": "yellow"
+  },
+  {
+    "id": "ibm-cybersecurity",
+    "titleKey": "certificates.ibmCybersecurity.title",
+    "descriptionKey": "certificates.ibmCybersecurity.description",
+    "issuer": "IBM",
+    "date": "2025/07",
+    "credentialUrl": "https://www.credly.com/badges/bed6c707-70de-4c09-8e3b-84f4cedb79aa/linked_in_profile",
+    "skills": ["Cybersecurity", "Cryptography", "Security"],
+    "icon": "/icons/ibm.svg",
+    "color": "blue"
+  },
+  {
+    "id": "platzi-javascript",
+    "titleKey": "certificates.platziJavaScript.title",
+    "descriptionKey": "certificates.platziJavaScript.description",
+    "issuer": "Platzi",
+    "date": "2025/08",
+    "credentialUrl": "https://platzi.com/p/cupinacop/curso/11059-gitgithub/diploma/detalle/",
+    "skills": ["JavaScript", "Frontend Development", "Web Development"],
+    "icon": "/icons/platzi.svg",
+    "color": "green"
   }
 ]

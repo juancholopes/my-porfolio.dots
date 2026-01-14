@@ -1,7 +1,11 @@
-import React from "react";
-import { ExternalLink } from "lucide-react";
+import React, { useState } from "react";
+import { ExternalLink, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import certificatesData from "../data/certificates.json";
+import PrimaryButton from "./ui/primary-button";
+
+const INITIAL_CERTIFICATES = 3;
+const LOAD_MORE_COUNT = 2;
 
 // Configuración de iconos para cada empresa certificadora
 const CompanyIcons = {
@@ -80,6 +84,13 @@ const CompanyIcons = {
 
 const Certificates = () => {
   const { t } = useTranslation();
+  const [visibleCertificates, setVisibleCertificates] = useState(INITIAL_CERTIFICATES);
+
+  const showMoreCertificates = () => {
+    setVisibleCertificates((prev) => Math.min(prev + LOAD_MORE_COUNT, certificatesData.length));
+  };
+
+  const hasMoreCertificates = visibleCertificates < certificatesData.length;
 
   return (
     <section id="certificates" className="py-12 sm:py-16 lg:py-20 relative">
@@ -102,7 +113,7 @@ const Certificates = () => {
         </div>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {certificatesData.map((certificate) => (
+          {certificatesData.slice(0, visibleCertificates).map((certificate) => (
             <div key={certificate.id} className="group relative h-full">
               <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full flex flex-col">
                 {/* Header with icon and title */}
@@ -178,6 +189,15 @@ const Certificates = () => {
             </div>
           ))}
         </div>
+
+        {/* Botón "Ver más" */}
+        {hasMoreCertificates && (
+          <div className="flex justify-center mt-8 sm:mt-12">
+            <PrimaryButton onClick={showMoreCertificates} icon={ChevronDown}>
+              {t("certificates.showMore")}
+            </PrimaryButton>
+          </div>
+        )}
       </div>
     </section>
   );

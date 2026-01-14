@@ -83,6 +83,7 @@
     "subtitle": "",
     "viewCertificate": "View Certificate",
     "issuedBy": "Issued by",
+    "showMore": "Show More",
     "microsoftAzure": {
       "title": "Azure Fundamentals",
       "description": "Microsoft Azure cloud fundamentals, core services and architecture."
