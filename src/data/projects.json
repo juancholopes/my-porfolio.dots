@@ -10,7 +10,7 @@
     ],
     "github": "https://github.com/juancholopes/bot-twitch",
     "demo": null,
-    "image": "/projects/bot-twitch.webp"
+    "image": "/projects/bot-twitch.webp?v=2"
   },
   {
     "titleKey": "projects.cafeYamara.title",
@@ -23,7 +23,7 @@
     ],
     "github": "https://github.com/juancholopes/cafe-yamara",
     "demo": "https://cafe-yamara.vercel.app/",
-    "image": "/projects/cafe-yamara.webp"
+    "image": "/projects/cafe-yamara.webp?v=2"
   },
   {
     "titleKey": "projects.vetCare.title",
@@ -36,7 +36,7 @@
     ],
     "github": "https://github.com/juancholopes/vet-care-frontend",
     "demo": null,
-    "image": "/projects/vet-pet-frontend.webp"
+    "image": "/projects/vet-pet-frontend.webp?v=2"
   },
   {
     "titleKey": "projects.portfolio.title",
@@ -48,7 +48,7 @@
     ],
     "github": "https://github.com/juancholopes/my-porfolio.dots",
     "demo": "https://juancholopez.netlify.app/",
-    "image": "/projects/portafolio-personal.webp"
+    "image": "/projects/portafolio-personal.webp?v=2"
   },
   {
     "titleKey": "projects.dragonBall.title",
@@ -60,7 +60,7 @@
     ],
     "github": "https://github.com/juancholopes/dragon-ball",
     "demo": "https://reactdragonball.netlify.app/",
-    "image": "/projects/dragon-ball-api.webp"
+    "image": "/projects/dragon-ball-api.webp?v=2"
   },
   {
     "titleKey": "projects.api-auth.title",
@@ -73,6 +73,6 @@
     ],
     "github": "https://github.com/juancholopes/api-postgresql",
     "demo": null,
-    "image": "/projects/api-postgresql.webp"
+    "image": "/projects/api-postgresql.webp?v=2"
   }
 ]
