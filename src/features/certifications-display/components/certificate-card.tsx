@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 interface CertificateCardProps {
   certificate: {
-    id: number;
+    id: string;
     titleKey: string;
     descriptionKey: string;
     issuer: string;
