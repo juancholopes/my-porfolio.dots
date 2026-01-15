@@ -45,13 +45,6 @@ const HeroShowcase = () => {
           <CopyEmailButton />
           <DownloadCvButton />
         </div>
-
-        {/* Botón ver mas */}
-        <div className="flex justify-center lg:justify-start">
-          <PrimaryButton href="#about" icon={Code2}>
-            {t("hero.exploreWork")}
-          </PrimaryButton>
-        </div>
       </div>
     </section>
   );

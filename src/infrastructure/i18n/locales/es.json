@@ -11,8 +11,7 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Juan Carlos",
-    "subtitle": "Desarrollador Web construyendo aplicaciones accesibles con JavaScript y TypeScript.",
-    "exploreWork": "Explorar más"
+    "subtitle": "Desarrollador Web construyendo aplicaciones accesibles con JavaScript y TypeScript."
   },
   "about": {
     "title": "Sobre mí",

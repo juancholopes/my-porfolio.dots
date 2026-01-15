@@ -89,16 +89,11 @@ const ProfileCarrusel = () => {
               <LazyImage
                 src={images[currentIndex]}
                 alt={`Galería ${currentIndex + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover peer"
                 priority={true}
               />
-              {/* Overlay con gradiente sutil */}
-              <motion.div
-                className="img-gradient-overlay"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
+              {/* Overlay con gradiente sutil, solo CSS */}
+              <div className="img-gradient-overlay"></div>
             </div>
           </div>
         </motion.div>
