@@ -10,7 +10,7 @@ import CustomCursor from "@infrastructure/theme/custom-cursor";
 // Carga diferida de componentes de página
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const Skeletons = lazy(() => import("./pages/Skeletons"));
+
 
 const queryClient = new QueryClient();
 
