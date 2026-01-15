@@ -22,27 +22,31 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       <div className="border border-blue-500/30 rounded-lg p-4 sm:p-6 bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 h-full flex flex-col">
         {/* Imagen del proyecto */}
         <div className="aspect-video w-full rounded-lg mb-4 sm:mb-6 relative overflow-hidden bg-muted project-image">
-          <LazyImage
-            src={project.image}
-            alt={t(project.titleKey)}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 project-image"
-            priority={index < 2} // Priorizar las primeras 2 imágenes
-            onError={(e) => {
-              // Imagen de respaldo en caso de error de carga
-              e.currentTarget.style.display = "none";
-              e.currentTarget.parentElement!.classList.add(
-                "bg-gradient-to-br",
-                "from-blue-500/20",
-                "to-blue-700/20",
-              );
-            }}
-          />
-          <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors duration-300"></div>
-          <div className="absolute top-2 right-2 sm:top-4 sm:right-4">
-            <Code
-              size={20}
-              className="text-white opacity-70 drop-shadow-lg sm:w-6 sm:h-6"
-            />
+          <div className="relative w-full h-full">
+            <div className="w-full h-full">
+              <LazyImage
+                src={project.image}
+                alt={t(project.titleKey)}
+                className="w-full h-full object-cover transition-transform duration-300 project-image peer"
+                priority={index < 2}
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                  e.currentTarget.parentElement!.classList.add(
+                    "bg-gradient-to-br",
+                    "from-blue-500/20",
+                    "to-blue-700/20",
+                  );
+                }}
+              />
+              {/* Overlay más intenso, solo con hover en la imagen */}
+              <div className="img-gradient-overlay"></div>
+            </div>
+            <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
+              <Code
+                size={20}
+                className="text-white opacity-70 drop-shadow-lg sm:w-6 sm:h-6"
+              />
+            </div>
           </div>
         </div>
 

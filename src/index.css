@@ -1,3 +1,8 @@
+@layer utilities {
+  .img-gradient-overlay {
+    @apply pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/10 transition-opacity duration-300 opacity-0 peer-hover:opacity-100;
+  }
+}
 @import url("/fonts/caskaydia-cove/caskaydia-cove.css");
 
 /* Firefox-specific cursor fix */

@@ -94,7 +94,7 @@ const ProfileCarrusel = () => {
               />
               {/* Overlay con gradiente sutil */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10"
+                className="img-gradient-overlay"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
