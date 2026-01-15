@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { lazy, Suspense } from "react";
 import CustomCursor from "@infrastructure/theme/custom-cursor";
-import IndexSkeleton from "./pages/IndexSkeleton";
 
 // Carga diferida de componentes de página
 const Index = lazy(() => import("./pages/Index"));
@@ -29,7 +28,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Suspense fallback={<IndexSkeleton />}>
+          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Cargando...</div>}>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="*" element={<NotFound />} />

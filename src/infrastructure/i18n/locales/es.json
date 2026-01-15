@@ -76,7 +76,10 @@
   "common": {
     "primaryButton": "Ver más",
     "primaryButtonProjects": "Mostrar más proyectos",
-    "primaryButtonHero": "Explorar mas"
+    "primaryButtonHero": "Explorar mas",
+    "copyEmail": "Copiar correo",
+    "downloadCV": "Descargar CV",
+    "copied": "¡Copiado!"
   },
   "certificates": {
     "title": "Aprendizaje",
