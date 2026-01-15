@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import AboutMe from "../components/AboutMe";
-import Projects from "../components/Projects";
-import Stack from "../components/Stack";
-import Certificates from "../components/Certificates";
-import Footer from "../components/Footer";
-import { useThemeSystem } from "../hooks/useThemeSystem";
+import { Navbar, Footer } from "@features/navigation";
+import HeroShowcase from "@features/hero-showcase";
+import ProfessionalProfile from "@features/professional-profile";
+import ProjectShowcase from "@features/project-showcase";
+import TechStackDisplay from "@features/tech-stack-display";
+import CertificationsDisplay from "@features/certifications-display";
+import { useThemeSystem } from "@shared/hooks/useThemeSystem";
 
 const Index = () => {
   useThemeSystem();
@@ -14,11 +13,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors">
       <Navbar />
-      <Hero />
-      <AboutMe />
-      <Projects />
-      <Stack />
-      <Certificates />
+      <HeroShowcase />
+      <ProfessionalProfile />
+      <ProjectShowcase />
+      <TechStackDisplay />
+      <CertificationsDisplay />
       <Footer />
     </div>
   );
