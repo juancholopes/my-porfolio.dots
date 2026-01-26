@@ -82,7 +82,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
+            className="border-none !p-3"
             data-cursor="text"
             icon={Github}
           >
@@ -94,7 +94,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
               target="_blank"
               icon={ExternalLink}
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
+              className="border-none !p-3"
               data-cursor="text"
             >
               
