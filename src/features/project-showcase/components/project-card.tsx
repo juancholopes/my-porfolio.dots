@@ -1,6 +1,7 @@
 import { Github, ExternalLink, Code } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LazyImage from "@shared/components/lazy-image";
+import PrimaryButton from "@shared/components/ui/primary-button";
 
 interface ProjectCardProps {
   project: {
@@ -38,7 +39,6 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                   );
                 }}
               />
-              {/* Overlay más intenso, solo con hover en la imagen */}
               <div className="img-gradient-overlay"></div>
             </div>
             <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
@@ -78,30 +78,28 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
         {/* Project and demo link sections */}
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mt-auto">
-          <a
+          <PrimaryButton
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
+            className="border-none !p-3"
             data-cursor="text"
+            icon={Github}
           >
-            <Github size={16} className="sm:w-[18px] sm:h-[18px]" />
-            <span>{t("projects.code")}</span>
-          </a>
+            {t("projects.code")}
+          </PrimaryButton>
           {project.demo !== null && (
-            <a
+            <PrimaryButton
               href={project.demo}
               target="_blank"
+              icon={ExternalLink}
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 text-sm sm:text-base"
+              className="border-none !p-3"
               data-cursor="text"
             >
-              <ExternalLink
-                size={16}
-                className="sm:w-[18px] sm:h-[18px]"
-              />
-              <span>{t("projects.demo")}</span>
-            </a>
+              
+              {t("projects.demo")}
+            </PrimaryButton>
           )}
         </div>
       </div>

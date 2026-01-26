@@ -83,13 +83,12 @@ body::-webkit-scrollbar {
     --sidebar-accent-foreground: 215 28% 17%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 221 83% 53%;
-
-    --zed-blue: 59 130 246;
-    --zed-light: 248 250 252;
-    --zed-gray: 100 116 139;
-    --bg-main: 241 245 249;
-    --text-main: 15 23 42;
-    --card-bg: 255 255 255;
+    --zed-blue: #3b82f6;
+    --zed-light: #f8fafc;
+    --zed-gray: #64748b;
+    --bg-main: #f1f5f9;
+    --text-main: #0f172a;
+    --card-bg: #ffffff;
     --button-hover: #020817;
   }
 
@@ -135,9 +134,9 @@ body::-webkit-scrollbar {
     --zed-blue: 221 83% 53%;
     --zed-dark: 222 84% 5%;
     --zed-gray: 215 20% 65%;
-    --bg-main: 15 23 42;
-    --text-main: 241 245 249;
-    --card-bg: 30 41 59;
+    --bg-main: #0f172a;
+    --text-main: #f1f5f9;
+    --card-bg: #1e293b;
   }
 }
 
