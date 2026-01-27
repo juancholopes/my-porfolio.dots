@@ -119,28 +119,19 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 text-slate-600 dark:text-gray-300 text-center sm:text-left">
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <span className="text-sm sm:text-base">
-                  {currentYear} {t("footer.portfolio")}. {t("footer.madeWith")}
+                  {currentYear} {t("footer.portfolio")}
                 </span>
-                <Heart
-                  size={14}
-                  className="text-red-400 animate-pulse sm:w-4 sm:h-4"
-                />
-              </div>
-              <div className="flex items-center space-x-1 sm:space-x-2">
-                <span className="text-sm sm:text-base">
-                  {t("footer.coffeeMessage")}
-                </span>
-                <Coffee
-                  size={14}
-                  className="text-blue-400 animate-pulse sm:w-4 sm:h-4"
-                />
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-xs sm:text-sm text-slate-500 dark:text-gray-400">
-              <span>{t("footer.builtWith")}</span>
-              <div className="w-1 h-1 bg-gray-400 rounded-full hidden sm:block"></div>
-              <span>{t("footer.styledWith")}</span>
+              <>
+                {t("footer.madeWith")}
+                <Heart
+                  size={14}
+                  className="inline-block mx-1 animate-pulse text-red-500 sm:w-4 sm:h-4"
+                />
+              </>
             </div>
           </div>
         </div>

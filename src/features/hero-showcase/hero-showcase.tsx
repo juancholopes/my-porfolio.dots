@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Code2 } from "lucide-react";
 import PrimaryButton from "@shared/components/ui/primary-button";
-import SocialLinks from "./components/social-links";
+import SocialLinkedinButton from "./components/social-linkedin-buttom";
+import SocialGithubButton from "./components/social-github-buttom";
 import CopyEmailButton from "./components/copy-email-button";
 import DownloadCvButton from "./components/download-cv-button";
 
@@ -41,7 +42,8 @@ const HeroShowcase = () => {
         </p>
 
         <div className="flex justify-center lg:justify-start flex-wrap gap-3 sm:gap-4 md:gap-6 mb-6 md:mb-8">
-          <SocialLinks />
+          <SocialLinkedinButton />
+          <SocialGithubButton />
           <CopyEmailButton />
           <DownloadCvButton />
         </div>

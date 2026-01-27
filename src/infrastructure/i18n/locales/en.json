@@ -78,7 +78,9 @@
     "primaryButtonHero": "Explore My Work",
     "downloadCV": "Download CV",
     "copyEmail": "Copy Email",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "showLinkedin": "View LinkedIn",
+    "showGitHub": "View GitHub"
 
   },
   "certificates": {

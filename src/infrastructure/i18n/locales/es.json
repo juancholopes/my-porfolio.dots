@@ -78,7 +78,9 @@
     "primaryButtonHero": "Explorar mas",
     "copyEmail": "Copiar correo",
     "downloadCV": "Descargar CV",
-    "copied": "¡Copiado!"
+    "copied": "¡Copiado!",
+    "showLinkedin": "Ver LinkedIn",
+    "showGitHub": "Ver GitHub"
   },
   "certificates": {
     "title": "Aprendizaje",
