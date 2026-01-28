@@ -6,9 +6,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@shared/components/ui/dropdown-menu";
+import Shuffle from "../../../shared/components/shuffle";
 
 const LanguageSelector = () => {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
 
   const languages = [
     { code: "en", name: "English" },
@@ -27,8 +28,12 @@ const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 px-2 lg:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-200 relative group">
-          {getDisplayText()}
+        <button className="px-2 lg:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-200 relative group">
+          <Shuffle
+            tag="span"
+            text={getDisplayText()}
+            className="jetbrains-mono-regular text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 px-2 lg:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-200"
+          />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./language-selector";
 import ThemeToggle from "./theme-toggle";
+import Shuffle from "../../../shared/components/shuffle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,13 +39,13 @@ const Navbar = () => {
           <div className="hidden md:flex md:items-center">
             <div className="flex items-baseline space-x-4 lg:space-x-8 relative">
               {navItems.map((item) => (
-                <a
+                <Shuffle
                   key={item.name}
+                  tag="a"
                   href={item.href}
-                  className="text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 px-2 lg:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
+                  className="jetbrains-mono-regular text-slate-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 px-2 lg:px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-200"
+                  text={item.name}
+                />
               ))}
 
               <LanguageSelector />
