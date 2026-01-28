@@ -1,4 +1,7 @@
-@import url("/fonts/caskaydia-cove/caskaydia-cove.css");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
+
 
 @layer utilities {
   .img-gradient-overlay {
@@ -29,9 +32,9 @@ body.custom-cursor-enabled {
 /* Hide scrollbar globally */
 html,
 body {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar,
@@ -163,14 +166,14 @@ body::-webkit-scrollbar {
 
   html {
     font-family:
-      "Caskaydia Cove", "SF Mono", Monaco, "Inconsolata", "Fira Code",
+      "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
       "Fira Mono", "Roboto Mono", monospace;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family:
-      "Caskaydia Cove", "SF Mono", Monaco, "Inconsolata", "Fira Code",
+      "JetBrains Mono", "SF Mono", Monaco, "Inconsolata", "Fira Code",
       "Fira Mono", "Roboto Mono", monospace;
     transition:
       background-color 0.3s ease,
@@ -184,15 +187,45 @@ body::-webkit-scrollbar {
 
   h1,
   h2 {
-    font-family: "Notable", sans-serif !important ;
+    font-family: "Notable", sans-serif !important;
+    font-weight: 400 !important;
     letter-spacing: 2px;
   }
-  
+
+  h3 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 52px !important;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    font-family: "Caskaydia Cove", monospace !important;
+    font-family: "JetBrains Mono", monospace !important;
+  }
+
+  /* Clase utilitaria para Work Sans Black 900 */
+  .work-sans-black-900 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  /* Google Fonts utility classes */
+  .notable-regular {
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  .jetbrains-mono-regular {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
   }
 }
 

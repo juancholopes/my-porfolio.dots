@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Code2 } from "lucide-react";
-import PrimaryButton from "@shared/components/ui/primary-button";
 import SocialLinkedinButton from "./components/social-linkedin-buttom";
 import SocialGithubButton from "./components/social-github-buttom";
 import CopyEmailButton from "./components/copy-email-button";
 import DownloadCvButton from "./components/download-cv-button";
+import Shuffle from "../../shared/components/shuffle";
 
 const HeroShowcase = () => {
   const { t } = useTranslation();
@@ -15,22 +13,23 @@ const HeroShowcase = () => {
       {/* Grid background */}
       <div className="absolute inset-0 grid-pattern opacity-30"></div>
 
-      <div className="relative z-10 text-center lg:text-left max-w-full w-full">
-        <div className="float-animation">
+      <div className="relative z-10 text-left max-w-full w-full">
+        <div >
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-bold mb-4 md:mb-6 leading-tight md:leading-none"
             data-cursor="text"
           >
-            <span className="text-foreground" data-cursor="text">
-              {t("hero.greeting")}
-            </span>
+            <Shuffle
+              tag="span"
+              text={t("hero.greeting")}
+              className="notable-regular normal-case text-foreground text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[10rem] leading-tight md:leading-none"
+            />
             <br />
-            <span
-              className="text-blue-500 dark:text-blue-400 inline-block"
-              data-cursor="text"
-            >
-              {t("hero.name")}
-            </span>
+            <Shuffle
+              tag="span"
+              text={t("hero.name")}
+              className="notable-regular inline-block normal-case text-blue-500 dark:text-blue-400 text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[10rem] leading-tight md:leading-none"
+            />
           </h1>
         </div>
 
