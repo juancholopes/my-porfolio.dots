@@ -1,7 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
 
+/* ============================================================================
+   SISTEMA DE VARIABLES CSS - GUÍA DE PALETA DE COLORES
+   ============================================================================
 
+   Este archivo centraliza TODOS los colores del proyecto mediante variables CSS.
+   Para cambiar la paleta de colores, modifica las variables en las secciones:
+   - :root (modo claro)
+   - .dark (modo oscuro)
+
+   VARIABLES PRINCIPALES:
+   ----------------------
+   --primary-rgb: Color principal del tema (por defecto: 59 130 246 = azul)
+   --primary-solid: Versión sólida del color principal
+   --primary-opacity-XX: Variantes con opacidad (10, 15, 20, 30, 40, 50, 60, 80, 90)
+
+   --background: Color de fondo principal
+   --foreground: Color de texto principal
+   --card-bg: Color de fondo de tarjetas
+   --bg-main: Color de fondo alternativo
+   --text-main: Color de texto alternativo
+
+   --white-rgb: Color blanco (255 255 255)
+   --white-solid: Versión sólida del blanco
+   --white-opacity-40: Blanco con 40% de opacidad
+
+   --accent-light-rgb: Color de acento claro (147 197 253)
+   --accent-light: Versión sólida del acento claro
+
+   --bg-overlay-light: Overlay oscuro para superposiciones
+   --focus-ring: Color del anillo de foco (accesibilidad)
+
+   CÓMO CAMBIAR LA PALETA:
+   -----------------------
+   1. Identifica el color que deseas cambiar
+   2. Busca su variable correspondiente en :root y .dark
+   3. Modifica el valor (RGB para variables con -rgb, HSL para otras)
+   4. Los cambios se aplicarán automáticamente a TODO el proyecto
+
+   EJEMPLO - Cambiar de azul a verde:
+   --primary-rgb: 34 197 94;  (antes: 59 130 246)
+
+   NOTA: Los componentes usan estas variables mediante var(--nombre-variable)
+   ============================================================================ */
 
 @layer utilities {
   .img-gradient-overlay {
@@ -93,6 +135,32 @@ body::-webkit-scrollbar {
     --text-main: #0f172a;
     --card-bg: #ffffff;
     --button-hover: #020817;
+
+    /* Color utilities with opacity variants */
+    --primary-rgb: 59 130 246;
+    --primary-opacity-10: rgba(var(--primary-rgb), 0.1);
+    --primary-opacity-15: rgba(var(--primary-rgb), 0.15);
+    --primary-opacity-20: rgba(var(--primary-rgb), 0.2);
+    --primary-opacity-30: rgba(var(--primary-rgb), 0.3);
+    --primary-opacity-40: rgba(var(--primary-rgb), 0.4);
+    --primary-opacity-50: rgba(var(--primary-rgb), 0.5);
+    --primary-opacity-60: rgba(var(--primary-rgb), 0.6);
+    --primary-opacity-80: rgba(var(--primary-rgb), 0.8);
+    --primary-opacity-90: rgba(var(--primary-rgb), 0.9);
+    --primary-solid: rgb(var(--primary-rgb));
+
+    /* Background colors with opacity */
+    --bg-overlay-light: rgba(15, 23, 42, 0.9);
+    --white-rgb: 255 255 255;
+    --white-opacity-40: rgba(var(--white-rgb), 0.4);
+    --white-solid: rgb(var(--white-rgb));
+
+    /* Accent colors */
+    --accent-light-rgb: 147 197 253;
+    --accent-light: rgb(var(--accent-light-rgb));
+
+    /* Focus and outline colors */
+    --focus-ring: rgb(var(--primary-rgb));
   }
 
   .dark {
@@ -140,6 +208,32 @@ body::-webkit-scrollbar {
     --bg-main: #0f172a;
     --text-main: #f1f5f9;
     --card-bg: #1e293b;
+
+    /* Color utilities with opacity variants - Dark mode */
+    --primary-rgb: 59 130 246;
+    --primary-opacity-10: rgba(var(--primary-rgb), 0.1);
+    --primary-opacity-15: rgba(var(--primary-rgb), 0.15);
+    --primary-opacity-20: rgba(var(--primary-rgb), 0.2);
+    --primary-opacity-30: rgba(var(--primary-rgb), 0.3);
+    --primary-opacity-40: rgba(var(--primary-rgb), 0.4);
+    --primary-opacity-50: rgba(var(--primary-rgb), 0.5);
+    --primary-opacity-60: rgba(var(--primary-rgb), 0.6);
+    --primary-opacity-80: rgba(var(--primary-rgb), 0.8);
+    --primary-opacity-90: rgba(var(--primary-rgb), 0.9);
+    --primary-solid: rgb(var(--primary-rgb));
+
+    /* Background colors with opacity */
+    --bg-overlay-light: rgba(15, 23, 42, 0.9);
+    --white-rgb: 255 255 255;
+    --white-opacity-40: rgba(var(--white-rgb), 0.4);
+    --white-solid: rgb(var(--white-rgb));
+
+    /* Accent colors */
+    --accent-light-rgb: 147 197 253;
+    --accent-light: rgb(var(--accent-light-rgb));
+
+    /* Focus and outline colors */
+    --focus-ring: rgb(var(--primary-rgb));
   }
 }
 
@@ -213,7 +307,6 @@ body::-webkit-scrollbar {
     font-style: normal;
   }
 
-
   .jetbrains-mono-regular {
     font-family: "JetBrains Mono", monospace;
     font-weight: 400;
@@ -223,23 +316,23 @@ body::-webkit-scrollbar {
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px);
+    linear-gradient(var(--primary-opacity-50) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-opacity-50) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .dark .grid-pattern {
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+    linear-gradient(var(--primary-opacity-15) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-opacity-15) 1px, transparent 1px);
 }
 
 .zed-glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px var(--primary-opacity-30);
 }
 
 .zed-border {
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--primary-opacity-30);
 }
 
 @keyframes float {
@@ -296,7 +389,7 @@ body::-webkit-scrollbar {
 }
 
 .zed-glow:hover {
-  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 25px var(--primary-opacity-50);
   transform: translateY(-2px);
 }
 
@@ -388,13 +481,13 @@ a:hover {
   0%,
   100% {
     box-shadow:
-      0 0 20px rgba(59, 130, 246, 0.3),
-      inset 0 0 10px rgba(59, 130, 246, 0.1);
+      0 0 20px var(--primary-opacity-30),
+      inset 0 0 10px var(--primary-opacity-10);
   }
   50% {
     box-shadow:
-      0 0 30px rgba(59, 130, 246, 0.5),
-      inset 0 0 15px rgba(59, 130, 246, 0.2);
+      0 0 30px var(--primary-opacity-50),
+      inset 0 0 15px var(--primary-opacity-20);
   }
 }
 
@@ -422,7 +515,7 @@ a:hover {
   transform: translateY(-50%);
   width: 8px;
   height: 2px;
-  background-color: rgb(59, 130, 246);
+  background-color: var(--primary-solid);
   animation: blink 1s infinite;
 }
 
@@ -438,11 +531,11 @@ a:hover {
   }
 
   .zed-glow {
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 15px var(--primary-opacity-20);
   }
 
   .zed-glow:hover {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 20px var(--primary-opacity-40);
     transform: translateY(-1px);
   }
 }
@@ -494,6 +587,6 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid rgb(59, 130, 246);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }

@@ -10,7 +10,7 @@ const ProfileCarrusel = () => {
       "/about-me/foto-3.webp",
       "/about-me/foto-4.webp",
     ],
-    []
+    [],
   );
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -117,8 +117,8 @@ const ProfileCarrusel = () => {
                 scale: currentIndex === index ? 1.5 : 1,
                 backgroundColor:
                   currentIndex === index
-                    ? "rgb(59 130 246)"
-                    : "rgba(255 255 255 / 0.4)",
+                    ? "var(--primary-solid)"
+                    : "var(--white-opacity-40)",
               }}
               transition={{ duration: 0.3 }}
             />
