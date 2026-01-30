@@ -98,16 +98,16 @@ const ProfessionalProfile = () => {
             >
               <PixelTransition
                 firstContent={
-                    <LazyImage
-                      src={"/public/about-me/foto-4.webp"}
-                      alt={"Professional Profile Image 1"}
-                      className="w-full h-full object-cover grayscale"
-                      priority={true}
-                    />
+                  <LazyImage
+                    src={"/about-me/foto-4.webp"}
+                    alt={"Professional Profile Image 1"}
+                    className="w-full h-full object-cover grayscale"
+                    priority={true}
+                  />
                 }
                 secondContent={
                   <LazyImage
-                    src={"/public/about-me/foto-1.webp"}
+                    src={"/about-me/foto-1.webp"}
                     alt={"Professional Profile Image 2"}
                     className="w-full h-full object-cover grayscale"
                     priority={true}
@@ -118,7 +118,7 @@ const ProfessionalProfile = () => {
                 once={false}
                 animationStepDuration={0.4}
                 className="w-full h-full"
-                />
+              />
             </div>
           </div>
         </div>
