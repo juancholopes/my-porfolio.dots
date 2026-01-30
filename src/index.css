@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
 
 @layer utilities {
   .img-gradient-overlay {
@@ -78,14 +76,14 @@ body::-webkit-scrollbar {
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 215 28% 17%;
-    --sidebar-primary: 221 83% 53%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 215 28% 17%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-background: #ffffff;
+    --sidebar-foreground: #1f2937;
+    --sidebar-primary: #3b82f6;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f8fafc;
+    --sidebar-accent-foreground: #1f2937;
+    --sidebar-border: #e6eef8;
+    --sidebar-ring: #3b82f6;
     --zed-blue: #3b82f6;
     --zed-light: #f8fafc;
     --zed-gray: #64748b;
@@ -93,6 +91,32 @@ body::-webkit-scrollbar {
     --text-main: #0f172a;
     --card-bg: #ffffff;
     --button-hover: #020817;
+
+    /* Color utilities with opacity variants */
+    --primary-rgb: 59 130 246;
+    --primary-opacity-10: rgba(var(--primary-rgb), 0.1);
+    --primary-opacity-15: rgba(var(--primary-rgb), 0.15);
+    --primary-opacity-20: rgba(var(--primary-rgb), 0.2);
+    --primary-opacity-30: rgba(var(--primary-rgb), 0.3);
+    --primary-opacity-40: rgba(var(--primary-rgb), 0.4);
+    --primary-opacity-50: rgba(var(--primary-rgb), 0.5);
+    --primary-opacity-60: rgba(var(--primary-rgb), 0.6);
+    --primary-opacity-80: rgba(var(--primary-rgb), 0.8);
+    --primary-opacity-90: rgba(var(--primary-rgb), 0.9);
+    --primary-solid: rgb(var(--primary-rgb));
+
+    /* Background colors with opacity */
+    --bg-overlay-light: rgba(15, 23, 42, 0.9);
+    --white-rgb: 255 255 255;
+    --white-opacity-40: rgba(var(--white-rgb), 0.4);
+    --white-solid: rgb(var(--white-rgb));
+
+    /* Accent colors */
+    --accent-light-rgb: 147 197 253;
+    --accent-light: rgb(var(--accent-light-rgb));
+
+    /* Focus and outline colors */
+    --focus-ring: rgb(var(--primary-rgb));
   }
 
   .dark {
@@ -140,6 +164,32 @@ body::-webkit-scrollbar {
     --bg-main: #0f172a;
     --text-main: #f1f5f9;
     --card-bg: #1e293b;
+
+    /* Color utilities with opacity variants - Dark mode */
+    --primary-rgb: 59 130 246;
+    --primary-opacity-10: rgba(var(--primary-rgb), 0.1);
+    --primary-opacity-15: rgba(var(--primary-rgb), 0.15);
+    --primary-opacity-20: rgba(var(--primary-rgb), 0.2);
+    --primary-opacity-30: rgba(var(--primary-rgb), 0.3);
+    --primary-opacity-40: rgba(var(--primary-rgb), 0.4);
+    --primary-opacity-50: rgba(var(--primary-rgb), 0.5);
+    --primary-opacity-60: rgba(var(--primary-rgb), 0.6);
+    --primary-opacity-80: rgba(var(--primary-rgb), 0.8);
+    --primary-opacity-90: rgba(var(--primary-rgb), 0.9);
+    --primary-solid: rgb(var(--primary-rgb));
+
+    /* Background colors with opacity */
+    --bg-overlay-light: rgba(15, 23, 42, 0.9);
+    --white-rgb: 255 255 255;
+    --white-opacity-40: rgba(var(--white-rgb), 0.4);
+    --white-solid: rgb(var(--white-rgb));
+
+    /* Accent colors */
+    --accent-light-rgb: 147 197 253;
+    --accent-light: rgb(var(--accent-light-rgb));
+
+    /* Focus and outline colors */
+    --focus-ring: rgb(var(--primary-rgb));
   }
 }
 
@@ -213,7 +263,6 @@ body::-webkit-scrollbar {
     font-style: normal;
   }
 
-
   .jetbrains-mono-regular {
     font-family: "JetBrains Mono", monospace;
     font-weight: 400;
@@ -223,23 +272,23 @@ body::-webkit-scrollbar {
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px);
+    linear-gradient(var(--primary-opacity-50) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-opacity-50) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .dark .grid-pattern {
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+    linear-gradient(var(--primary-opacity-15) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary-opacity-15) 1px, transparent 1px);
 }
 
 .zed-glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px var(--primary-opacity-30);
 }
 
 .zed-border {
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--primary-opacity-30);
 }
 
 @keyframes float {
@@ -296,7 +345,7 @@ body::-webkit-scrollbar {
 }
 
 .zed-glow:hover {
-  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 25px var(--primary-opacity-50);
   transform: translateY(-2px);
 }
 
@@ -388,13 +437,13 @@ a:hover {
   0%,
   100% {
     box-shadow:
-      0 0 20px rgba(59, 130, 246, 0.3),
-      inset 0 0 10px rgba(59, 130, 246, 0.1);
+      0 0 20px var(--primary-opacity-30),
+      inset 0 0 10px var(--primary-opacity-10);
   }
   50% {
     box-shadow:
-      0 0 30px rgba(59, 130, 246, 0.5),
-      inset 0 0 15px rgba(59, 130, 246, 0.2);
+      0 0 30px var(--primary-opacity-50),
+      inset 0 0 15px var(--primary-opacity-20);
   }
 }
 
@@ -422,7 +471,7 @@ a:hover {
   transform: translateY(-50%);
   width: 8px;
   height: 2px;
-  background-color: rgb(59, 130, 246);
+  background-color: var(--primary-solid);
   animation: blink 1s infinite;
 }
 
@@ -438,11 +487,11 @@ a:hover {
   }
 
   .zed-glow {
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 15px var(--primary-opacity-20);
   }
 
   .zed-glow:hover {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 20px var(--primary-opacity-40);
     transform: translateY(-1px);
   }
 }
@@ -494,6 +543,6 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid rgb(59, 130, 246);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }

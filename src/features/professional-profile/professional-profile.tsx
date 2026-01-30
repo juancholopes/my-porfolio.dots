@@ -1,6 +1,7 @@
 import { User, Target, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import ProfileCarrusel from "./components/profile-carrusel";
+import PixelTransition from "@shared/components/pixel-transition";
+import LazyImage from "@shared/components/lazy-image";
 
 const ProfessionalProfile = () => {
   const { t } = useTranslation();
@@ -92,10 +93,32 @@ const ProfessionalProfile = () => {
 
           <div className="relative order-1 lg:order-2">
             <div
-              className="w-full h-64 sm:h-80 lg:h-96 border border-blue-500/30 rounded-lg bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image overflow-hidden"
+              className="w-full h-64 sm:h-80 lg:h-96 rounded-lg bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image overflow-hidden"
               data-cursor="image"
             >
-              <ProfileCarrusel />
+              <PixelTransition
+                firstContent={
+                    <LazyImage
+                      src={"/public/about-me/foto-4.webp"}
+                      alt={"Professional Profile Image 1"}
+                      className="w-full h-full object-cover grayscale"
+                      priority={true}
+                    />
+                }
+                secondContent={
+                  <LazyImage
+                    src={"/public/about-me/foto-1.webp"}
+                    alt={"Professional Profile Image 2"}
+                    className="w-full h-full object-cover grayscale"
+                    priority={true}
+                  />
+                }
+                gridSize={18}
+                pixelColor="#60A5FA"
+                once={false}
+                animationStepDuration={0.4}
+                className="w-full h-full"
+                />
             </div>
           </div>
         </div>

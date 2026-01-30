@@ -85,33 +85,31 @@ const CustomCursor: React.FC = () => {
                   : "50%",
             backgroundColor:
               cursorVariant === "text"
-                ? "rgba(59, 130, 246, 1)"
+                ? "var(--primary-solid)"
                 : cursorVariant === "image"
-                  ? "rgba(15, 23, 42, 0.9)"
+                  ? "var(--bg-overlay-light)"
                   : cursorVariant === "hover"
-                    ? "rgba(59, 130, 246, 0.3)"
-                    : "rgba(59, 130, 246, 0.8)",
+                    ? "var(--primary-opacity-30)"
+                    : "var(--primary-opacity-80)",
             border:
               cursorVariant === "text"
                 ? "none"
                 : cursorVariant === "image"
-                  ? "2px solid rgba(59, 130, 246, 0.9)"
+                  ? "2px solid var(--primary-opacity-90)"
                   : cursorVariant === "hover"
-                    ? "2px solid rgba(59, 130, 246, 1)"
-                    : "2px solid rgba(59, 130, 246, 1)",
+                    ? "2px solid var(--primary-solid)"
+                    : "2px solid var(--primary-solid)",
             boxShadow:
               cursorVariant === "text"
-                ? "0 0 8px rgba(59, 130, 246, 0.6)"
+                ? "0 0 8px var(--primary-opacity-60)"
                 : cursorVariant === "image"
-                  ? "0 0 20px rgba(59, 130, 246, 0.6)"
+                  ? "0 0 20px var(--primary-opacity-60)"
                   : cursorVariant === "hover"
-                    ? "0 0 25px rgba(59, 130, 246, 0.8)"
-                    : "0 0 15px rgba(59, 130, 246, 0.6)",
+                    ? "0 0 25px var(--primary-opacity-80)"
+                    : "0 0 15px var(--primary-opacity-60)",
             fontSize: cursorVariant === "image" ? "11px" : "0px",
             color:
-              cursorVariant === "image"
-                ? "rgba(147, 197, 253, 1)"
-                : "transparent",
+              cursorVariant === "image" ? "var(--accent-light)" : "transparent",
             display: cursorVariant === "image" ? "flex" : "block",
             alignItems: cursorVariant === "image" ? "center" : "flex-start",
             justifyContent: cursorVariant === "image" ? "center" : "flex-start",
