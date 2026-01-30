@@ -94,15 +94,16 @@ body::-webkit-scrollbar {
 
     /* Color utilities with opacity variants */
     --primary-rgb: 59 130 246;
-    --primary-opacity-10: rgba(var(--primary-rgb), 0.1);
-    --primary-opacity-15: rgba(var(--primary-rgb), 0.15);
-    --primary-opacity-20: rgba(var(--primary-rgb), 0.2);
-    --primary-opacity-30: rgba(var(--primary-rgb), 0.3);
-    --primary-opacity-40: rgba(var(--primary-rgb), 0.4);
-    --primary-opacity-50: rgba(var(--primary-rgb), 0.5);
-    --primary-opacity-60: rgba(var(--primary-rgb), 0.6);
-    --primary-opacity-80: rgba(var(--primary-rgb), 0.8);
-    --primary-opacity-90: rgba(var(--primary-rgb), 0.9);
+    /* Use modern color syntax so the space-separated --primary-rgb works reliably */
+    --primary-opacity-10: rgb(var(--primary-rgb) / 0.1);
+    --primary-opacity-15: rgb(var(--primary-rgb) / 0.15);
+    --primary-opacity-20: rgb(var(--primary-rgb) / 0.2);
+    --primary-opacity-30: rgb(var(--primary-rgb) / 0.3);
+    --primary-opacity-40: rgb(var(--primary-rgb) / 0.4);
+    --primary-opacity-50: rgb(var(--primary-rgb) / 0.5);
+    --primary-opacity-60: rgb(var(--primary-rgb) / 0.6);
+    --primary-opacity-80: rgb(var(--primary-rgb) / 0.8);
+    --primary-opacity-90: rgb(var(--primary-rgb) / 0.9);
     --primary-solid: rgb(var(--primary-rgb));
 
     /* Background colors with opacity */
@@ -167,15 +168,15 @@ body::-webkit-scrollbar {
 
     /* Color utilities with opacity variants - Dark mode */
     --primary-rgb: 59 130 246;
-    --primary-opacity-10: rgba(var(--primary-rgb), 0.1);
-    --primary-opacity-15: rgba(var(--primary-rgb), 0.15);
-    --primary-opacity-20: rgba(var(--primary-rgb), 0.2);
-    --primary-opacity-30: rgba(var(--primary-rgb), 0.3);
-    --primary-opacity-40: rgba(var(--primary-rgb), 0.4);
-    --primary-opacity-50: rgba(var(--primary-rgb), 0.5);
-    --primary-opacity-60: rgba(var(--primary-rgb), 0.6);
-    --primary-opacity-80: rgba(var(--primary-rgb), 0.8);
-    --primary-opacity-90: rgba(var(--primary-rgb), 0.9);
+    --primary-opacity-10: rgb(var(--primary-rgb) / 0.1);
+    --primary-opacity-15: rgb(var(--primary-rgb) / 0.15);
+    --primary-opacity-20: rgb(var(--primary-rgb) / 0.2);
+    --primary-opacity-30: rgb(var(--primary-rgb) / 0.3);
+    --primary-opacity-40: rgb(var(--primary-rgb) / 0.4);
+    --primary-opacity-50: rgb(var(--primary-rgb) / 0.5);
+    --primary-opacity-60: rgb(var(--primary-rgb) / 0.6);
+    --primary-opacity-80: rgb(var(--primary-rgb) / 0.8);
+    --primary-opacity-90: rgb(var(--primary-rgb) / 0.9);
     --primary-solid: rgb(var(--primary-rgb));
 
     /* Background colors with opacity */
@@ -270,6 +271,7 @@ body::-webkit-scrollbar {
   }
 }
 
+/* Web Background*/
 .grid-pattern {
   background-image:
     linear-gradient(var(--primary-opacity-50) 1px, transparent 1px),
