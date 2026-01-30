@@ -17,7 +17,6 @@ const HeroShowcase = () => {
         <div >
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-bold mb-4 md:mb-6 leading-tight md:leading-none"
-            data-cursor="text"
           >
             <Shuffle
               tag="span"

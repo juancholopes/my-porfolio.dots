@@ -1,50 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
 
-/* ============================================================================
-   SISTEMA DE VARIABLES CSS - GUÍA DE PALETA DE COLORES
-   ============================================================================
-
-   Este archivo centraliza TODOS los colores del proyecto mediante variables CSS.
-   Para cambiar la paleta de colores, modifica las variables en las secciones:
-   - :root (modo claro)
-   - .dark (modo oscuro)
-
-   VARIABLES PRINCIPALES:
-   ----------------------
-   --primary-rgb: Color principal del tema (por defecto: 59 130 246 = azul)
-   --primary-solid: Versión sólida del color principal
-   --primary-opacity-XX: Variantes con opacidad (10, 15, 20, 30, 40, 50, 60, 80, 90)
-
-   --background: Color de fondo principal
-   --foreground: Color de texto principal
-   --card-bg: Color de fondo de tarjetas
-   --bg-main: Color de fondo alternativo
-   --text-main: Color de texto alternativo
-
-   --white-rgb: Color blanco (255 255 255)
-   --white-solid: Versión sólida del blanco
-   --white-opacity-40: Blanco con 40% de opacidad
-
-   --accent-light-rgb: Color de acento claro (147 197 253)
-   --accent-light: Versión sólida del acento claro
-
-   --bg-overlay-light: Overlay oscuro para superposiciones
-   --focus-ring: Color del anillo de foco (accesibilidad)
-
-   CÓMO CAMBIAR LA PALETA:
-   -----------------------
-   1. Identifica el color que deseas cambiar
-   2. Busca su variable correspondiente en :root y .dark
-   3. Modifica el valor (RGB para variables con -rgb, HSL para otras)
-   4. Los cambios se aplicarán automáticamente a TODO el proyecto
-
-   EJEMPLO - Cambiar de azul a verde:
-   --primary-rgb: 34 197 94;  (antes: 59 130 246)
-
-   NOTA: Los componentes usan estas variables mediante var(--nombre-variable)
-   ============================================================================ */
-
 @layer utilities {
   .img-gradient-overlay {
     @apply pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-black/10 transition-opacity duration-300 opacity-0 peer-hover:opacity-100;
@@ -120,14 +76,14 @@ body::-webkit-scrollbar {
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 215 28% 17%;
-    --sidebar-primary: 221 83% 53%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 215 28% 17%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-background: #ffffff;
+    --sidebar-foreground: #1f2937;
+    --sidebar-primary: #3b82f6;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f8fafc;
+    --sidebar-accent-foreground: #1f2937;
+    --sidebar-border: #e6eef8;
+    --sidebar-ring: #3b82f6;
     --zed-blue: #3b82f6;
     --zed-light: #f8fafc;
     --zed-gray: #64748b;

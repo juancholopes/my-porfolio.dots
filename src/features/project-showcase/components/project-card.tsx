@@ -26,6 +26,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <div className="relative w-full h-full">
             <div className="w-full h-full">
               <LazyImage
+
                 src={project.image}
                 alt={t(project.titleKey)}
                 className="w-full h-full object-cover transition-transform duration-300 project-image peer"
