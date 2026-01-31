@@ -62,7 +62,7 @@ const CopyEmailButton = () => {
           <span>{t("common.copyEmail")}</span>
           {/* Flecha del tooltip */}
           <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-            <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900/95"></div>
+            <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-blue-500/30 border-solid"></div>
           </div>
         </div>
       )}
@@ -76,7 +76,7 @@ const CopyEmailButton = () => {
           </span>
           {/* Flecha del tooltip */}
           <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-            <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900/95"></div>
+            <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-blue-500/30 border-solid"></div>
           </div>
         </div>
       )}
