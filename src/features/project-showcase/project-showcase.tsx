@@ -5,7 +5,7 @@ import projectsData from "@/data/projects.json";
 import ProjectCard from "./components/project-card";
 import PrimaryButton from "@shared/components/ui/primary-button";
 
-const INITIAL_PROJECTS = 4;
+const INITIAL_PROJECTS = 2;
 const LOAD_MORE_COUNT = 2;
 
 const ProjectShowcase = () => {
