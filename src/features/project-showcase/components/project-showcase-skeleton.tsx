@@ -14,7 +14,7 @@ const ProjectShowcaseSkeleton = () => {
 
         {/* Project cards grid skeleton */}
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {[...Array(4)].map((_, index) => (
+          {[...Array(2)].map((_, index) => (
             <div
               key={index}
               className="bg-card dark:bg-gray-800/50 rounded-2xl overflow-hidden border border-border"
