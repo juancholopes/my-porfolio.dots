@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import projectsData from "@/data/projects.json";
 import ProjectCard from "./components/project-card";
 import PrimaryButton from "@shared/components/ui/primary-button";
+import BlurText from "@shared/components/BlurText.tsx";
 
 const INITIAL_PROJECTS = 2;
 const LOAD_MORE_COUNT = 2;
@@ -13,7 +14,9 @@ const ProjectShowcase = () => {
   const [visibleProjects, setVisibleProjects] = useState(INITIAL_PROJECTS);
 
   const showMoreProjects = () => {
-    setVisibleProjects((prev) => Math.min(prev + LOAD_MORE_COUNT, projectsData.length));
+    setVisibleProjects((prev) =>
+      Math.min(prev + LOAD_MORE_COUNT, projectsData.length),
+    );
   };
 
   const hasMoreProjects = visibleProjects < projectsData.length;
@@ -28,12 +31,14 @@ const ProjectShowcase = () => {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4"
             data-cursor="text"
           >
-            <span
+            <BlurText
+              text={t("projects.title")}
+              delay={50}
+              animateBy="letters"
+              direction="bottom"
+              align="center"
               className="text-blue-500 dark:text-blue-400"
-              data-cursor="text"
-            >
-              {t("projects.title")}
-            </span>
+            />
           </h2>
           <p
             className="text-slate-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0"

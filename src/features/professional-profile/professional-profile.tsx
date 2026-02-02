@@ -1,7 +1,8 @@
-import { User, Target, Zap } from "lucide-react";
+import { Target, User, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PixelTransition from "@shared/components/pixel-transition";
 import LazyImage from "@shared/components/lazy-image";
+import BlurText from "@shared/components/BlurText";
 
 const ProfessionalProfile = () => {
   const { t } = useTranslation();
@@ -15,12 +16,14 @@ const ProfessionalProfile = () => {
             className="text-2xl  sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4"
             data-cursor="text"
           >
-            <span
+            <BlurText
+              text={t("about.title")}
+              delay={50}
+              animateBy="letters"
+              direction="bottom"
+              align="center"
               className="text-blue-500 dark:text-blue-400"
-              data-cursor="text"
-            >
-              {t("about.title")}
-            </span>
+            />
           </h2>
         </div>
 
