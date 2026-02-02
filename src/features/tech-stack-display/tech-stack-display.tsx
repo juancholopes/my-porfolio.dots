@@ -1,5 +1,6 @@
-import { Database, Globe, Users, Server, Palette, Zap } from "lucide-react";
+import { Database, Globe, Palette, Server, Users, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import BlurText from "@shared/components/BlurText.tsx";
 
 const TechStackDisplay = () => {
   const { t } = useTranslation();
@@ -36,7 +37,7 @@ const TechStackDisplay = () => {
       icon: Database,
       technologies: [
         "MySQL",
-        "PostgreSQL",
+        "PostgresSQL",
         "Sequelize",
         "Database Design",
         "SQL",
@@ -95,12 +96,14 @@ const TechStackDisplay = () => {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4"
             data-cursor="text"
           >
-            <span
+            <BlurText
+              text={t("stack.title")}
+              delay={50}
+              animateBy="letters"
+              direction="bottom"
+              align="center"
               className="text-blue-500 dark:text-blue-400"
-              data-cursor="text"
-            >
-              {t("stack.title")}
-            </span>
+            />
           </h2>
           <p
             className="text-slate-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-2 sm:px-0"

@@ -4,16 +4,20 @@ import { useTranslation } from "react-i18next";
 import certificatesData from "@/data/certificates.json";
 import CertificateCard from "./components/certificate-card";
 import PrimaryButton from "@shared/components/ui/primary-button";
+import BlurText from "@shared/components/BlurText.tsx";
 
 const INITIAL_CERTIFICATES = 3;
 const LOAD_MORE_COUNT = 2;
 
 const CertificationsDisplay = () => {
   const { t } = useTranslation();
-  const [visibleCertificates, setVisibleCertificates] = useState(INITIAL_CERTIFICATES);
+  const [visibleCertificates, setVisibleCertificates] =
+    useState(INITIAL_CERTIFICATES);
 
   const showMoreCertificates = () => {
-    setVisibleCertificates((prev) => Math.min(prev + LOAD_MORE_COUNT, certificatesData.length));
+    setVisibleCertificates((prev) =>
+      Math.min(prev + LOAD_MORE_COUNT, certificatesData.length),
+    );
   };
 
   const hasMoreCertificates = visibleCertificates < certificatesData.length;
@@ -28,12 +32,14 @@ const CertificationsDisplay = () => {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4"
             data-cursor="text"
           >
-            <span
+            <BlurText
+              text={t("certificates.title")}
+              delay={50}
+              animateBy="letters"
+              direction="bottom"
+              align="center"
               className="text-blue-500 dark:text-blue-400"
-              data-cursor="text"
-            >
-              {t("certificates.title")}
-            </span>
+            />
           </h2>
         </div>
 
