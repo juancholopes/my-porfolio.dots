@@ -1,0 +1,10 @@
+
+
+User-agent: *
+Allow: /
+
+# Bloquear archivos innecesarios para los bots
+Disallow: /files/
+
+# Sitemap
+Sitemap: https://juancholopez.netlify.app/sitemap.xml

@@ -1,1 +1,7 @@
+# Asegurar que archivos SEO sean servidos correctamente
+/sitemap.xml    /sitemap.xml    200
+/robots.txt     /robots.txt     200
+
+# SPA fallback para React Router
 /*    /index.html   200
+
