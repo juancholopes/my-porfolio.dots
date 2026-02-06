@@ -18,6 +18,11 @@
 /*.css
   Cache-Control: public, max-age=31536000, immutable
 
+# Archivos de verificación de Google Search Console
+/google*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: text/html; charset=UTF-8
+
 # HTML sin caché para permitir actualizaciones
 /*.html
   Cache-Control: public, max-age=0, must-revalidate

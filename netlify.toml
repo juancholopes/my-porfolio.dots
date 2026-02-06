@@ -1,29 +1,36 @@
 # Netlify configuration for better SEO and performance
 
 [build]
-  publish = "dist"
-  command = "npm run build"
+publish = "dist"
+command = "npm run build"
 
 # Headers for SEO and security
 [[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+for = "/*"
+[headers.values]
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Headers para archivos de verificación de Google
+[[headers]]
+for = "/google*.html"
+[headers.values]
+Content-Type = "text/html; charset=UTF-8"
+Cache-Control = "public, max-age=0, must-revalidate"
 
 # Prerender configuration for better SEO (optional but recommended)
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
+package = "@netlify/plugin-lighthouse"
 
 # Cache control
 [[headers]]
-  for = "/sitemap.xml"
-  [headers.values]
-    Cache-Control = "public, max-age=86400, must-revalidate"
+for = "/sitemap.xml"
+[headers.values]
+Cache-Control = "public, max-age=86400, must-revalidate"
 
 [[headers]]
-  for = "/robots.txt"
-  [headers.values]
-    Cache-Control = "public, max-age=86400, must-revalidate"
+for = "/robots.txt"
+[headers.values]
+Cache-Control = "public, max-age=86400, must-revalidate"

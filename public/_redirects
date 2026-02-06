@@ -2,6 +2,9 @@
 /sitemap.xml    /sitemap.xml    200
 /robots.txt     /robots.txt     200
 
-# SPA fallback para React Router
+# Excluir archivos HTML estáticos de Google Search Console
+/google*.html   /google*.html   200
+
+# SPA fallback para React Router (debe ir al final)
 /*    /index.html   200
 
