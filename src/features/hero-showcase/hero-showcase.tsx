@@ -3,7 +3,7 @@ import SocialLinkedinButton from "./components/social-linkedin-buttom";
 import SocialGithubButton from "./components/social-github-buttom";
 import CopyEmailButton from "./components/copy-email-button";
 import DownloadCvButton from "./components/download-cv-button";
-import BlurText from "@/shared/components/BlurText";
+import BlurText from "@shared/components/blur-text.tsx";
 
 const HeroShowcase = () => {
   const { t } = useTranslation();

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import projectsData from "@/data/projects.json";
 import ProjectCard from "./components/project-card";
 import PrimaryButton from "@shared/components/ui/primary-button";
-import BlurText from "@shared/components/BlurText.tsx";
+import BlurText from "@shared/components/blur-text.tsx";
 
 const INITIAL_PROJECTS = 2;
 const LOAD_MORE_COUNT = 2;

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import certificatesData from "@/data/certificates.json";
 import CertificateCard from "./components/certificate-card";
 import PrimaryButton from "@shared/components/ui/primary-button";
-import BlurText from "@shared/components/BlurText.tsx";
+import BlurText from "@shared/components/blur-text.tsx";
 
 const INITIAL_CERTIFICATES = 3;
 const LOAD_MORE_COUNT = 2;

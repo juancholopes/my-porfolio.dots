@@ -2,7 +2,7 @@ import { Target, User, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PixelTransition from "@shared/components/pixel-transition";
 import LazyImage from "@shared/components/lazy-image";
-import BlurText from "@shared/components/BlurText";
+import BlurText from "@shared/components/blur-text.tsx";
 
 const ProfessionalProfile = () => {
   const { t } = useTranslation();
