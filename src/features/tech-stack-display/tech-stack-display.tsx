@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import BlurText from "@shared/components/blur-text.tsx";
-import StackGallery from "@shared/components/stack-gallery.tsx";
+import StackGallery from "./components/stack-gallery";
 
 const TechStackDisplay = () => {
   const { t } = useTranslation();
