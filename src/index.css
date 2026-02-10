@@ -166,8 +166,8 @@ body::-webkit-scrollbar {
     --text-main: #f1f5f9;
     --card-bg: #1e293b;
 
-    /* Color utilities with opacity variants - Dark mode */
-    --primary-rgb: 59 130 246;
+    --buttom-bg: #1e293b /* Color utilities with opacity variants - Dark mode */
+      --primary-rgb: 59 130 246;
     --primary-opacity-10: rgb(var(--primary-rgb) / 0.1);
     --primary-opacity-15: rgb(var(--primary-rgb) / 0.15);
     --primary-opacity-20: rgb(var(--primary-rgb) / 0.2);
