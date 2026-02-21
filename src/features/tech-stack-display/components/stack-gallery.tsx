@@ -100,7 +100,7 @@ const StackGallery = () => {
           {techStackImages.map((image, index) => (
             <Tooltip key={index}>
               <TooltipTrigger asChild>
-                <div className=" w-32 h-7 lg:h-24 lg:w-full flex items-center justify-center bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-500 ease-in-out cursor-pointer group-hover:opacity-40 group-hover:grayscale hover:!grayscale-0 hover:!opacity-100 hover:scale-110">
+                <div className=" w-32 h-14 lg:h-24 lg:w-full flex items-center justify-center bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-500 ease-in-out cursor-pointer group-hover:opacity-40 group-hover:grayscale hover:!grayscale-0 hover:!opacity-100 hover:scale-110">
                   <img
                     src={image.src}
                     alt={image.alt}
