@@ -160,42 +160,132 @@ Este proyecto no requiere variables de entorno para funcionar en local. Para dep
 ```
 my-porfolio.dots/
 ├── public/
-│   ├── projects/              # Imágenes de proyectos (optimizadas a <200KB cada una)
-│   └── CV-Juan.pdf            # Curriculum descargable
+│   ├── about-me/                # Imágenes del perfil profesional
+│   ├── fonts/                   # Fuentes personalizadas (Caskaydia Cove)
+│   ├── icons/                   # Íconos del tech stack (SVG)
+│   ├── projects/                # Imágenes de proyectos (WebP optimizadas)
+│   ├── robots.txt               # SEO: directivas para crawlers
+│   └── sitemap.xml              # SEO: mapa del sitio
+│
+├── scripts/
+│   └── generate-sitemap.js      # Generador automático de sitemap
 │
 ├── src/
-│   ├── components/            # Componentes React reutilizables
-│   │   ├── CustomCursor.tsx   # Sistema de cursor personalizado
-│   │   ├── LazyImage.tsx      # Lazy loading de imágenes
-│   │   ├── Hero.tsx           # Sección principal
-│   │   ├── AboutMe.tsx        # Información personal
-│   │   ├── Projects.tsx       # Grid de proyectos con load more
-│   │   └── Stack.tsx          # Tecnologías dominadas
+│   ├── App.tsx                  # Componente raíz
+│   ├── main.tsx                 # Punto de entrada
 │   │
-│   ├── hooks/
-│   │   ├── useCursor.ts       # Lógica del cursor personalizado
-│   │   └── useDesktopDevice.ts # Detección de dispositivo
+│   ├── pages/                   # Páginas de la aplicación
+│   │   ├── Index.tsx            # Página principal
+│   │   ├── IndexSkeleton.tsx    # Skeleton de carga
+│   │   └── NotFound.tsx         # Página 404
 │   │
-│   ├── locales/               # Archivos de traducción
-│   │   ├── es.json            # Español (idioma por defecto)
-│   │   └── en.json            # Inglés
+│   ├── features/                # Features organizadas por dominio (Screaming Architecture)
+│   │   ├── hero-showcase/       # Sección hero con CTAs y redes sociales
+│   │   │   ├── hero-showcase.tsx          # Container principal
+│   │   │   ├── index.ts                   # Barrel export
+│   │   │   └── components/
+│   │   │       ├── copy-email-button.tsx
+│   │   │       ├── download-cv-button.tsx
+│   │   │       ├── hero-showcase-skeleton.tsx
+│   │   │       ├── social-github-buttom.tsx
+│   │   │       └── social-linkedin-buttom.tsx
+│   │   │
+│   │   ├── professional-profile/  # Sección "Sobre mí" con pixel transition
+│   │   │   ├── professional-profile.tsx   # Container principal
+│   │   │   ├── index.ts
+│   │   │   └── components/
+│   │   │       └── professional-profile-skeleton.tsx
+│   │   │
+│   │   ├── tech-stack-display/    # Grid de tecnologías con tooltips
+│   │   │   ├── tech-stack-display.tsx     # Container principal
+│   │   │   ├── tech-stack.data.ts         # Datos estáticos del stack + tipos
+│   │   │   ├── index.ts
+│   │   │   └── components/
+│   │   │       ├── stack-gallery.tsx                # Galería interactiva con tooltips
+│   │   │       └── tech-stack-display-skeleton.tsx
+│   │   │
+│   │   ├── project-showcase/      # Carrusel de proyectos con load more
+│   │   │   ├── project-showcase.tsx       # Container principal
+│   │   │   ├── index.ts
+│   │   │   └── components/
+│   │   │       ├── project-card.tsx
+│   │   │       └── project-showcase-skeleton.tsx
+│   │   │
+│   │   ├── certifications-display/  # Grid de certificaciones
+│   │   │   ├── certifications-display.tsx # Container principal
+│   │   │   ├── index.ts
+│   │   │   └── components/
+│   │   │       ├── certificate-card.tsx
+│   │   │       └── certifications-display-skeleton.tsx
+│   │   │
+│   │   └── navigation/             # Navbar, footer, selectores globales
+│   │       ├── index.ts
+│   │       └── components/
+│   │           ├── navbar.tsx
+│   │           ├── footer.tsx
+│   │           ├── contact-button.tsx
+│   │           ├── copy-email-button-footer.tsx
+│   │           ├── language-selector.tsx
+│   │           └── theme-toggle.tsx
 │   │
-│   ├── data/
-│   │   └── projects.json      # Base de datos de proyectos
+│   ├── shared/                  # Componentes/hooks usados por 2+ features (Scope Rule)
+│   │   ├── components/
+│   │   │   ├── blur-text.tsx              # Animación de texto con blur
+│   │   │   ├── lazy-image.tsx             # Lazy loading con Intersection Observer
+│   │   │   ├── pixel-transition.tsx       # Transición de píxeles (GSAP)
+│   │   │   ├── scroll-infinity.tsx        # Scroll infinito
+│   │   │   ├── shuffle.tsx                # Animación shuffle
+│   │   │   ├── SEO.tsx                    # Meta tags dinámicos
+│   │   │   └── ui/                        # Primitivos UI (Radix + Tailwind)
+│   │   │       ├── button.tsx
+│   │   │       ├── card.tsx
+│   │   │       ├── carousel.tsx
+│   │   │       ├── dropdown-menu.tsx
+│   │   │       ├── primary-button.tsx
+│   │   │       ├── skeleton.tsx
+│   │   │       ├── tooltip.tsx
+│   │   │       ├── toast.tsx
+│   │   │       ├── toaster.tsx
+│   │   │       └── sonner.tsx
+│   │   └── hooks/
+│   │       ├── useDesktopDevice.ts        # Detección de dispositivo desktop (consolidado)
+│   │       ├── useCursor.ts               # Lógica del cursor personalizado
+│   │       ├── useThemeSystem.ts          # Sistema de temas
+│   │       ├── use-mobile.tsx             # Detección de mobile
+│   │       └── use-toast.ts              # Hook de notificaciones toast
 │   │
-│   └── App.tsx                # Componente raíz
+│   ├── infrastructure/          # Concerns cross-cutting
+│   │   ├── i18n/
+│   │   │   ├── i18n.ts                   # Configuración i18next
+│   │   │   └── locales/
+│   │   │       ├── es.json               # Traducciones español
+│   │   │       └── en.json               # Traducciones inglés
+│   │   └── theme/
+│   │       └── custom-cursor.tsx          # Cursor personalizado (rendering)
+│   │
+│   ├── data/                    # Datos compartidos entre features
+│   │   ├── projects.json                 # Proyectos del portfolio
+│   │   ├── certificates.json             # Certificaciones
+│   │   └── images.json                   # Imágenes del perfil
+│   │
+│   └── lib/
+│       └── utils.ts             # Utilidades (cn helper para Tailwind)
 │
-├── tailwind.config.ts         # Configuración de Tailwind (tema personalizado)
-├── vite.config.ts             # Configuración de Vite (aliases, plugins)
-├── tsconfig.json              # Configuración de TypeScript
-└── package.json               # Dependencias y scripts
+├── tailwind.config.ts           # Configuración de Tailwind (tema personalizado)
+├── vite.config.ts               # Configuración de Vite (aliases, plugins)
+├── tsconfig.json                # Configuración de TypeScript
+├── eslint.config.js             # Configuración de ESLint
+├── netlify.toml                 # Configuración de deployment en Netlify
+└── package.json                 # Dependencias y scripts
 ```
 
 ### Justificación de la Estructura
 
-- **Separación por tipo de archivo** (components, hooks, data): Facilita encontrar código relacionado y escala bien hasta ~50 componentes antes de necesitar estructura por features
-- **data/projects.json**: Separar datos del código permite a no-developers actualizar proyectos y facilita futuras migraciones a CMS
-- **locales/ independiente**: Aislar traducciones facilita agregar nuevos idiomas sin modificar componentes
+- **Screaming Architecture**: Los nombres de las features (`hero-showcase`, `project-showcase`, `certifications-display`) comunican inmediatamente qué hace la aplicación sin necesidad de leer código
+- **Scope Rule**: Si un componente/hook lo usa solo 1 feature, vive local dentro de esa feature. Si lo usan 2+ features, se promueve a `shared/`. Ejemplo: `tech-stack.data.ts` es local a `tech-stack-display/` porque ninguna otra feature lo necesita
+- **Container/Presentational**: Cada feature tiene un container con el mismo nombre de la feature (ej. `project-showcase.tsx`) que maneja lógica, y componentes internos que son presentacionales
+- **infrastructure/**: Concerns cross-cutting como i18n y el cursor personalizado que no pertenecen a ninguna feature específica
+- **data/**: Archivos JSON compartidos entre features (proyectos, certificaciones) que facilitan actualización sin tocar código
 
 ---
 

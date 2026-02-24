@@ -117,9 +117,24 @@ const PixelTransition: React.FC<PixelTransitionProps> = ({
     if (!isActive) animatePixels(true);
     else if (isActive && !once) animatePixels(false);
   };
+
+  const handleKeyDown = (e: React.KeyboardEvent): void => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      if (isTouchDevice) {
+        handleClick();
+      } else {
+        if (!isActive) handleEnter();
+        else handleLeave();
+      }
+    }
+  };
+
   return (
     <div
       ref={containerRef}
+      role="button"
+      aria-label="Toggle image transition"
       className={`
         ${className}
         bg-[#222]
@@ -136,6 +151,7 @@ const PixelTransition: React.FC<PixelTransitionProps> = ({
       onMouseEnter={!isTouchDevice ? handleEnter : undefined}
       onMouseLeave={!isTouchDevice ? handleLeave : undefined}
       onClick={isTouchDevice ? handleClick : undefined}
+      onKeyDown={handleKeyDown}
       onFocus={!isTouchDevice ? handleEnter : undefined}
       onBlur={!isTouchDevice ? handleLeave : undefined}
       tabIndex={0}

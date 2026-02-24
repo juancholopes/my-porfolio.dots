@@ -2,13 +2,11 @@ import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { useCursor } from "@shared/hooks/useCursor";
 import { useTheme } from "next-themes";
-import { useDesktopDevice } from "@shared/hooks/useDesktopDevice";
 
 const CustomCursor: React.FC = () => {
-  const { mousePosition, cursorVariant, textHeight } = useCursor();
+  const { mousePosition, cursorVariant, textHeight, isDesktop } = useCursor();
   const { theme } = useTheme();
   const isDark = theme === "dark";
-  const isDesktop = useDesktopDevice();
 
   // Agregar clase CSS para ocultar el cursor predeterminado cuando el cursor personalizado está activo
   useEffect(() => {

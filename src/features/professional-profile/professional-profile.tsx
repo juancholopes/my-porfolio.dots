@@ -96,7 +96,7 @@ const ProfessionalProfile = () => {
 
           <div className="relative order-1 lg:order-2">
             <div
-              className="w-[400px] h-[400px] mx-auto rounded-lg bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image overflow-hidden"
+              className="w-full max-w-[400px] aspect-square mx-auto rounded-lg bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm project-image overflow-hidden"
               data-cursor="image"
             >
               <PixelTransition
