@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -6,6 +7,22 @@ import {
 } from "@/shared/components/ui/tooltip";
 
 const StackGallery = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [openTooltipIndex, setOpenTooltipIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      setIsDesktop(event.matches);
+    };
+
+    setIsDesktop(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   const techStackImages = [
     {
       src: "/icons/React-icon.svg",
@@ -98,9 +115,26 @@ const StackGallery = () => {
       <div className="grid place-items-center h-full">
         <div className="grid gap-4 group grid-cols-2 lg:grid-cols-7  md:grid-cols-4 sm:grid-cols-2">
           {techStackImages.map((image, index) => (
-            <Tooltip key={index}>
+            <Tooltip
+              key={index}
+              open={!isDesktop ? openTooltipIndex === index : undefined}
+              onOpenChange={
+                !isDesktop
+                  ? (open) => setOpenTooltipIndex(open ? index : null)
+                  : undefined
+              }
+            >
               <TooltipTrigger asChild>
-                <div className=" w-32 h-14 lg:h-24 lg:w-full flex items-center justify-center bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-500 ease-in-out cursor-pointer group-hover:opacity-40 group-hover:grayscale hover:!grayscale-0 hover:!opacity-100 hover:scale-110">
+                <div
+                  className=" w-32 h-14 lg:h-24 lg:w-full flex items-center justify-center bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-500 ease-in-out cursor-pointer group-hover:opacity-40 group-hover:grayscale hover:!grayscale-0 hover:!opacity-100 hover:scale-110"
+                  onClick={() => {
+                    if (!isDesktop) {
+                      setOpenTooltipIndex((current) =>
+                        current === index ? null : index
+                      );
+                    }
+                  }}
+                >
                   <img
                     src={image.src}
                     alt={image.alt}
