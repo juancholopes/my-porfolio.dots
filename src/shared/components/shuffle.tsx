@@ -75,6 +75,8 @@ const Shuffle: React.FC<ShuffleProps> = ({
   const tlRef = useRef<gsap.core.Timeline | null>(null);
   const playingRef = useRef(false);
   const hoverHandlerRef = useRef<((e: Event) => void) | null>(null);
+  const cachedDimensionsRef = useRef<Map<string, { w: number; h: number }>>(new Map());
+  const lastContainerWidthRef = useRef<number>(0);
 
   useEffect(() => {
     if ("fonts" in document) {
@@ -136,15 +138,23 @@ const Shuffle: React.FC<ShuffleProps> = ({
         }
         try {
           splitRef.current?.revert();
-        } catch {}
+        } catch { }
         splitRef.current = null;
         playingRef.current = false;
       };
 
-      const build = () => {
+      const build = (useCache = false) => {
         teardown();
 
+        // READ: getComputedStyle BEFORE SplitText mutates the DOM
         const computedFont = getComputedStyle(el).fontFamily;
+
+        // Check if container size changed (invalidates cache)
+        const currentContainerWidth = el.offsetWidth;
+        if (currentContainerWidth !== lastContainerWidthRef.current) {
+          cachedDimensionsRef.current.clear();
+          lastContainerWidthRef.current = currentContainerWidth;
+        }
 
         splitRef.current = new GSAPSplitText(el, {
           type: "chars",
@@ -161,53 +171,67 @@ const Shuffle: React.FC<ShuffleProps> = ({
         const rolls = Math.max(1, Math.floor(shuffleTimes));
         const rand = (set: string) =>
           set.charAt(Math.floor(Math.random() * set.length)) || "";
+        const isVertical =
+          shuffleDirection === "up" || shuffleDirection === "down";
+        const blockClass = isVertical ? "block" : "inline-block";
 
-        chars.forEach((ch) => {
+        // === PASS 1: Batch READ all dimensions (single layout calculation) ===
+        const charData: { ch: HTMLElement; parent: HTMLElement; w: number; h: number }[] = [];
+        for (let i = 0; i < chars.length; i++) {
+          const ch = chars[i];
           const parent = ch.parentElement;
-          if (!parent) return;
+          if (!parent) continue;
 
-          const w = ch.getBoundingClientRect().width;
-          const h = ch.getBoundingClientRect().height;
-          if (!w) return;
+          const charText = ch.textContent || "";
+          const cacheKey = `${charText}_${i}`;
+          let w: number;
+          let h: number;
+
+          if (useCache && cachedDimensionsRef.current.has(cacheKey)) {
+            const cached = cachedDimensionsRef.current.get(cacheKey)!;
+            w = cached.w;
+            h = cached.h;
+          } else {
+            const rect = ch.getBoundingClientRect();
+            w = rect.width;
+            h = rect.height;
+            cachedDimensionsRef.current.set(cacheKey, { w, h });
+          }
+
+          if (!w) continue;
+          charData.push({ ch, parent, w, h });
+        }
+
+        // === PASS 2: Batch WRITE all DOM mutations (no geometry reads) ===
+        for (let i = 0; i < charData.length; i++) {
+          const { ch, parent, w, h } = charData[i];
 
           const wrap = document.createElement("span");
           wrap.className = "inline-block overflow-hidden text-left";
           Object.assign(wrap.style, {
             width: w + "px",
-            height:
-              shuffleDirection === "up" || shuffleDirection === "down"
-                ? h + "px"
-                : "auto",
+            height: isVertical ? h + "px" : "auto",
             verticalAlign: "bottom",
           });
 
           const inner = document.createElement("span");
           inner.className =
             "inline-block will-change-transform origin-left transform-gpu " +
-            (shuffleDirection === "up" || shuffleDirection === "down"
-              ? "whitespace-normal"
-              : "whitespace-nowrap");
+            (isVertical ? "whitespace-normal" : "whitespace-nowrap");
+          inner.style.willChange = "transform";
 
           parent.insertBefore(wrap, ch);
           wrap.appendChild(inner);
 
           const firstOrig = ch.cloneNode(true) as HTMLElement;
-          firstOrig.className =
-            "text-left " +
-            (shuffleDirection === "up" || shuffleDirection === "down"
-              ? "block"
-              : "inline-block");
+          firstOrig.className = "text-left " + blockClass;
           Object.assign(firstOrig.style, {
             width: w + "px",
             fontFamily: computedFont,
           });
 
           ch.setAttribute("data-orig", "1");
-          ch.className =
-            "text-left " +
-            (shuffleDirection === "up" || shuffleDirection === "down"
-              ? "block"
-              : "inline-block");
+          ch.className = "text-left " + blockClass;
           Object.assign(ch.style, {
             width: w + "px",
             fontFamily: computedFont,
@@ -217,11 +241,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
           for (let k = 0; k < rolls; k++) {
             const c = ch.cloneNode(true) as HTMLElement;
             if (scrambleCharset) c.textContent = rand(scrambleCharset);
-            c.className =
-              "text-left " +
-              (shuffleDirection === "up" || shuffleDirection === "down"
-                ? "block"
-                : "inline-block");
+            c.className = "text-left " + blockClass;
             Object.assign(c.style, {
               width: w + "px",
               fontFamily: computedFont,
@@ -270,7 +290,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
 
           if (colorFrom) (inner.style as any).color = colorFrom;
           wrappersRef.current.push(wrap);
-        });
+        }
       };
 
       const inners = () =>
@@ -402,7 +422,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
         removeHover();
         const handler = () => {
           if (playingRef.current) return;
-          build();
+          build(true); // Use cached dimensions on hover rebuild
           if (scrambleCharset) randomizeScrambles();
           play();
         };
