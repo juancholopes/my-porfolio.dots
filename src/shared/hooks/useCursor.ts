@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useDesktopDevice } from '@shared/hooks/useDesktopDevice';
 
 export type CursorVariant = 'default' | 'text' | 'image' | 'hover';
 
@@ -14,23 +15,7 @@ export const useCursor = () => {
   });
   const [cursorVariant, setCursorVariant] = useState<CursorVariant>('default');
   const [textHeight, setTextHeight] = useState<number>(16);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const checkIsDesktop = () => {
-      const hasHover = window.matchMedia('(hover: hover)').matches;
-      const hasPointer = window.matchMedia('(pointer: fine)').matches;
-      const isLargeScreen = window.innerWidth >= 1024;
-      setIsDesktop(hasHover && hasPointer && isLargeScreen);
-    };
-
-    checkIsDesktop();
-    window.addEventListener('resize', checkIsDesktop);
-
-    return () => {
-      window.removeEventListener('resize', checkIsDesktop);
-    };
-  }, []);
+  const isDesktop = useDesktopDevice();
 
   const updateMousePosition = useCallback((e: MouseEvent) => {
     setMousePosition({
@@ -42,7 +27,6 @@ export const useCursor = () => {
   const handleMouseOver = useCallback((e: MouseEvent) => {
     const target = e.target as HTMLElement;
 
-    // Verificación de atributo data-cursor
     const cursorType = target.getAttribute('data-cursor');
     if (cursorType === 'image') {
       setCursorVariant('image');
@@ -56,7 +40,6 @@ export const useCursor = () => {
       return;
     }
 
-    // Verificación de elementos de imagen
     if (
       target.tagName === 'IMG' ||
       target.classList.contains('project-image') ||
@@ -67,7 +50,6 @@ export const useCursor = () => {
       return;
     }
 
-    // Verificación de botones y enlaces (cursor hover para mayor tamaño)
     if (
       target.tagName === 'BUTTON' ||
       target.closest('button') ||
@@ -82,7 +64,6 @@ export const useCursor = () => {
       return;
     }
 
-    // Verificación de elementos de texto (excluyendo botones y enlaces)
     if (
       target.tagName === 'H1' ||
       target.tagName === 'H2' ||
@@ -95,7 +76,6 @@ export const useCursor = () => {
       target.tagName === 'LI' ||
       target.classList.contains('cursor-text')
     ) {
-      // Obtención de altura de texto para cursor adaptativo
       const computedStyle = window.getComputedStyle(target);
       const fontSize = parseFloat(computedStyle.fontSize);
       setTextHeight(fontSize * 1.2);
@@ -129,5 +109,6 @@ export const useCursor = () => {
     mousePosition,
     cursorVariant,
     textHeight,
+    isDesktop,
   };
 };
