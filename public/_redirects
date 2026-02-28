@@ -5,6 +5,9 @@
 # Excluir archivos HTML estáticos de Google Search Console
 /google*.html   /google*.html   200
 
+# Servir PDFs directamente sin SPA fallback
+/docs/*    /docs/:splat    200
+
 # SPA fallback para React Router (debe ir al final)
 /*    /index.html   200
 
