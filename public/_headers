@@ -23,6 +23,12 @@
   Cache-Control: public, max-age=0, must-revalidate
   Content-Type: text/html; charset=UTF-8
 
+# PDFs servidos inline para visualización en el navegador
+/docs/*.pdf
+  Content-Type: application/pdf
+  Content-Disposition: inline
+  Cache-Control: public, max-age=0, must-revalidate
+
 # HTML sin caché para permitir actualizaciones
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
